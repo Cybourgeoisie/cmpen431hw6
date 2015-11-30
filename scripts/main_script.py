@@ -18,7 +18,7 @@ def parseCSVIntoConfigs(csvFileName):
 
 
 	# <-- Opening the csv file and update testTitle and testParameters --->
-	f = open("../csv/%s.csv" %csvFile)
+	f = open("../csv/%s.csv" %csvFileName)
 	i = 0
 	for line in f:
 		data = re.split(r',',line.strip("\r\n"))
