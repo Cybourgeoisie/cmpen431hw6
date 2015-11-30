@@ -9,7 +9,7 @@
 
 ## Project Workflow
 
-** The proposed workflow is to: **
+**The proposed workflow is to:**
 * (Research) Determine what variables we should change, and give reasoning
 * Log our changes from the base config in a Google Spreadsheet with the experiment name
 * (Coding) Parse the spreadsheet, create a config file (dropped into the ./configs/{experiment_name}/ directory, where {experiment_name} is the name provided in the spreadsheet)
@@ -27,7 +27,7 @@ More details are listed under the Tasks section.
 When we run the experiments, we should have a full record of the changes that lead to any results. This is to avoid having to redo work, as once a config is created and a test is run, we should (theoretically) never have to run the experiment again, as long as we keep the original config and raw results.
 
 ### Proposed Layout
-
+```
 ./configs/
   {experiment_name}/
     config.cfg
@@ -46,6 +46,7 @@ When we run the experiments, we should have a full record of the changes that le
     sjeng.out
 ./scripts/
   ... (the scripts listed below, and any others)
+```
 
 ## Tasks
 
