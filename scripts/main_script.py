@@ -32,7 +32,7 @@ def extractDataFromResults(ListOfParaToGet):
 		f.write("testcases,benchmarks")
 		for item in ListOfParaToGet:
 			f.write(",%s" %item)
-		f.write("\n")
+		f.write(",clock cycle (ps)\n")
 
 		benchmarks = ["bzip2","equake","hmmer","mcf","milc","sjeng"]
 
@@ -43,12 +43,48 @@ def extractDataFromResults(ListOfParaToGet):
 			for benchmark in benchmarks:
 				f.write("%s,%s" %(folder,benchmark))
 
+				# variables for determining clock cycle
+				static = True
+				issueWidth = 1
+
 				# go though all the lines in the benchmark output and put all the results that matches the parameter that we want
 				for line in fileinput.input("../results/%s/%s.out" %(folder,benchmark), inplace=0 , backup=0):
 					for parameter in ListOfParaToGet:
+						# if the line matches the parameter that we want then extract the numberical value
 						if re.match("%s\s+.+" %parameter,line):
 							# once the line is split, the result that we want is index 1 of the list
 							f.write(",%s" %re.split("\s+",line)[1])
+
+					# pull the value of the issue:inorder and issue:width to determine the clock cycle
+					if re.match("(?:(-issue:inorder)|(-issue:width))",line):
+						splitLine = re.split("\s+",line)
+						if splitLine[0] == "-issue:inorder":
+							if splitLine[1] == "false":
+								static = False 
+						else:
+							issueWidth = int(splitLine[1])
+
+				# use the value of static and issueWidth to determine the clock cycle
+				if static == True:
+					if issueWidth == 1:
+						f.write(",100")
+					elif issueWidth == 2:
+						f.write(",115")
+					elif issueWidth == 3:
+						f.write(",130")
+					elif issueWidth == 4:
+						f.write(",145")
+					else:
+						raise EnvironmentError("Invalid machine issue:width")
+				else:
+					if issueWidth == 2:
+						f.write(",125")
+					elif issueWidth == 4:
+						f.write(",160")
+					elif issueWidth == 8:
+						f.write(",195")
+					else:
+						raise EnvironmentError("Invalid machine issue:width")
 
 				# we are done with a single benchmark so we need to move to a new line
 				f.write("\n")
