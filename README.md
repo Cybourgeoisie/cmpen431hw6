@@ -55,6 +55,7 @@ When we run the experiments, we should have a full record of the changes that le
 1. Write script to parse changes from base config and produce usable config file
   * Quang did this already
 2. Write script to accept config file, run experiments, and produce raw result files
+  * Ben did this already
 3. Write script to parse raw result files, pull out desired data
 4. Write script to parse results, produce graphs
   * We probably shouldn't do this in isolation, but rather wait until we know what graphs / charts we need for the paper. It's likely that we can make several really short, one-off scripts, so this isn't a major task.
