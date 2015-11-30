@@ -46,6 +46,8 @@ When we run the experiments, we should have a full record of the changes that le
     sjeng.out
 ./scripts/
   ... (the scripts listed below, and any others)
+./csv/
+  ... (csv and spreadsheet files)
 ```
 
 ## Tasks
