@@ -2,6 +2,57 @@ import fileinput
 import os.path
 import re
 import subprocess
+import os
+
+
+# Purpose: This function will loop through all the folders in the /results/ folder and pull the desired data from each 
+#	of the benchmarks' output. 
+#	The resulting file will be placed under the /results/ folder under the name "results.csv". 
+#
+# Input: The function takes a list that has the list of parameters that the function will need to pull from the benchmarks. 
+#
+# Example: extractDataFromResults(["sim_IPC","ifq_latency"])
+#	will pull all the "sim_IPC" and "ifq_latency" results from all the benchmarks and place it in a single results.cvs file
+#
+# Note: if a results.csv file already exits in the ../results/ folder then the function will overwrite the previous file. 
+
+def extractDataFromResults(ListOfParaToGet):
+	# get the name of all the test cases in the results folder
+	testCasesName = []
+	for index,(subdir,dirs,files) in enumerate(os.walk("../results/")):
+		if index == 0:
+			testCasesName = dirs
+
+
+	# open the results file in the result folder.
+	# Note: this will overwrite the previous value in the result file if the file already exists
+	with open("../results/results.cvs","w") as f:
+
+		# write the header row
+		f.write("testcases,benchmarks")
+		for item in ListOfParaToGet:
+			f.write(",%s" %item)
+		f.write("\n")
+
+		benchmarks = ["bzip2","equake","hmmer","mcf","milc","sjeng"]
+
+		# now we have to loop through all the folder and pull the results out
+		for folder in testCasesName:
+
+			# go through all the benchmarks on each of the folder
+			for benchmark in benchmarks:
+				f.write("%s,%s" %(folder,benchmark))
+
+				# go though all the lines in the benchmark output and put all the results that matches the parameter that we want
+				for line in fileinput.input("../results/%s/%s.out" %(folder,benchmark), inplace=0 , backup=0):
+					for parameter in ListOfParaToGet:
+						if re.match("%s\s+.+" %parameter,line):
+							# once the line is split, the result that we want is index 1 of the list
+							f.write(",%s" %re.split("\s+",line)[1])
+
+				# we are done with a single benchmark so we need to move to a new line
+				f.write("\n")
+	f.close()
 
 
 # This function will go though all the test cases that are in the cvs file and create a config file and folder

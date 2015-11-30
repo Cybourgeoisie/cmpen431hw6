@@ -44,6 +44,7 @@ When we run the experiments, we should have a full record of the changes that le
     mcf.out
     milc.out
     sjeng.out
+  (results.csv)
 ./scripts/
   ... (the scripts listed below, and any others)
 ./csv/
