@@ -26,7 +26,7 @@ def extractDataFromResults(ListOfParaToGet):
 
 	# open the results file in the result folder.
 	# Note: this will overwrite the previous value in the result file if the file already exists
-	with open("../results/results.cvs","w") as f:
+	with open("../results/results.csv","w") as f:
 
 		# write the header row
 		f.write("testcases,benchmarks")
@@ -148,6 +148,7 @@ def parseCSVIntoConfigs(csvFileName):
 
 def main():
 	parseCSVIntoConfigs("testcases")
+	#extractDataFromResults(["sim_IPC","sim_CPI"])
 
 
 if __name__ == "__main__":

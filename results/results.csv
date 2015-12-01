@@ -1,0 +1,19 @@
+testcases,benchmarks,sim_IPC,sim_CPI,clock cycle (ps)
+baseline,bzip2,0.3241,3.0853,100
+baseline,equake,0.3241,3.0853,100
+baseline,hmmer,0.3241,3.0853,100
+baseline,mcf,0.3241,3.0853,100
+baseline,milc,0.3241,3.0853,100
+baseline,sjeng,0.3241,3.0853,100
+test1,bzip2,0.3241,3.0853,195
+test1,equake,0.3241,3.0853,145
+test1,hmmer,0.3241,3.0853,100
+test1,mcf,0.3241,3.0853,100
+test1,milc,0.3241,3.0853,100
+test1,sjeng,0.3241,3.0853,100
+test2,bzip2,0.3241,3.0853,160
+test2,equake,0.3241,3.0853,145
+test2,hmmer,0.3241,3.0853,100
+test2,mcf,0.3241,3.0853,100
+test2,milc,0.3241,3.0853,100
+test2,sjeng,0.3241,3.0853,100
