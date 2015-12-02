@@ -29,26 +29,36 @@ When we run the experiments, we should have a full record of the changes that le
 ### Proposed Layout
 ```
 ./configs/
-  {experiment_name}/
-    config.cfg
+  {experiment_set}/
+    {experiment_name}/
+      config.cfg
+  }
+./csv/
+  {experiment_set}/
+    ... (experiment csv and ods file)
 ./paper/
   images/
     ... (any images used in the paper)
   project.tex
   ... (latex-produced files)
 ./results/
-  {experiment_name}/
-    bzip2.out
-    equake.out
-    hmmer.out
-    mcf.out
-    milc.out
-    sjeng.out
-  (results.csv)
+  {experiment_set}/
+    {experiment_name}/
+      bzip2.out
+      equake.out
+      hmmer.out
+      mcf.out
+      milc.out
+      sjeng.out
+./tables/
+  {experiment_set}/
+    rawTable.csv
+./graphs/
+  {experiment_set}/
+    ... (experiment geometric means graph and table)
 ./scripts/
   ... (the scripts listed below, and any others)
-./csv/
-  ... (csv and spreadsheet files)
+
 ```
 
 ## Tasks

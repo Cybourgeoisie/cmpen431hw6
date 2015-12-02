@@ -1,0 +1,13 @@
+testcases,benchmark,total_insn,sim_IPC,clock cycle (ps)
+baseline,BZIP2,2500000,0.2311,100
+baseline,MCF,2500000,0.3359,100
+baseline,HMMR,2500000,0.2788,100
+baseline,SJENG,2500000,0.3575,100
+baseline,MILC,2500000,0.3919,100
+baseline,EQAKE,2500000,0.2859,100
+taticSSDatapath,BZIP2,2500000,0.3281,145
+taticSSDatapath,MCF,2500000,0.3851,145
+taticSSDatapath,HMMR,2500000,0.3604,145
+taticSSDatapath,SJENG,2500001,0.4291,145
+taticSSDatapath,MILC,2500000,0.4544,145
+taticSSDatapath,EQAKE,2500000,0.3415,145

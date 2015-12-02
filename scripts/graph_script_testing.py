@@ -18,7 +18,6 @@ def reportFromDataFrame(inputDataFrame,paraToPlot):
 		offsetDataFrame = inputDataFrame[(i-1)*6:i*6]
 		# insert the testcase into the newDataFrame
 		offsetDataFrame.index = range(0,6)
-		print(offsetDataFrame["sim_IPC"])
 		newDataFrame[inputDataFrame.loc[(i-1)*6,"testcases"]] = offsetDataFrame["sim_IPC"]
 	# Change the index of the newdataframe
 	newDataFrame = newDataFrame.set_index("benchmarks")
