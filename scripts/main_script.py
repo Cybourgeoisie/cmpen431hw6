@@ -60,7 +60,7 @@ def runBenchmarksOnTestSets():
 			os.makedirs("../results/%s" %testSet[0])
 
 		# Loop through all the test cases in the current test set
-		for testCase in testSets[1]:
+		for testCase in testSet[1]:
 
 			# check if the  directory for the test case already exist. 
 			# skip if it already exists
@@ -71,11 +71,12 @@ def runBenchmarksOnTestSets():
 			# check if the directory for the current test case already has output files or not
 			#	if it already has files then we will not perform the simultion on this test case
 			#	this allows us to shorted the time between execution
-			for subdir,dirs,files in enumerate(os.walk("../results/%s/%s" %(testSet[0],testCase))):
+			for index,(subdir,dirs,files) in enumerate(os.walk("../results/%s/%s" %(testSet[0],testCase))):
 				# only perform the simulation if the test case folder has no files in it
 				if not files:
 					subprocess.call("./run_experiment.sh %s/%s" %(testSet[0],testCase),
 						shell=True)
+				
 
 
 
@@ -238,6 +239,7 @@ def parseCSVIntoConfigs():
 
 def main():
 	parseCSVIntoConfigs()
+	runBenchmarksOnTestSets()
 	extractDataFromResults(["sim_IPC"])
 
 

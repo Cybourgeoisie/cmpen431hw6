@@ -1,19 +1,2 @@
 testcases,benchmarks,sim_IPC,clock cycle (ps)
-baseline,bzip2,0.3241,195
-baseline,hmmer,0.3241,100
-baseline,mcf,0.3241,100
-baseline,sjeng,0.3241,100
-baseline,milc,0.3241,100
-baseline,equake,0.3241,145
-changeBpred,bzip2,0.3241,195
-changeBpred,hmmer,0.3241,100
-changeBpred,mcf,0.3241,100
-changeBpred,sjeng,0.3241,100
-changeBpred,milc,0.3241,100
-changeBpred,equake,0.3241,145
-changeruu,bzip2,0.3241,195
-changeruu,hmmer,0.3241,100
-changeruu,mcf,0.3241,100
-changeruu,sjeng,0.3241,100
-changeruu,milc,0.3241,100
-changeruu,equake,0.3241,145
+testing2,bzip2
