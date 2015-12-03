@@ -1,0 +1,148 @@
+####################################################################
+# DIRECTION:
+#
+# - download the bash file to a directory
+# - The value of the variables SIMPLESCALAR, SSDIR, SIMOUTORDER, CFGNAME to match your system
+# - cd to the directory where the bash file is residing
+# - type "bash hw2.sh"
+# - The results should now be in their respective files. 
+####################################################################
+
+# Declaring variables
+SIMPLESCALAR=/home/software/simplesim
+SSDIR=/home/grads/qxn5005/Documents/simplescalar/ss-benchmark
+SIMOUTORDER=/home/software/simplesim/simplesim-3.0/sim-outorder
+BZIP2=/home/grads/qxn5005/Documents/simplescalar/ss-benchmark/bzip2
+HMMR=/home/grads/qxn5005/Documents/simplescalar/ss-benchmark/hmmer
+MILC=/home/grads/qxn5005/Documents/simplescalar/ss-benchmark/milc
+EQUAKE=/home/grads/qxn5005/Documents/simplescalar/ss-benchmark/equake
+MCF=/home/grads/qxn5005/Documents/simplescalar/ss-benchmark/mcf
+SJENG=/home/grads/qxn5005/Documents/simplescalar/ss-benchmark/sjeng
+CFGNAME="hw3.cfg"
+CFGDIR=$SSDIR/$CFGNAME
+OUTPUTFILE="hw3_output.txt"
+OUTPULFILEDIR=$SSDIR/$OUTPUTFILE
+SimOutputFileName="hw3.out"
+
+
+###################################
+#
+# Parameters:
+#	1: directory of the file
+#	2: directory of the output file
+###################################	
+GetValuesFromFile()
+{
+	echo $1 >> $2
+	awk '/^sim_IPC/{print $1,",",$2}' $1 >> $2
+	awk '/^il1.hits/{print $1,",",$2}' $1 >> $2
+	awk '/^il1.misses/{print $1,",",$2}' $1 >> $2
+	awk '/^dl1.hits/{print $1,",",$2}' $1 >> $2
+	awk '/^dl1.misses/{print $1,",",$2}' $1 >> $2
+	awk '/^ul2.hits/{print $1,",",$2}' $1 >> $2
+	awk '/^ul2.misses/{print $1,",",$2}' $1 >> $2
+	rm $1
+}
+
+
+
+ExtractFromResults()
+{
+	GetValuesFromFile $BZIP2/$SimOutputFileName $OUTPULFILEDIR
+	GetValuesFromFile $MCF/$SimOutputFileName $OUTPULFILEDIR
+	GetValuesFromFile $HMMR/$SimOutputFileName $OUTPULFILEDIR
+	GetValuesFromFile $SJENG/$SimOutputFileName $OUTPULFILEDIR
+	GetValuesFromFile $MILC/$SimOutputFileName $OUTPULFILEDIR
+	GetValuesFromFile $EQUAKE/$SimOutputFileName $OUTPULFILEDIR
+}
+
+RunSimulators()
+{
+	# Running bzip2
+	cd $SSDIR/bzip2
+	$SIMOUTORDER -config ../$CFGNAME bzip2_base.i386-m32-gcc42-nn dryer.jpg
+
+	# Running mcf
+	cd ../mcf
+	$SIMOUTORDER -config ../$CFGNAME mcf_base.i386-m32-gcc42-nn inp.in
+
+	# Running hmmr
+	cd ../hmmer
+	$SIMOUTORDER -config ../$CFGNAME hmmer_base.i386-m32-gcc42-nn bombesin.hmm
+
+	# Running sjeng
+	cd ../sjeng
+	$SIMOUTORDER -config ../$CFGNAME sjeng_base.i386-m32-gcc42-nn test.txt
+
+	# Running milc
+	cd ../milc
+	$SIMOUTORDER -config ../$CFGNAME milc_base.i386-m32-gcc42-nn < su3imp.in
+
+	# Running equake
+	cd ../equake
+	$SIMOUTORDER -config ../$CFGNAME equake_base.pisa_little < inp.in > inp.out
+
+	cd $SSDIR
+}
+
+touch $OUTPULFILEDIR
+
+echo "First Run" >> OUTPULFILEDIR
+
+#RunSimulators
+
+#ExtractFromResults
+
+#############
+echo "Second Run" >> OUTPULFILEDIR
+touch tempfile.txt
+# Quadruple L2 cache and latency
+awk ' { sub(/ul2:1024:64:4:l/,"ul2:4096:64:4:l",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+touch tempfile.txt
+awk ' /dl2lat/ { sub($2,"40",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+touch tempfile.txt
+awk ' /il2lat/ { sub($2,"40",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+
+#RunSimulators
+
+#ExtractFromResults
+
+#############
+echo "Third Run" >> OUTPULFILEDIR
+touch tempfile.txt
+# Double L1 caches and latency
+awk ' { sub(/il1:256:32:1:l/,"il1:512:32:1:l",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+touch tempfile.txt
+awk ' { sub(/dl1:256:32:1:l/,"dl1:512:32:1:l",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+touch tempfile.txt
+awk ' /dl1lat/ { sub($2,"2",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+touch tempfile.txt
+awk ' /il1lat/ { sub($2,"2",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+
+#RunSimulators
+
+#ExtractFromResults
+
+#############
+echo "Fourth Run" >> OUTPULFILEDIR
+touch tempfile.txt
+# Set L1 cache to 4-way set associative and LRU replacement
+awk ' { sub(/il1:512:32:1:l/,"il1:512:32:4:l",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+touch tempfile.txt
+awk ' { sub(/dl1:512:32:1:l/,"dl1:512:32:4:l",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+
+#############
+echo "Fifth Run" >> OUTPULFILEDIR
+touch tempfile.txt
+# Set L1 cache to 4-way set associative and Random replacement
+awk ' { sub(/il1:512:32:4:l/,"il1:512:32:4:r",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+touch tempfile.txt
+awk ' { sub(/dl1:512:32:4:l/,"dl1:512:32:4:r",$2)}1' $CFGDIR > tempfile.txt && mv tempfile.txt $CFGDIR
+
+
+#RunSimulators
+
+#ExtractFromResults
+
+
+

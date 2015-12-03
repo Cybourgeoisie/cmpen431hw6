@@ -4,15 +4,84 @@ import re
 import subprocess
 import os
 
-# Note: you might need to comment out these library and the methods to generate the graphs if you
-# can't get python to run 
-import matplotlib.pyplot as plt
-import pandas as pd 
-import ggplot
-import numpy as np
 
 
-# Purpose: This function will loop through all the folders in the /results/ folder and pull the desired data from each 
+# function:
+#	This method will return all the subfolder and subfolder of the subfolder in a list
+#
+# example:
+#	suppose that the result folder has the following structure
+#		../results/
+#			testSet1/
+#				baseline/
+#				bzip2/
+#			testSet2/
+#				baseline/
+#				bzip2/
+#	running the method will return a list that has the following values
+#		result = [["testSet1",["baseline","bzip2"]],["testSet2",["baseline","bzip2"]]			
+def getSetsAndTestCases(rootFolderName):
+	# get the name of the sets and test cases in the root folder
+	Sets = []
+	for index,(subdir,dirs,files) in enumerate(os.walk("../%s/" %rootFolderName)):
+		if index == 0:
+			for i,folder in enumerate(dirs):
+				Sets.append([])
+				Sets[i].append(folder)
+
+				for j,(subdir2,dirs2,files2) in enumerate(os.walk("../%s/%s" %(rootFolderName,folder))):
+					if j == 0:
+						Sets[i].append(dirs2)
+	return Sets
+
+
+# function: 
+#	This method will through through all the experiment sets under the configs folder 
+# 	run the simpleScalar simulation on all the test cases of the sets. The results of the simulation
+#	will be placed under the following directory "./results/{experient_set}/{test_case}/"
+#
+# Important assumption: 
+#	if there existing files in a test case of a set ("./results/{experient_set}/{test_case}/"),
+#	then the function will not perform the simulation. This is because we are making the assumption that when we are 
+#	changing the spreadsheet file, we will not be changing the parameters of a previous test case. If we are going to
+#	make any modifications to the spreadsheet, it would make sense that we would only add another testcase
+#
+#	This assumption allows us to cut down the time that it will take to run through all the test sets
+def runBenchmarksOnTestSets():
+	# get the name of all the test cases in the results folder
+	testSets = getSetsAndTestCases("configs")
+
+	
+	for testSet in testSets:
+		# check if the  directory for the test set already exist. 
+		# skip if it already exists
+		# create new directory if not
+		if not(os.path.isdir("../results/%s" %testSet[0])):
+			os.makedirs("../results/%s" %testSet[0])
+
+		# Loop through all the test cases in the current test set
+		for testCase in testSets[1]:
+
+			# check if the  directory for the test case already exist. 
+			# skip if it already exists
+			# create new directory if not
+			if not(os.path.isdir("../results/%s/%s" %(testSet[0],testCase))):
+				os.makedirs("../results/%s/%s" %(testSet[0],testCase))
+
+			# check if the directory for the current test case already has output files or not
+			#	if it already has files then we will not perform the simultion on this test case
+			#	this allows us to shorted the time between execution
+			for subdir,dirs,files in enumerate(os.walk("../results/%s/%s" %(testSet[0],testCase))):
+				# only perform the simulation if the test case folder has no files in it
+				if not files:
+					subprocess.call("./run_experiment.sh %s/%s" %(testSet[0],testCase),
+						shell=True)
+
+
+
+
+# Function: 
+#	This function will loop through all the folders in the /results/ folder and pull the desired data from each 
 #	of the benchmarks' output. 
 #	The resulting file will be placed under the /results/ folder under the name "results.csv". 
 #
@@ -25,17 +94,7 @@ import numpy as np
 
 def extractDataFromResults(ListOfParaToGet):
 	# get the name of all the test cases in the results folder
-	testSets = []
-	for index,(subdir,dirs,files) in enumerate(os.walk("../results/")):
-		if index == 0:
-			for i,folder in enumerate(dirs):
-				testSets.append([])
-				testSets[i].append(folder)
-
-				for j,(subdir2,dirs2,files2) in enumerate(os.walk("../results/%s" %folder)):
-					if j == 0:
-						testSets[i].append(dirs2)
-
+	testSets = getSetsAndTestCases("results")
 
 	# check if the  directory for the test case already exist. 
 	# skip if it already exists
@@ -177,79 +236,9 @@ def parseCSVIntoConfigs():
 
 
 
-def calculateGeometricMeans(inputDataFrame):
-
-	GeoMeansDF = pd.DataFrame()
-	GeoMeansDF["benchmarks"] = ["interger","floating point"]
-
-	# execution time = [2500000 x clock cycle (ps)] / sim_IPC
-	inputDataFrame["execution time (ms)"] = ((inputDataFrame["clock cycle (ps)"] * pow(10,-9)) * 2500000) / inputDataFrame["sim_IPC"]
-
-	# Each test cases has 6 benchmarks so if we divide the length of the dataframe
-	#	by 6 then we will be left with the number of test cases. This will allow us
-	#	to slice to dataFrame to get the testcase that we want 
-	for i in range(1,len(inputDataFrame.index)/6+1):
-		# initialized variables for our geometric means
-		intergerGM = 0
-		floatingGM = 0
-		# Slice the dataFrame to get the testcase that we want
-		offsetDataFrame = inputDataFrame[(i-1)*6:i*6]
-		# Change the index of the offset DF
-		offsetDataFrame.index = range(0,6)
-
-		# take the product of all the exectiontime for the interger execution time
-		for index,intExeTime in enumerate(offsetDataFrame[:4]["execution time (ms)"]):
-			if index == 0:
-				intergerGM = intExeTime
-			else:
-				intergerGM *= intExeTime
-
-		# take the product of all the exectiontime for the floating point execution time
-		for index,floatExeTime in enumerate(offsetDataFrame[4:6]["execution time (ms)"]):
-			if index == 0:
-				floatingGM = floatExeTime
-			else:
-				floatingGM *= floatExeTime
-
-		# attached the new geometric means to the dataframe
-		GeoMeansDF[inputDataFrame.loc[(i-1)*6,"testcases"]] = [pow(intergerGM,1.0/4.0),pow(floatingGM,1.0/2.0)]
-
-	GeoMeansDF = GeoMeansDF.set_index("benchmarks")
-
-
-	return GeoMeansDF
-
-
-def generateGraphs():
-	# get the name of all the table sets in the table folder
-	tableSets = []
-	for index,(subdir,dirs,files) in enumerate(os.walk("../tables/")):
-		if index == 0:
-			tableSets = dirs
-	
-	# go through all the tables and generate the geomentric means graph for them
-	for table in tableSets:
-
-		if not(os.path.isdir("../graphs/%s" %table)):
-			os.makedirs("../graphs/%s" %table)
-
-		DF = pd.read_csv("../tables/%s/rawTable.csv" %(table))
-		geometricMeanDF = calculateGeometricMeans(DF)
-
-		geometricMeanDF.to_csv("../graphs/%s/%s_Table" %(table,table))
-		geometricMeanDF.plot(kind="line")
-		plt.title(table)
-		plt.xlabel("Benchmarks")
-		plt.ylabel("Execution Time (ms)")
-		plt.savefig("../graphs/%s/%s_Graph" %(table,table))
-
-
-
-
 def main():
 	parseCSVIntoConfigs()
 	extractDataFromResults(["sim_IPC"])
-	generateGraphs()
 
 
 if __name__ == "__main__":

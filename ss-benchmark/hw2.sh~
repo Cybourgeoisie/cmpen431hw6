@@ -1,0 +1,41 @@
+####################################################################
+# DIRECTION:
+#
+# - download the bash file to a directory
+# - The value of the variables SIMPLESCALAR, SSDIR, SIMOUTORDER, CFGNAME to match your system
+# - cd to the directory where the bash file is residing
+# - type "bash hw2.sh"
+# - The results should now be in their respective files. 
+####################################################################
+
+# Declaring variables
+SIMPLESCALAR=/home/software/simplesim
+SSDIR=/home/grads/qxn5005/Documents/simplescalar/ss-benchmark
+SIMOUTORDER=/home/software/simplesim/simplesim-3.0/sim-outorder
+CFGNAME="hw2.cfg"
+
+# Running bzip2
+cd $SSDIR/bzip2
+$SIMOUTORDER -config ../$CFGNAME bzip2_base.i386-m32-gcc42-nn dryer.jpg
+
+# Running mcf
+cd ../mcf
+$SIMOUTORDER -config ../$CFGNAME mcf_base.i386-m32-gcc42-nn inp.in
+
+# Running hmmr
+cd ../hmmer
+$SIMOUTORDER -config ../$CFGNAME hmmer_base.i386-m32-gcc42-nn bombesin.hmm
+
+# Running sjeng
+cd ../sjeng
+$SIMOUTORDER -config ../$CFGNAME sjeng_base.i386-m32-gcc42-nn test.txt
+
+# Running milc
+cd ../milc
+$SIMOUTORDER -config ../$CFGNAME milc_base.i386-m32-gcc42-nn < su3imp.in
+
+# Running equake
+cd ../equake
+$SIMOUTORDER -config ../$CFGNAME equake_base.i386-m32-gcc42-nn < inp.in > inp.out
+
+
