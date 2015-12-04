@@ -39,6 +39,6 @@ test,changeBpred
 issue:wrongpath,true
 bpred,taken
 test,changeruu
-ruu:size,6
+ruu:size,4
 issue:inorder,false
 issue:width,4
