@@ -71,11 +71,15 @@ def generateGraphs():
 		geometricMeanDF = calculateGeometricMeans(DF)
 
 		geometricMeanDF.to_csv("../graphs/%s/%s_Table.csv" %(table,table))
+		
 		geometricMeanDF.plot(kind="line")
+
 		plt.title(table)
-		plt.xlabel("Benchmarks")
-		plt.ylabel("Execution Time (ms)")
-		plt.savefig("../graphs/%s/%s_Graph" %(table,table))
+		plt.xlabel("Benchmarks",size=10)
+		plt.ylabel("Execution Time (ms)",size=10)
+		plt.legend(prop={'size':8})
+
+		plt.savefig("../graphs/%s/%s_Graph.JPEG" %(table,table),dpi=300)
 
 
 def main():

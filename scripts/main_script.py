@@ -79,100 +79,6 @@ def runBenchmarksOnTestSets():
 				
 
 
-
-
-# Function: 
-#	This function will loop through all the folders in the /results/ folder and pull the desired data from each 
-#	of the benchmarks' output. 
-#	The resulting file will be placed under the /results/ folder under the name "results.csv". 
-#
-# Input: The function takes a list that has the list of parameters that the function will need to pull from the benchmarks. 
-#
-# Example: extractDataFromResults(["sim_IPC","ifq_latency"])
-#	will pull all the "sim_IPC" and "ifq_latency" results from all the benchmarks and place it in a single results.cvs file
-#
-# Note: if a results.csv file already exits in the ../results/ folder then the function will overwrite the previous file. 
-
-def extractDataFromResults(ListOfParaToGet):
-	# get the name of all the test cases in the results folder
-	testSets = getSetsAndTestCases("results")
-
-	# check if the  directory for the test case already exist. 
-	# skip if it already exists
-	# create new directory if not
-	for testSet in testSets:
-		if not(os.path.isdir("../tables/%s" %testSet[0])):
-			os.makedirs("../tables/%s" %testSet[0])
-
-		# open the results file in the result folder.
-		# Note: this will overwrite the previous value in the result file if the file already exists
-		with open("../tables/%s/rawTable.csv" %testSet[0],"w") as f:
-
-			# write the header row
-			f.write("testcases,benchmarks")
-			for item in ListOfParaToGet:
-				f.write(",%s" %item)
-			f.write(",clock cycle (ps)\n")
-
-			# Note: the order of this list matters. The first 3 will be the interger benchmarks and the last 2 will be the 
-			#	floating point benchmarks
-			benchmarks = ["bzip2","hmmer","mcf","sjeng","milc","equake"]
-
-			# now we have to loop through all the folder in the test set and pull the results out
-			for folder in testSet[1]:
-
-				# go through all the benchmarks on each of the folder
-				for benchmark in benchmarks:
-					f.write("%s,%s" %(folder,benchmark))
-
-					# variables for determining clock cycle
-					static = True
-					issueWidth = 1
-
-					# go though all the lines in the benchmark output and put all the results that matches the parameter that we want
-					for line in fileinput.input("../results/%s/%s/%s.out" %(testSet[0],folder,benchmark), inplace=0 , backup=0):
-						for parameter in ListOfParaToGet:
-							# if the line matches the parameter that we want then extract the numberical value
-							if re.match("%s\s+.+" %parameter,line):
-								# once the line is split, the result that we want is index 1 of the list
-								f.write(",%s" %re.split("\s+",line)[1])
-
-						# pull the value of the issue:inorder and issue:width to determine the clock cycle
-						if re.match("(?:(-issue:inorder)|(-issue:width))",line):
-							splitLine = re.split("\s+",line)
-							if splitLine[0] == "-issue:inorder":
-								if splitLine[1] == "false":
-									static = False 
-							else:
-								issueWidth = int(splitLine[1])
-
-					# use the value of static and issueWidth to determine the clock cycle
-					if static == True:
-						if issueWidth == 1:
-							f.write(",100")
-						elif issueWidth == 2:
-							f.write(",115")
-						elif issueWidth == 3:
-							f.write(",130")
-						elif issueWidth == 4:
-							f.write(",145")
-						else:
-							raise EnvironmentError("Invalid machine issue:width")
-					else:
-						if issueWidth == 2:
-							f.write(",125")
-						elif issueWidth == 4:
-							f.write(",160")
-						elif issueWidth == 8:
-							f.write(",195")
-						else:
-							raise EnvironmentError("Invalid machine issue:width")
-
-					# we are done with a single benchmark so we need to move to a new line
-					f.write("\n")
-		f.close()
-
-
 # This function will go though all the test cases that are in the cvs file and create a config file and folder
 # 	for each of the test cases. 
 # Important assumption: if the folder for the test case already exists then the function will assume that the config file is already 
@@ -236,6 +142,98 @@ def parseCSVIntoConfigs():
 					print (line.strip("\n"))
 
 
+
+# Function: 
+#	This function will loop through all the folders in the /results/ folder and pull the desired data from each 
+#	of the benchmarks' output. 
+#	The resulting file will be placed under the /results/ folder under the name "results.csv". 
+#
+# Input: The function takes a list that has the list of parameters that the function will need to pull from the benchmarks. 
+#
+# Example: extractDataFromResults(["sim_IPC","ifq_latency"])
+#	will pull all the "sim_IPC" and "ifq_latency" results from all the benchmarks and place it in a single results.cvs file
+#
+# Note: if a results.csv file already exits in the ../results/ folder then the function will overwrite the previous file. 
+
+def extractDataFromResults(ListOfParaToGet):
+	# get the name of all the test cases in the results folder
+	testSets = getSetsAndTestCases("results")
+
+	# check if the  directory for the test case already exist. 
+	# skip if it already exists
+	# create new directory if not
+	for testSet in testSets:
+		if not(os.path.isdir("../tables/%s" %testSet[0])):
+			os.makedirs("../tables/%s" %testSet[0])
+
+		# open the results file in the result folder.
+		# Note: this will overwrite the previous value in the result file if the file already exists
+		with open("../tables/%s/rawTable.csv" %testSet[0],"w") as f:
+
+			# write the header row
+			f.write("testcases,benchmarks")
+			for item in ListOfParaToGet:
+				f.write(",%s" %item)
+			f.write(",clock cycle (ps)\n")
+
+			# Note: the order of this list matters. The first 3 will be the interger benchmarks and the last 2 will be the 
+			#	floating point benchmarks
+			benchmarks = ["bzip2","hmmer","mcf","sjeng","milc","equake"]
+
+			# now we have to loop through all the folder in the test set and pull the results out
+			for folder in testSet[1]:
+
+				# go through all the benchmarks on each of the folder
+				for benchmark in benchmarks:
+					f.write("%s,%s" %(folder,benchmark))
+
+					# variables for determining clock cycle
+					static = True
+					issueWidth = 1
+
+					# go though all the lines in the benchmark output and put all the results that matches the parameter that we want
+					for parameter in ListOfParaToGet:
+						for line in fileinput.input("../results/%s/%s/%s.out" %(testSet[0],folder,benchmark), inplace=0 , backup=0):
+							# if the line matches the parameter that we want then extract the numberical value
+							if re.match("%s\s+.+" %parameter,line):
+								# once the line is split, the result that we want is index 1 of the list
+								f.write(",%s" %re.split("\s+",line)[1])
+
+					for line in fileinput.input("../results/%s/%s/%s.out" %(testSet[0],folder,benchmark), inplace=0 , backup=0):
+						# pull the value of the issue:inorder and issue:width to determine the clock cycle
+						if re.match("(?:(-issue:inorder)|(-issue:width))",line):
+							splitLine = re.split("\s+",line)
+							if splitLine[0] == "-issue:inorder":
+								if splitLine[1] == "false":
+									static = False 
+							else:
+								issueWidth = int(splitLine[1])
+
+					# use the value of static and issueWidth to determine the clock cycle
+					if static == True:
+						if issueWidth == 1:
+							f.write(",100")
+						elif issueWidth == 2:
+							f.write(",115")
+						elif issueWidth == 3:
+							f.write(",130")
+						elif issueWidth == 4:
+							f.write(",145")
+						else:
+							raise EnvironmentError("Invalid machine issue:width")
+					else:
+						if issueWidth == 2:
+							f.write(",125")
+						elif issueWidth == 4:
+							f.write(",160")
+						elif issueWidth == 8:
+							f.write(",195")
+						else:
+							raise EnvironmentError("Invalid machine issue:width")
+
+					# we are done with a single benchmark so we need to move to a new line
+					f.write("\n")
+		f.close()
 
 def main():
 	parseCSVIntoConfigs()
