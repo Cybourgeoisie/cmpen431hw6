@@ -47,12 +47,18 @@ def getSetsAndTestCases(rootFolderName):
 #	make any modifications to the spreadsheet, it would make sense that we would only add another testcase
 #
 #	This assumption allows us to cut down the time that it will take to run through all the test sets
-def runBenchmarksOnTestSets():
+def runBenchmarksOnTestSets(desiredTestSets = []):
 	# get the name of all the test cases in the results folder
 	testSets = getSetsAndTestCases("configs")
 
 	
 	for testSet in testSets:
+
+		# Only run for desired test sets, if provided
+		if (desiredTestSets is not []):
+			if testSet[0] not in desiredTestSets:
+				continue;
+
 		# check if the  directory for the test set already exist. 
 		# skip if it already exists
 		# create new directory if not
@@ -155,7 +161,7 @@ def parseCSVIntoConfigs():
 #
 # Note: if a results.csv file already exits in the ../results/ folder then the function will overwrite the previous file. 
 
-def extractDataFromResults(ListOfParaToGet):
+def extractDataFromResults(ListOfParaToGet, desiredTestSets = []):
 	# get the name of all the test cases in the results folder
 	testSets = getSetsAndTestCases("results")
 
@@ -163,6 +169,12 @@ def extractDataFromResults(ListOfParaToGet):
 	# skip if it already exists
 	# create new directory if not
 	for testSet in testSets:
+
+		# Only run for desired test sets, if provided
+		if (desiredTestSets is not []):
+			if testSet[0] not in desiredTestSets:
+				continue;
+
 		if not(os.path.isdir("../tables/%s" %testSet[0])):
 			os.makedirs("../tables/%s" %testSet[0])
 
@@ -176,7 +188,7 @@ def extractDataFromResults(ListOfParaToGet):
 				f.write(",%s" %item)
 			f.write(",clock cycle (ps)\n")
 
-			# Note: the order of this list matters. The first 3 will be the interger benchmarks and the last 2 will be the 
+			# Note: the order of this list matters. The first 3 will be the integer benchmarks and the last 2 will be the 
 			#	floating point benchmarks
 			benchmarks = ["bzip2","hmmer","mcf","sjeng","milc","equake"]
 
@@ -215,8 +227,6 @@ def extractDataFromResults(ListOfParaToGet):
 							f.write(",100")
 						elif issueWidth == 2:
 							f.write(",115")
-						elif issueWidth == 3:
-							f.write(",130")
 						elif issueWidth == 4:
 							f.write(",145")
 						else:

@@ -18,13 +18,12 @@ def combineParameters(params):
 # Validate permutations of proposed settings
 def validateSettings(settings):
 	
-	if 'res:ialu' in settings and 'res:imult' in settings:
-		if int(settings['res:ialu']) + int(settings['res:imult']) > 2 * int(settings['issue:width']):
-			return False
+	if int(settings['res:ialu']) + int(settings['res:imult']) > 2 * int(settings['issue:width']):
+		return False
 
-	if 'res:fpalu' in settings and 'res:fpmult' in settings:
-		if int(settings['res:fpalu']) + int(settings['res:fpmult']) > 2 * int(settings['issue:width']):
-			return False
+
+	if int(settings['res:fpalu']) + int(settings['res:fpmult']) > 2 * int(settings['issue:width']):
+		return False
 
 	return True
 
@@ -40,6 +39,10 @@ def getSettingsFromFile(filename):
 		if line.startswith('-') == True:
 			splitLine = re.split("\s+", line)
 			settings[re.sub('-','',splitLine[0])] = splitLine[1]
+
+			# The above works for everything except mem:lat, which has two parameters separated by a space
+			if splitLine[0] == "-mem:lat":
+				settings[re.sub('-','',splitLine[0])] += " " + splitLine[2]
 
 	return settings
 
@@ -102,7 +105,7 @@ def saveConfig(testSet, title, settings):
 	# write the config
 	configName = "../configs/%s/%s/config.cfg" %(testSet,title)
 	with open(configName, "w") as configFile:
-		configFile.writelines('-{} {}\r\n'.format(k,v) for k, v in settings.items())	
+		configFile.writelines('-{0} {1}\n'.format(k,v) for k, v in settings.items())	
 
 	return configName
 

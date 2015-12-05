@@ -14,7 +14,7 @@ import numpy as np
 def calculateGeometricMeans(inputDataFrame):
 
 	GeoMeansDF = pd.DataFrame()
-	GeoMeansDF["benchmarks"] = ["interger","floating point"]
+	GeoMeansDF["benchmarks"] = ["integer","floating point"]
 
 	# execution time = [2500000 x clock cycle (ps)] / sim_IPC
 	inputDataFrame["execution time (ms)"] = ((inputDataFrame["clock cycle (ps)"] * pow(10,-9)) * 2500000) / inputDataFrame["sim_IPC"]
@@ -24,19 +24,19 @@ def calculateGeometricMeans(inputDataFrame):
 	#	to slice to dataFrame to get the testcase that we want 
 	for i in range(1,len(inputDataFrame.index)/6+1):
 		# initialized variables for our geometric means
-		intergerGM = 0
+		integerGM = 0
 		floatingGM = 0
 		# Slice the dataFrame to get the testcase that we want
 		offsetDataFrame = inputDataFrame[(i-1)*6:i*6]
 		# Change the index of the offset DF
 		offsetDataFrame.index = range(0,6)
 
-		# take the product of all the exectiontime for the interger execution time
+		# take the product of all the exectiontime for the integer execution time
 		for index,intExeTime in enumerate(offsetDataFrame[:4]["execution time (ms)"]):
 			if index == 0:
-				intergerGM = intExeTime
+				integerGM = intExeTime
 			else:
-				intergerGM *= intExeTime
+				integerGM *= intExeTime
 
 		# take the product of all the exectiontime for the floating point execution time
 		for index,floatExeTime in enumerate(offsetDataFrame[4:6]["execution time (ms)"]):
@@ -46,7 +46,7 @@ def calculateGeometricMeans(inputDataFrame):
 				floatingGM *= floatExeTime
 
 		# attached the new geometric means to the dataframe
-		GeoMeansDF[inputDataFrame.loc[(i-1)*6,"testcases"]] = [pow(intergerGM,1.0/4.0),pow(floatingGM,1.0/2.0)]
+		GeoMeansDF[inputDataFrame.loc[(i-1)*6,"testcases"]] = [pow(integerGM,1.0/4.0),pow(floatingGM,1.0/2.0)]
 
 	GeoMeansDF = GeoMeansDF.set_index("benchmarks")
 
@@ -79,7 +79,7 @@ def generateGraphs():
 		plt.ylabel("Execution Time (ms)",size=10)
 		plt.legend(prop={'size':8})
 
-		plt.savefig("../graphs/%s/%s_Graph.JPEG" %(table,table),dpi=300)
+		plt.savefig("../graphs/%s/%s_Graph.jpeg" %(table,table),dpi=300)
 
 
 def main():
