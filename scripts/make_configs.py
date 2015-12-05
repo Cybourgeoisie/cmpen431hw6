@@ -17,11 +17,24 @@ def combineParameters(params):
 
 # Validate permutations of proposed settings
 def validateSettings(settings):
-	
+
+	# Constraint: number of integer ALU's / mult/div's must be <= MAX_INSTS_PER_CLASS
+	if int(settings['res:ialu']) > 8 or int(settings['res:imult']) > 8:
+		return False;
+
+	# Constraint: number of memory system ports must be <= MAX_INSTS_PER_CLASS
+	if int(settings['res:memport']) > 8:
+		return False;
+
+	# Constraint: number of FP ALU's / mult/div's must be <= MAX_INSTS_PER_CLASS
+	if int(settings['res:fpalu']) > 8 or int(settings['res:fpmult']) > 8:
+		return False;
+
+	# Project constraint: imult + ialu <= 2 * issue:width
 	if int(settings['res:ialu']) + int(settings['res:imult']) > 2 * int(settings['issue:width']):
 		return False
 
-
+	# Project constraint: fpmult + fpalu <= 2 * issue:width
 	if int(settings['res:fpalu']) + int(settings['res:fpmult']) > 2 * int(settings['issue:width']):
 		return False
 
