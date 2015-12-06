@@ -7,31 +7,35 @@ import itertools
 # See experiment_alu_mult.py in this folder for an example of usage
 #
 
-
-
-
 # Validate permutations of proposed settings
 def validateSettings(settings):
 
 	if not validateL1Cache(settings):
+		print "Failed L1 cache validation."
 		return False
 
-	if not validateL2Cache(settings)
+	if not validateL2Cache(settings):
+		print "Failed L2 cache validation."
 		return False
 
 	if not validateTlb(settings):
+		print "Failed TLB validation."
 		return False
 
 	if not validateBped(settings):
+		print "Failed BPred validation."
 		return False
 
 	if not validateFunctionalUnits(settings):
+		print "Failed functional unit validation."
 		return False
 
 	if not validateMemory(settings):
+		print "Failed memory validation."
 		return False
 	
 	if not validateMisc(settings):
+		print "Failed misc validation."
 		return False
 
 
@@ -41,7 +45,7 @@ def validateSettings(settings):
 def validateL1Cache(settings):
 
 	il1 = re.split(':',settings['cache:il1'])
-	dli = re.split(':',settings['cache:dl1'])
+	dl1 = re.split(':',settings['cache:dl1'])
 
 	# Constraint: il1 block size must match the ifq size and dl1 block size
 	if ( int(il1[2]) != int(settings['fetch:ifqsize']) * 8 ) or ( int(il1[2]) != int(dl1[2]) ):
@@ -158,19 +162,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 7
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 8
 	if int(ul2[3]) == 1:
-			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 4) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 4) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 5) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 5) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 6) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 6) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 7) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 7) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 8) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 	 #  * 2-way set associative:
 	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 5
@@ -179,19 +183,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 8
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 9
 	if int(ul2[3]) == 2:
-			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 5) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 5) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 6) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 6) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 7) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 7) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 8) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 9) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 9) ) ):
 				return False
 	 #  * 4-way set associative:
 	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 6
@@ -200,19 +204,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 9
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 10
 	if int(ul2[3]) == 4:
-			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 6) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 6) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 7) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 7) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 8) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 9) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 9) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 10) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 10) ) ):
 				return False
 	 #  * 8-way set associative:
 	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 7
@@ -221,19 +225,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 10
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 11
 	if int(ul2[3]) == 8:
-			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 7) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 7) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 8) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 9) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 9) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 10) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 10) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 11) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 11) ) ):
 				return False
 	 #  * 16-way set associative:
 	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 8
@@ -242,19 +246,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 11
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 12
 	if int(ul2[3]) == 16:
-			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 8) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 9) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 9) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 10) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 10) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 11) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 11) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 12) ):
+			if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 12) ) ):
 				return False
 
 
@@ -287,15 +291,15 @@ def validateMisc(settings):
 		return False
 
 	# Constraint: decode:width <= fetch:ifqsize; decode:width = 1, 2, 4, 8
-	if (int(settings['decode:width']) > int(settings['fetch:ifqsize'])) or (not settings['decode:width'] in [1,2,4,8]):
+	if (int(settings['decode:width']) > int(settings['fetch:ifqsize'])) or (not int(settings['decode:width']) in [1,2,4,8]):
 		return False
 
 	# Constraint: ruu:size - no more than 8 times the issue width, max 64
-	if (int(settings['ruu:size']) > int(settings['issue:width']) * 8) or (int(settings['ruu:size']) > 64):
+	if (int(settings['ruu:size']) > int(settings['issue:width']) * 8):
 		return False
 
 	# Constraint: lsq:size - no more than 4 times the issue width, max 32
-	if (int(settings['lsq:size']) > int(settings['issue:width']) * 4) or (int(settings['lsq:size']) > 32):
+	if (int(settings['lsq:size']) > int(settings['issue:width']) * 4):
 		return False
 
 	return True
@@ -309,7 +313,7 @@ def validateBped(settings):
 		return False
 
 	# Constraint: bpred:ras between 0 and 16, inclusive
-	if not (int(settings['bpred:ras']) in range(0,17)):
+	if not (int(settings['bpred:ras']) in range(1,17)):
 		return False 
 
 	# Constraint: bpred:btb max of 1024 sets, 1-, 2-, 4-way
@@ -324,7 +328,7 @@ def validateBped(settings):
 def validateMemory(settings):
 
 	# Constraint: res:memport = 1, 2
-	if not ( int(settings['res:memport']) == 1 or int(settings['res:memport']) == 1 ):
+	if not ( int(settings['res:memport']) == 1 or int(settings['res:memport']) == 2 ):
 		return False;
 
 	# Constraint: mem:width = 8 , 16
@@ -332,6 +336,7 @@ def validateMemory(settings):
 		return False;
 
 	return True
+
 
 # Validate res:imult, res:ialu, res:falu, res:fpmult
 def validateFunctionalUnits(settings):
@@ -353,6 +358,7 @@ def validateFunctionalUnits(settings):
 		return False
 
 	return True
+
 
 # Generate all permutations of dynamic parameters
 def combineParameters(params):
@@ -381,7 +387,7 @@ def getSettingsFromFile(filename):
 
 
 # Create the configuration files for a set of dynamic and static parameters
-def makeConfigs(testName, dynamicParams, staticParams):
+def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {}):
 	
 	# Make the baseline config
 	settings = getSettingsFromFile('../configs/baseline.cfg')
@@ -400,11 +406,14 @@ def makeConfigs(testName, dynamicParams, staticParams):
 		settings.update(staticParams)
 
 		# Run the tests for all issue widths
-		if (superscalar == "static"):
-			issue_widths = [1,2,4]
-		elif (superscalar == "dynamic"):
-			issue_widths = [2,4,8]
-		
+		if overrideIssueWidths is not {} and superscalar in overrideIssueWidths:
+			issue_widths = overrideIssueWidths[superscalar]
+		else:
+			if (superscalar == "static"):
+				issue_widths = [1,2,4]
+			elif (superscalar == "dynamic"):
+				issue_widths = [2,4,8]
+
 		# For each available issue width...
 		for issue_width in issue_widths:
 			

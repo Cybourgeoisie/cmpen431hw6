@@ -16,8 +16,19 @@ def calculateGeometricMeans(inputDataFrame):
 	GeoMeansDF = pd.DataFrame()
 	GeoMeansDF["benchmarks"] = ["integer","floating point"]
 
-	# execution time = [2500000 x clock cycle (ps)] / sim_IPC
-	inputDataFrame["execution time (ms)"] = ((inputDataFrame["clock cycle (ps)"] * pow(10,-9)) * 2500000) / inputDataFrame["sim_IPC"]
+	# Get the baseline runtimes
+	# int baseline,bzip2, 0.1992,100
+	# int baseline,hmmer, 0.4625,100
+	# int baseline,mcf,   0.3186,100
+	# int baseline,sjeng, 0.2684,100
+	# fp  baseline,milc,  0.4234,100
+	# fp  baseline,equake,0.2696,100
+	integerGMBaseline  =  100 * 2500000 / 0.1992 * pow(10,-6)
+	integerGMBaseline  *= 100 * 2500000 / 0.4625 * pow(10,-6)
+	integerGMBaseline  *= 100 * 2500000 / 0.3186 * pow(10,-6)
+	integerGMBaseline  *= 100 * 2500000 / 0.2684 * pow(10,-6)
+	floatingGMBaseline =  100 * 2500000 / 0.4234 * pow(10,-6)
+	floatingGMBaseline *= 100 * 2500000 / 0.2696 * pow(10,-6)
 
 	# Each test cases has 6 benchmarks so if we divide the length of the dataframe
 	#	by 6 then we will be left with the number of test cases. This will allow us
@@ -32,18 +43,16 @@ def calculateGeometricMeans(inputDataFrame):
 		offsetDataFrame.index = range(0,6)
 
 		# take the product of all the exectiontime for the integer execution time
-		for index,intExeTime in enumerate(offsetDataFrame[:4]["execution time (ms)"]):
-			if index == 0:
-				integerGM = intExeTime
-			else:
-				integerGM *= intExeTime
+		integerGM = 1
+		for index,intExeTime in enumerate(offsetDataFrame[:4]["execution time (us)"]):
+			integerGM *= intExeTime
+		integerGM /= integerGMBaseline
 
 		# take the product of all the exectiontime for the floating point execution time
-		for index,floatExeTime in enumerate(offsetDataFrame[4:6]["execution time (ms)"]):
-			if index == 0:
-				floatingGM = floatExeTime
-			else:
-				floatingGM *= floatExeTime
+		floatingGM = 1
+		for index,floatExeTime in enumerate(offsetDataFrame[4:6]["execution time (us)"]):
+			floatingGM *= floatExeTime
+		floatingGM /= floatingGMBaseline
 
 		# attached the new geometric means to the dataframe
 		GeoMeansDF[inputDataFrame.loc[(i-1)*6,"testcases"]] = [pow(integerGM,1.0/4.0),pow(floatingGM,1.0/2.0)]
@@ -76,7 +85,7 @@ def generateGraphs():
 
 		plt.title(table)
 		plt.xlabel("Benchmarks",size=10)
-		plt.ylabel("Execution Time (ms)",size=10)
+		plt.ylabel("Execution Time (us)",size=10)
 		plt.legend(prop={'size':8})
 
 		plt.savefig("../graphs/%s/%s_Graph.jpeg" %(table,table),dpi=300)

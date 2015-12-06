@@ -186,7 +186,7 @@ def extractDataFromResults(ListOfParaToGet, desiredTestSets = []):
 			f.write("testcases,benchmarks")
 			for item in ListOfParaToGet:
 				f.write(",%s" %item)
-			f.write(",clock cycle (ps)\n")
+			f.write(",clock cycle (ps),execution time (us)\n")
 
 			# Note: the order of this list matters. The first 3 will be the integer benchmarks and the last 2 will be the 
 			#	floating point benchmarks
@@ -202,44 +202,63 @@ def extractDataFromResults(ListOfParaToGet, desiredTestSets = []):
 					# variables for determining clock cycle
 					static = True
 					issueWidth = 1
+					clockCycle = 100
+					simIPC = 1
 
-					# go though all the lines in the benchmark output and put all the results that matches the parameter that we want
-					for parameter in ListOfParaToGet:
-						for line in fileinput.input("../results/%s/%s/%s.out" %(testSet[0],folder,benchmark), inplace=0 , backup=0):
-							# if the line matches the parameter that we want then extract the numberical value
-							if re.match("%s\s+.+" %parameter,line):
-								# once the line is split, the result that we want is index 1 of the list
-								f.write(",%s" %re.split("\s+",line)[1])
+					# Get all data from result file
+					with open("../results/%s/%s/%s.out" %(testSet[0],folder,benchmark), 'r') as testFile:
+						
+						# File content
+						content = testFile.read()
 
-					for line in fileinput.input("../results/%s/%s/%s.out" %(testSet[0],folder,benchmark), inplace=0 , backup=0):
-						# pull the value of the issue:inorder and issue:width to determine the clock cycle
-						if re.match("(?:(-issue:inorder)|(-issue:width))",line):
-							splitLine = re.split("\s+",line)
-							if splitLine[0] == "-issue:inorder":
-								if splitLine[1] == "false":
-									static = False 
-							else:
-								issueWidth = int(splitLine[1])
+						# Get all optional parameters
+						for parameter in ListOfParaToGet:
+							matchObj = re.search(r"%s\s+([0-9.a-z]*)" %parameter, content)
+							if (matchObj != None):
+								f.write(",%s" %matchObj.group(1))
+								if (parameter == 'sim_IPC'):
+									simIPC = float(matchObj.group(1))
+
+						if not simIPC:
+							matchObj = re.search(r"sim_IPC\s+([0-9.a-z]*)", content)
+							if (matchObj != None):
+								simIPC = float(matchObj.group(1))
+
+						# Get static/dynamic info
+						static = True
+						matchObj = re.search(r"-issue:inorder\s+([0-9.a-z]*)", content)
+						if (matchObj != None and matchObj.group(1) == "false"):
+							static = False
+
+						matchObj = re.search(r"-issue:width\s+([0-9.a-z]*)", content)
+						if (matchObj != None):
+							issueWidth = int(matchObj.group(1))
 
 					# use the value of static and issueWidth to determine the clock cycle
 					if static == True:
 						if issueWidth == 1:
-							f.write(",100")
+							clockCycle = 100
 						elif issueWidth == 2:
-							f.write(",115")
+							clockCycle = 115
 						elif issueWidth == 4:
-							f.write(",145")
+							clockCycle = 145
 						else:
 							raise EnvironmentError("Invalid machine issue:width")
 					else:
 						if issueWidth == 2:
-							f.write(",125")
+							clockCycle = 125
 						elif issueWidth == 4:
-							f.write(",160")
+							clockCycle = 160
 						elif issueWidth == 8:
-							f.write(",195")
+							clockCycle = 195
 						else:
 							raise EnvironmentError("Invalid machine issue:width")
+
+					# Calculate the execution time, then store both the clock cycle and exec time
+					execTime = (clockCycle * 2500000 / simIPC) * pow(10,-6)
+
+					# Write the clock cylce and exec time
+					f.write(",%s,%s" %(clockCycle,execTime))
 
 					# we are done with a single benchmark so we need to move to a new line
 					f.write("\n")
