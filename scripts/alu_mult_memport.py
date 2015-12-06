@@ -1,6 +1,3 @@
-import sys
-sys.path.append('../')
-
 from make_configs import makeConfigs
 from main_script import runBenchmarksOnTestSets, extractDataFromResults
 
