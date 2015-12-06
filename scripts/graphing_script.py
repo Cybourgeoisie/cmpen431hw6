@@ -11,8 +11,13 @@ import numpy as np
 
 
 
+# this function will return a tuple oft dataframes
+#	1st tuple = the DF with both the integer and floating point GM
+#	2nd tuple = the DF with the integer GM sorted in descending order
+#	3rd tuple = the DF with the floating point GM sorted in descending order
 def calculateGeometricMeans(inputDataFrame):
 
+	# DF with both integer and floating point
 	GeoMeansDF = pd.DataFrame()
 	GeoMeansDF["benchmarks"] = ["integer","floating point"]
 
@@ -29,6 +34,14 @@ def calculateGeometricMeans(inputDataFrame):
 	integerGMBaseline  *= 100 * 2500000 / 0.2684 * pow(10,-6)
 	floatingGMBaseline =  100 * 2500000 / 0.4234 * pow(10,-6)
 	floatingGMBaseline *= 100 * 2500000 / 0.2696 * pow(10,-6)
+
+	# DF with integer 
+	GeoMeansDF_int = pd.DataFrame()
+	GeoMeansDF_int["benchmarks"] = ["execution time (us)"]
+
+	# DF with both integer and floating point
+	GeoMeansDF_float = pd.DataFrame()
+	GeoMeansDF_float["benchmarks"] = ["execution time (us)"]
 
 	# Each test cases has 6 benchmarks so if we divide the length of the dataframe
 	#	by 6 then we will be left with the number of test cases. This will allow us
@@ -54,13 +67,24 @@ def calculateGeometricMeans(inputDataFrame):
 			floatingGM *= floatExeTime
 		floatingGM /= floatingGMBaseline
 
+		integerGM = pow(integerGM,1.0/4.0)
+		floatingGM = pow(floatingGM,1.0/2.0)
+		testName = inputDataFrame.loc[(i-1)*6,"testcases"]
+
 		# attached the new geometric means to the dataframe
-		GeoMeansDF[inputDataFrame.loc[(i-1)*6,"testcases"]] = [pow(integerGM,1.0/4.0),pow(floatingGM,1.0/2.0)]
+		GeoMeansDF[testName] = [integerGM,floatingGM]
+		GeoMeansDF_float[testName] = [floatingGM]
+		GeoMeansDF_int[testName] = [integerGM]
+
 
 	GeoMeansDF = GeoMeansDF.set_index("benchmarks")
+	GeoMeansDF_int = GeoMeansDF_int.set_index("benchmarks")
+	GeoMeansDF_float = GeoMeansDF_float.set_index("benchmarks")
 
+	GeoMeansDF_int = GeoMeansDF_int.T.sort_values('execution time (us)',ascending=[0])
+	GeoMeansDF_float = GeoMeansDF_float.T.sort_values('execution time (us)',ascending=[0])
 
-	return GeoMeansDF
+	return (GeoMeansDF,GeoMeansDF_int,GeoMeansDF_float)
 
 
 def generateGraphs():
@@ -77,18 +101,27 @@ def generateGraphs():
 			os.makedirs("../graphs/%s" %table)
 
 		DF = pd.read_csv("../tables/%s/rawTable.csv" %(table))
-		geometricMeanDF = calculateGeometricMeans(DF)
 
-		geometricMeanDF.to_csv("../graphs/%s/%s_Table.csv" %(table,table))
+		geometricMeanDFTuple = calculateGeometricMeans(DF)
+
+		geometricMeanDFTuple[0].to_csv("../graphs/%s/%s_Table.csv" %(table,table))
 		
-		geometricMeanDF.plot(kind="line")
+		# generate the tables and graph for the integer and floating point benchmarks
+		for i in [1,2]:
+			benchmarkType = "int" if(i == 1) else "floating"
+			resultDF = geometricMeanDFTuple[i]
 
-		plt.title(table)
-		plt.xlabel("Benchmarks",size=10)
-		plt.ylabel("Execution Time (us)",size=10)
-		plt.legend(prop={'size':8})
+			resultDF.to_csv("../graphs/%s/%s_%s_Table.csv" %(table,table,benchmarkType))
 
-		plt.savefig("../graphs/%s/%s_Graph.jpeg" %(table,table),dpi=300)
+			# only plot the first 10 benchmarks with the highest execution time
+			resultDF[:10].plot(kind="line")
+			plt.title("%s_%s" %(table,benchmarkType))
+			plt.xlabel("Test Cases",size=5)
+			plt.xticks(rotation=70)
+			plt.ylabel("Execution Time (ms)",size=10)
+			plt.legend(prop={'size':8})
+			plt.tight_layout(pad=.2,)
+			plt.savefig("../graphs/%s/%s_%s_Graph.jpeg" %(table,table,benchmarkType),dpi=300)
 
 
 def main():
