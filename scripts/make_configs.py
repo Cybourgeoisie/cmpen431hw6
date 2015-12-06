@@ -7,35 +7,44 @@ import itertools
 # See experiment_alu_mult.py in this folder for an example of usage
 #
 
+debug = False
+
 # Validate permutations of proposed settings
 def validateSettings(settings):
 
 	if not validateL1Cache(settings):
-		print "Failed L1 cache validation."
+		if debug:
+			print "Failed L1 cache validation."
 		return False
 
 	if not validateL2Cache(settings):
-		print "Failed L2 cache validation."
+		if debug:
+			print "Failed L2 cache validation."
 		return False
 
 	if not validateTlb(settings):
-		print "Failed TLB validation."
+		if debug:
+			print "Failed TLB validation."
 		return False
 
 	if not validateBped(settings):
-		print "Failed BPred validation."
+		if debug:
+			print "Failed BPred validation."
 		return False
 
 	if not validateFunctionalUnits(settings):
-		print "Failed functional unit validation."
+		if debug:
+			print "Failed functional unit validation."
 		return False
 
 	if not validateMemory(settings):
-		print "Failed memory validation."
+		if debug:
+			print "Failed memory validation."
 		return False
 	
 	if not validateMisc(settings):
-		print "Failed misc validation."
+		if debug:
+			print "Failed misc validation."
 		return False
 
 
@@ -313,7 +322,7 @@ def validateBped(settings):
 		return False
 
 	# Constraint: bpred:ras between 0 and 16, inclusive
-	if not (int(settings['bpred:ras']) in range(1,17)):
+	if (int(settings['bpred:ras']) not in range(0,17)):
 		return False 
 
 	# Constraint: bpred:btb max of 1024 sets, 1-, 2-, 4-way
