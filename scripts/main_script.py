@@ -171,7 +171,7 @@ def extractDataFromResults(ListOfParaToGet, desiredTestSets = []):
 	for testSet in testSets:
 
 		# Only run for desired test sets, if provided
-		if (desiredTestSets is not []):
+		if (desiredTestSets != []):
 			if testSet[0] not in desiredTestSets:
 				continue;
 
