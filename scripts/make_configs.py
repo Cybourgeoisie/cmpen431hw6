@@ -388,8 +388,12 @@ def getSettingsFromFile(filename):
 			splitLine = re.split("\s+", line)
 			settings[re.sub('-','',splitLine[0])] = splitLine[1]
 
-			# The above works for everything except mem:lat, which has two parameters separated by a space
+			# The above works for everything except mem:lat,bpred:2lev, and bpred:btb, which has two parameters separated by a space
 			if splitLine[0] == "-mem:lat":
+				settings[re.sub('-','',splitLine[0])] += " " + splitLine[2]
+			if splitLine[0] == "-bpred:2lev":
+				settings[re.sub('-','',splitLine[0])] += " " + splitLine[2] + " " + splitLine[3] + " " + splitLine[4]
+			if splitLine[0] == "-bpred:btb":
 				settings[re.sub('-','',splitLine[0])] += " " + splitLine[2]
 
 	return settings
