@@ -8,6 +8,8 @@ import itertools
 #
 
 debug = False
+forceOptimal = False
+
 
 # Validate permutations of proposed settings
 def validateSettings(settings):
@@ -433,9 +435,6 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 			# Set the current issue width
 			settings['issue:width'] = issue_width
 
-			# Pre-defined optimizations - these values were determined to be optimal per tests
-			#settings = setOptimalVariables(superscalar, issue_width, settings)
-
 			# Run test for each set of combinations
 			for params in combinations:
 
@@ -443,7 +442,8 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 				settings.update(params)
 
 				# Set the absolute dependent variables
-				settings = setDependentVariables(settings)
+				if forceOptimal:
+					settings = setDependentVariables(settings)
 
 				# Validate this combination with the current setttings
 				if (validateSettings(settings) == False):
@@ -457,23 +457,26 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 
 
 def setOptimalVariables(superscalar, issue_width, settings):
-	'''
-	if superscalar == 'static' and issue_width == 2:
+
+	# Max out the RUU and LSQ
+	if superscalar == 'dynamic' and issue_width == 2:
 		settings['ruu:size'] = 16
 		settings['lsq:size'] = 8
-	elif superscalar == 'static' and issue_width == 4:
+	elif superscalar == 'dynamic' and issue_width == 4:
 		settings['ruu:size'] = 32
 		settings['lsq:size'] = 16
-	elif superscalar == 'static' and issue_width == 8:
+	elif superscalar == 'dynamic' and issue_width == 8:
 		settings['ruu:size'] = 64
 		settings['lsq:size'] = 32
-	'''
+
+	# Max out the mem:width
+	settings['mem:width'] = 16
 
 	# TEST: Make the dl1 and il1 caches equal
-	if 'cache:il1' in settings:
-		dl1cache = list(settings['cache:il1'])
-		dl1cache[0] = 'd' # Change from i to d
-		settings['cache:dl1'] = "".join(dl1cache)
+	#if 'cache:il1' in settings:
+	#	dl1cache = list(settings['cache:il1'])
+	#	dl1cache[0] = 'd' # Change from i to d
+	#	settings['cache:dl1'] = "".join(dl1cache)
 
 	return settings
 
