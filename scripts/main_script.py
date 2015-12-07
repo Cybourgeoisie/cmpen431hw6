@@ -217,12 +217,18 @@ def extractDataFromResults(ListOfParaToGet, desiredTestSets = []):
 							if (matchObj != None):
 								f.write(",%s" %matchObj.group(1))
 								if (parameter == 'sim_IPC'):
-									simIPC = float(matchObj.group(1))
+									try:
+										simIPC = float(matchObj.group(1))
+									except ValueError:
+										continue
 
 						if not simIPC:
 							matchObj = re.search(r"sim_IPC\s+([0-9.a-z]*)", content)
 							if (matchObj != None):
-								simIPC = float(matchObj.group(1))
+								try:
+									simIPC = float(matchObj.group(1))
+								except ValueError:
+									continue
 
 						# Get static/dynamic info
 						static = True
