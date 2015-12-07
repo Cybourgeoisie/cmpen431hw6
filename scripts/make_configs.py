@@ -192,19 +192,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 8
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 9
 	if int(ul2[3]) == 2:
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 5) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 65536 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 5) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 6) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 131072 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 6) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 7) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 262144 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 7) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 8) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 524288 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 9) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 9 or int(settings['cache:il2lat'] != 9) ) ):
 				return False
 	 #  * 4-way set associative:
 	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 6
@@ -213,19 +213,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 9
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 10
 	if int(ul2[3]) == 4:
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 6) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 65536 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 6) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 7) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 131072 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 7) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 8) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 262144 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 9) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 524288 ) and ( int(settings['cache:dl2lat'] != 9 or int(settings['cache:il2lat'] != 9) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 10) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 10 or int(settings['cache:il2lat'] != 10) ) ):
 				return False
 	 #  * 8-way set associative:
 	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 7
@@ -234,19 +234,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 10
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 11
 	if int(ul2[3]) == 8:
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 7) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 65536 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 7) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 8) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 131072 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 9) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 262144 ) and ( int(settings['cache:dl2lat'] != 9 or int(settings['cache:il2lat'] != 9) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 10) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 524288 ) and ( int(settings['cache:dl2lat'] != 10 or int(settings['cache:il2lat'] != 10) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 11) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 11 or int(settings['cache:il2lat'] != 11) ) ):
 				return False
 	 #  * 16-way set associative:
 	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 8
@@ -255,19 +255,19 @@ def validateL2Cache(settings):
 	 #    * ul2 = 512 KB means ul2 lat = 11
 	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 12
 	if int(ul2[3]) == 16:
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 65536 ) and ( int(settings['cache:dl2lat'] != 4 or int(settings['cache:il2lat'] != 8) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 65536 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 8) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 131072 ) and ( int(settings['cache:dl2lat'] != 5 or int(settings['cache:il2lat'] != 9) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 131072 ) and ( int(settings['cache:dl2lat'] != 9 or int(settings['cache:il2lat'] != 9) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 262144 ) and ( int(settings['cache:dl2lat'] != 6 or int(settings['cache:il2lat'] != 10) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 262144 ) and ( int(settings['cache:dl2lat'] != 10 or int(settings['cache:il2lat'] != 10) ) ):
 				return False
 			
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 524288 ) and ( int(settings['cache:dl2lat'] != 7 or int(settings['cache:il2lat'] != 11) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 524288 ) and ( int(settings['cache:dl2lat'] != 11 or int(settings['cache:il2lat'] != 11) ) ):
 				return False
 
-			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 8 or int(settings['cache:il2lat'] != 12) ) ):
+			if ( (int(ul2[1]) * int(ul2[2]) * int(ul2[3])) == 1048576 ) and ( int(settings['cache:dl2lat'] != 12 or int(settings['cache:il2lat'] != 12) ) ):
 				return False
 
 
