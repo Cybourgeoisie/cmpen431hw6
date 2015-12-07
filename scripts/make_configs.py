@@ -300,7 +300,7 @@ def validateMisc(settings):
 		return False
 
 	# Constraint: decode:width <= fetch:ifqsize; decode:width = 1, 2, 4, 8
-	if (int(settings['decode:width']) > int(settings['fetch:ifqsize'])) or (not int(settings['decode:width']) in [1,2,4,8]):
+	if (int(settings['decode:width']) > int(settings['fetch:ifqsize'])) or (not int(settings['decode:width']) in [1,2,4,8,16]):
 		return False
 
 	# Constraint: ruu:size - no more than 8 times the issue width, max 64
@@ -429,11 +429,17 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 			# Set the current issue width
 			settings['issue:width'] = issue_width
 
+			# Pre-defined optimizations - these values were determined to be optimal per tests
+			#settings = setOptimalVariables(superscalar, issue_width, settings)
+
 			# Run test for each set of combinations
 			for params in combinations:
 
 				# Include the current dynamic settings
 				settings.update(params)
+
+				# Set the absolute dependent variables
+				settings = setDependentVariables(settings)
 
 				# Validate this combination with the current setttings
 				if (validateSettings(settings) == False):
@@ -445,6 +451,236 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 				# Save the config settings to file
 				saveConfig(testName, configName, settings)
 
+
+def setOptimalVariables(superscalar, issue_width, settings):
+	if superscalar == 'static' and issue_width == 2:
+		settings['ruu:size'] = 16
+		settings['lsq:size'] = 8
+	elif superscalar == 'static' and issue_width == 4:
+		settings['ruu:size'] = 32
+		settings['lsq:size'] = 16
+	elif superscalar == 'static' and issue_width == 8:
+		settings['ruu:size'] = 64
+		settings['lsq:size'] = 32
+
+
+# For any dependent variables, set these automatically
+def setDependentVariables(settings):
+	# Cache latencies
+	settings = setCacheDependentVariables(settings)
+
+	return settings
+
+def setCacheDependentVariables(settings):
+	# Set cache values
+	il1 = re.split(':',settings['cache:il1'])
+	dl1 = re.split(':',settings['cache:dl1'])
+
+	if int(il1[3]) == 1:
+		if ( (int(il1[1]) * int(il1[2])) == 8192 ):
+			settings['cache:il1lat'] = 1
+
+		if ( (int(il1[1]) * int(il1[2])) == 16384 ):
+			settings['cache:il1lat'] = 2
+		
+		if ( (int(il1[1]) * int(il1[2])) == 32768 ):
+			settings['cache:il1lat'] = 3
+		
+		if ( (int(il1[1]) * int(il1[2])) == 65536 ):
+			settings['cache:il1lat'] = 4
+
+	if int(dl1[3]) == 1:
+		if ( (int(dl1[1]) * int(dl1[2])) == 8192 ):
+			settings['cache:dl1lat'] = 1
+
+		if ( (int(dl1[1]) * int(dl1[2])) == 16384 ):
+			settings['cache:dl1lat'] = 2
+		
+		if ( (int(dl1[1]) * int(dl1[2])) == 32768 ):
+			settings['cache:dl1lat'] = 3
+		
+		if ( (int(dl1[1]) * int(dl1[2])) == 65536 ):
+			settings['cache:dl1lat'] = 4
+
+
+	 #  * 2-way set associative:
+	 #    * il1 = 8 KB (baseline, minimum size) means il1lat = 2
+	 #    * il1 = 16 KB means il1lat = 3
+	 #    * il1 = 32 KB means il1lat = 4
+	 #    * il1 = 64 KB (maximum size) means il1lat = 5
+	if int(il1[3]) == 2:
+		if ( (int(il1[1]) * int(il1[2])) == 8192 ):
+			settings['cache:il1lat'] = 2
+
+		if ( (int(il1[1]) * int(il1[2])) == 16384 ):
+			settings['cache:il1lat'] = 3
+		
+		if ( (int(il1[1]) * int(il1[2])) == 32768 ):
+			settings['cache:il1lat'] = 4
+		
+		if ( (int(il1[1]) * int(il1[2])) == 65536 ):
+			settings['cache:il1lat'] = 5
+
+	if int(dl1[3]) == 2:
+		if ( (int(dl1[1]) * int(dl1[2])) == 8192 ):
+			settings['cache:dl1lat'] = 2
+
+		if ( (int(dl1[1]) * int(dl1[2])) == 16384 ):
+			settings['cache:dl1lat'] = 3
+		
+		if ( (int(dl1[1]) * int(dl1[2])) == 32768 ):
+			settings['cache:dl1lat'] = 4
+		
+		if ( (int(dl1[1]) * int(dl1[2])) == 65536 ):
+			settings['cache:dl1lat'] = 5
+
+	 #  * 4-way set associative:
+	 #    * il1 = 8 KB (baseline, minimum size) means il1lat = 3
+	 #    * il1 = 16 KB means il1lat = 4
+	 #    * il1 = 32 KB means il1lat = 5
+	 #    * il1 = 64 KB (maximum size) means il1lat = 6
+	if int(il1[3]) == 4:
+		if ( (int(il1[1]) * int(il1[2])) == 8192 ):
+			settings['cache:il1lat'] = 3
+
+		if ( (int(il1[1]) * int(il1[2])) == 16384 ):
+			settings['cache:il1lat'] = 4
+		
+		if ( (int(il1[1]) * int(il1[2])) == 32768 ):
+			settings['cache:il1lat'] = 5
+		
+		if ( (int(il1[1]) * int(il1[2])) == 65536 ):
+			settings['cache:il1lat'] = 6
+
+	if int(dl1[3]) == 4:
+		if ( (int(dl1[1]) * int(dl1[2])) == 8192 ):
+			settings['cache:dl1lat'] = 3
+
+		if ( (int(dl1[1]) * int(dl1[2])) == 16384 ):
+			settings['cache:dl1lat'] = 4
+		
+		if ( (int(dl1[1]) * int(dl1[2])) == 32768 ):
+			settings['cache:dl1lat'] = 5
+		
+		if ( (int(dl1[1]) * int(dl1[2])) == 65536 ):
+			settings['cache:dl1lat'] = 6
+
+
+	ul2 = re.split(':',settings['cache:dl2'])
+
+	# Constraint: 
+	 # * ul2 latencies are defined by the ul2 sizes:
+	 #  * Direct mapped:
+	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 4
+	 #    * ul2 = 128 KB means ul2lat = 5
+	 #    * ul2 = 256 KB means ul2lat = 6
+	 #    * ul2 = 512 KB means ul2 lat = 7
+	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 8
+	if int(ul2[3]) == 1:
+		if ( (int(ul2[1]) * int(ul2[2])) == 65536 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 4
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 131072 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 5
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 262144 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 6
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 524288 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 7
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 8
+
+	 #  * 2-way set associative:
+	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 5
+	 #    * ul2 = 128 KB means ul2lat = 6
+	 #    * ul2 = 256 KB means ul2lat = 7
+	 #    * ul2 = 512 KB means ul2 lat = 8
+	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 9
+	if int(ul2[3]) == 2:
+		if ( (int(ul2[1]) * int(ul2[2])) == 65536 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 5
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 131072 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 6
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 262144 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 7
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 524288 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 8
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 9
+
+	 #  * 4-way set associative:
+	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 6
+	 #    * ul2 = 128 KB means ul2lat = 7
+	 #    * ul2 = 256 KB means ul2lat = 8
+	 #    * ul2 = 512 KB means ul2 lat = 9
+	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 10
+	if int(ul2[3]) == 4:
+		if ( (int(ul2[1]) * int(ul2[2])) == 65536 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 6
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 131072 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 7
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 262144 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 8
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 524288 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 9
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 10
+
+	 #  * 8-way set associative:
+	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 7
+	 #    * ul2 = 128 KB means ul2lat = 8
+	 #    * ul2 = 256 KB means ul2lat = 9
+	 #    * ul2 = 512 KB means ul2 lat = 10
+	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 11
+	if int(ul2[3]) == 8:
+		if ( (int(ul2[1]) * int(ul2[2])) == 65536 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 7
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 131072 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 8
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 262144 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 9
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 524288 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 10
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 11
+
+	 #  * 16-way set associative:
+	 #    * ul2 = 64KB (baseline, minimum size) means ul2lat = 8
+	 #    * ul2 = 128 KB means ul2lat = 9
+	 #    * ul2 = 256 KB means ul2lat = 10
+	 #    * ul2 = 512 KB means ul2 lat = 11
+	 #    * ul2 = 1024 KB (1 MB) (maximum size) means ul2lat = 12
+	if int(ul2[3]) == 16:
+		if ( (int(ul2[1]) * int(ul2[2])) == 65536 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 8
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 131072 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 9
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 262144 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 10
+		
+		if ( (int(ul2[1]) * int(ul2[2])) == 524288 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 11
+
+		if ( (int(ul2[1]) * int(ul2[2])) == 1048576 ):
+			settings['cache:dl2lat'] = settings['cache:il2lat'] = 12
+
+	return settings
 
 
 # Accept a test set, a title, and the config text
