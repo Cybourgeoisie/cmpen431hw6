@@ -441,9 +441,12 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 				# Include the current dynamic settings
 				settings.update(params)
 
-				# Set the absolute dependent variables
+				# Set optimal values
 				if forceOptimal:
-					settings = setDependentVariables(settings)
+					settings = setOptimalVariables(superscalar, issue_width, settings)
+				
+				# Set the absolute dependent variables
+				settings = setDependentVariables(settings)
 
 				# Validate this combination with the current setttings
 				if (validateSettings(settings) == False):
