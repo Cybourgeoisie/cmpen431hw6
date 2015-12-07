@@ -1,5 +1,11 @@
 # Computer Architecture, Final Project
 
+## Links 
+* Spreadsheet for experiments
+** https://docs.google.com/spreadsheets/d/1Z-ALktnUdF6VdzY6vCkTMIA2cPbumE-xfZRn9Jjqhyo/edit?usp=sharing
+* Document for constraints
+** https://docs.google.com/document/d/11hCWEWhyZdoGpjgomASmgec-O5ciKBJH06uW5_oFrqo/edit?usp=sharing
+
 ## Contents
 * Project Workflow
 * Project Layout
