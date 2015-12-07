@@ -37,11 +37,11 @@ def calculateGeometricMeans(inputDataFrame):
 
 	# DF with integer 
 	GeoMeansDF_int = pd.DataFrame()
-	GeoMeansDF_int["benchmarks"] = ["execution time (us)"]
+	GeoMeansDF_int["benchmarks"] = ["geometric mean"]
 
 	# DF with both integer and floating point
 	GeoMeansDF_float = pd.DataFrame()
-	GeoMeansDF_float["benchmarks"] = ["execution time (us)"]
+	GeoMeansDF_float["benchmarks"] = ["geometric mean"]
 
 	# Each test cases has 6 benchmarks so if we divide the length of the dataframe
 	#	by 6 then we will be left with the number of test cases. This will allow us
@@ -81,8 +81,8 @@ def calculateGeometricMeans(inputDataFrame):
 	GeoMeansDF_int = GeoMeansDF_int.set_index("benchmarks")
 	GeoMeansDF_float = GeoMeansDF_float.set_index("benchmarks")
 
-	GeoMeansDF_int = GeoMeansDF_int.T.sort_values('execution time (us)',ascending=[0])
-	GeoMeansDF_float = GeoMeansDF_float.T.sort_values('execution time (us)',ascending=[0])
+	GeoMeansDF_int = GeoMeansDF_int.T.sort_values('geometric mean',ascending=[0])
+	GeoMeansDF_float = GeoMeansDF_float.T.sort_values('geometric mean',ascending=[0])
 
 	return (GeoMeansDF,GeoMeansDF_int,GeoMeansDF_float)
 
@@ -118,7 +118,7 @@ def generateGraphs():
 			plt.title("%s_%s" %(table,benchmarkType))
 			plt.xlabel("Test Cases",size=5)
 			plt.xticks(rotation=70)
-			plt.ylabel("Execution Time (ms)",size=10)
+			plt.ylabel("Geometric Mean",size=10)
 			plt.legend(prop={'size':8})
 			plt.tight_layout(pad=.2,)
 			plt.savefig("../graphs/%s/%s_%s_Graph.png" %(table,table,benchmarkType),dpi=300)
