@@ -28,7 +28,7 @@ makeConfigs("ex_BT_SS3_bimod",
 )
 
 # Run tests
-#runBenchmarksOnTestSets(["ex_BT_SS3_bimod"])
+runBenchmarksOnTestSets(["ex_BT_SS3_bimod"])
 
 # Retrieve results
-#extractDataFromResults(["sim_IPC"], ["ex_BT_SS3_bimod"])
+extractDataFromResults(["sim_IPC"], ["ex_BT_SS3_bimod"])

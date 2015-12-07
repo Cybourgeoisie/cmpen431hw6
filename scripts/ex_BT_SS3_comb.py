@@ -28,7 +28,7 @@ makeConfigs("ex_BT_SS3_comb",
 )
 
 # Run tests
-#runBenchmarksOnTestSets(["ex_BT_SS3_comb"])
+runBenchmarksOnTestSets(["ex_BT_SS3_comb"])
 
 # Retrieve results
-#extractDataFromResults(["sim_IPC"], ["ex_BT_SS3_comb"])
+extractDataFromResults(["sim_IPC"], ["ex_BT_SS3_comb"])

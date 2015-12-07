@@ -28,7 +28,7 @@ makeConfigs("ex_BT_SS3_2lev",
 )
 
 # Run tests
-#runBenchmarksOnTestSets(["ex_BT_SS3_2lev"])
+runBenchmarksOnTestSets(["ex_BT_SS3_2lev"])
 
 # Retrieve results
-#extractDataFromResults(["sim_IPC"], ["ex_BT_SS3_2lev"])
+extractDataFromResults(["sim_IPC"], ["ex_BT_SS3_2lev"])

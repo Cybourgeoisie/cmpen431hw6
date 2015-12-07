@@ -21,14 +21,13 @@ dl2_16way = ["dl2:%s:16:1:l" %(x/16) for x in [4096,8192,16384,32768,65536]]
 makeConfigs("ex_BT_SS2_bimod", 
 	{'cache:il1': il1_1way + il1_2way + il1_4way,
 	'cache:dl1': dl1_1way + dl1_2way + dl1_4way,
-	'cache:dl2': dl2_1way + dl2_2way + dl2_4way + dl2_8way + dl2_16way,
-	'bpred': 'bimod'},
-	{},
+	'cache:dl2': dl2_1way + dl2_2way + dl2_4way + dl2_8way + dl2_16way},
+	{'bpred': 'bimod'},
 	{'static': [2], 'dynamic': []}
 )
 
 # Run tests
-#runBenchmarksOnTestSets(["ex_BT_SS2_bimod"])
+runBenchmarksOnTestSets(["ex_BT_SS2_bimod"])
 
 # Retrieve results
-#extractDataFromResults(["sim_IPC"], ["ex_BT_SS2_bimod"])
+extractDataFromResults(["sim_IPC"], ["ex_BT_SS2_bimod"])
