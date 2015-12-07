@@ -402,7 +402,7 @@ def getSettingsFromFile(filename):
 
 
 # Create the configuration files for a set of dynamic and static parameters
-def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {}):
+def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {}, useOptimal = False):
 	
 	# Make the baseline config
 	settings = getSettingsFromFile('../configs/baseline.cfg')
@@ -442,7 +442,7 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 				settings.update(params)
 
 				# Set optimal values
-				if forceOptimal:
+				if forceOptimal or useOptimal:
 					settings = setOptimalVariables(superscalar, issue_width, settings)
 				
 				# Set the absolute dependent variables
@@ -460,6 +460,9 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 
 
 def setOptimalVariables(superscalar, issue_width, settings):
+
+	# Can't set here, but good to write down:
+	# ifqsize - should not be 4, 8 or 16
 
 	# Max out the RUU and LSQ
 	if superscalar == 'dynamic' and issue_width == 2:
