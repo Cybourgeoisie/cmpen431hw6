@@ -457,6 +457,7 @@ def makeConfigs(testName, dynamicParams, staticParams, overrideIssueWidths = {})
 
 
 def setOptimalVariables(superscalar, issue_width, settings):
+	'''
 	if superscalar == 'static' and issue_width == 2:
 		settings['ruu:size'] = 16
 		settings['lsq:size'] = 8
@@ -466,6 +467,15 @@ def setOptimalVariables(superscalar, issue_width, settings):
 	elif superscalar == 'static' and issue_width == 8:
 		settings['ruu:size'] = 64
 		settings['lsq:size'] = 32
+	'''
+
+	# TEST: Make the dl1 and il1 caches equal
+	if 'cache:il1' in settings:
+		dl1cache = list(settings['cache:il1'])
+		dl1cache[0] = 'd' # Change from i to d
+		settings['cache:dl1'] = "".join(dl1cache)
+
+	return settings
 
 
 # For any dependent variables, set these automatically
