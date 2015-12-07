@@ -14,37 +14,37 @@ def validateSettings(settings):
 
 	if not validateL1Cache(settings):
 		if debug:
-			print "Failed L1 cache validation."
+			print("Failed L1 cache validation.")
 		return False
 
 	if not validateL2Cache(settings):
 		if debug:
-			print "Failed L2 cache validation."
+			print("Failed L2 cache validation.")
 		return False
 
 	if not validateTlb(settings):
 		if debug:
-			print "Failed TLB validation."
+			print("Failed TLB validation.")
 		return False
 
 	if not validateBped(settings):
 		if debug:
-			print "Failed BPred validation."
+			print("Failed BPred validation.")
 		return False
 
 	if not validateFunctionalUnits(settings):
 		if debug:
-			print "Failed functional unit validation."
+			print("Failed functional unit validation.")
 		return False
 
 	if not validateMemory(settings):
 		if debug:
-			print "Failed memory validation."
+			print("Failed memory validation.")
 		return False
 	
 	if not validateMisc(settings):
 		if debug:
-			print "Failed misc validation."
+			print ("Failed misc validation.")
 		return False
 
 
@@ -327,7 +327,7 @@ def validateBped(settings):
 
 	# Constraint: bpred:btb max of 1024 sets, 1-, 2-, 4-way
 	# 	Comment: Ben we are defaulting to 4 way here. Do we want to change the associativity in the future?
-	if int(settings['bpred:btb']) > 1024:
+	if ( int(settings['bpred:btb'].split(" ")[0]) > 1024 ) or not( int(settings['bpred:btb'].split(" ")[1]) in [1,2,4] ):
 		return False
 
 	return True
