@@ -2,13 +2,16 @@ from make_configs import makeConfigs
 from main_script import runBenchmarksOnTestSets, extractDataFromResults
 
 # il1 and dl1 cache block size are fixed at ifqize * 8
-il1 = ["il1:%s:%s:1:l" %(int(1024/x),x*8) for x in [4,8,16]]
+il1 = ["il1:1024:%s:1:l" %(x*8) for x in [4,8,16]]
+
+dl2 = ["dl2:%s:16:1:l" %(x) for x in [4096,8192,16384,32768,65536]]
 
 makeConfigs("optimal_w_bpred_test_ifqsize_fetch_speed", 
 	{
-		'fetch:ifqsize': [4,8,16],
-		'fetch:speed': [1,4],
-		'cache:il1': il1
+		#'fetch:ifqsize': [4,8,16],
+		#'fetch:speed': [1,4],
+		'cache:il1': il1,
+		'cache:dl2': dl2
 	},
 	{
 		'bpred': 'comb', # Certain
