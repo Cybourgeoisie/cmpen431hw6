@@ -478,11 +478,14 @@ def setOptimalVariables(superscalar, issue_width, settings):
 	# Max out the mem:width
 	settings['mem:width'] = 16
 
+	# Set the decode:width to the same as the ifqsize
+	settings['decode:width'] = settings['fetch:ifqsize']
+
 	# TEST: Make the dl1 and il1 caches equal
-	#if 'cache:il1' in settings:
-	#	dl1cache = list(settings['cache:il1'])
-	#	dl1cache[0] = 'd' # Change from i to d
-	#	settings['cache:dl1'] = "".join(dl1cache)
+	if 'cache:il1' in settings:
+		dl1cache = list(settings['cache:il1'])
+		dl1cache[0] = 'd' # Change from i to d
+		settings['cache:dl1'] = "".join(dl1cache)
 
 	return settings
 
