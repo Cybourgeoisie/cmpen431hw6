@@ -62,8 +62,12 @@ def validateL1Cache(settings):
 	if ( int(il1[2]) != int(settings['fetch:ifqsize']) * 8 ) or ( int(il1[2]) != int(dl1[2]) ):
 		return False
 
-	# Limit the total size of the L1 cache
+	# Limit the total size of the L1 instruction cache
 	if ((int(il1[1]) * int(il1[2]) * int(il1[3])) not in [8192, 16384, 32768, 65536]):
+		return False
+
+	# Limit the total size of the L1 data cache
+	if ((int(dl1[1]) * int(dl1[2]) * int(dl1[3])) not in [8192, 16384, 32768, 65536]):
 		return False
 
 	# Constraint: 
@@ -167,7 +171,25 @@ def validateL1Cache(settings):
 # Validate cache:dl2, cache:dl2lat, cache:il2lat
 def validateL2Cache(settings):
 
+	il1 = re.split(':',settings['cache:il1'])
+	dl1 = re.split(':',settings['cache:dl1'])
 	ul2 = re.split(':',settings['cache:dl2'])
+
+	# Require that the L2 block size is at least twice the il1/dl1 block size (which must be identical)
+	if int(ul2[2]) < int(il1[2]) * 2:
+		return False
+
+	# Require that the L2 cache total size is at least the size of both il1 and dl1
+	il1size = (int(il1[1]) * int(il1[2]) * int(il1[3]))
+	dl1size = (int(dl1[1]) * int(dl1[2]) * int(dl1[3]))
+	ul2size = (int(ul2[1]) * int(ul2[2]) * int(ul2[3]))	
+	if (il1size + dl1size > ul2size):
+		return False
+
+	# Limit the total size of the L2 cache
+	if ((int(ul2[1]) * int(ul2[2]) * int(ul2[3])) not in [65536, 131072, 262144, 524288, 1048576]):
+		return False
+
 	# Constraint: 
 	 # * ul2 latencies are defined by the ul2 sizes:
 	 #  * Direct mapped:
