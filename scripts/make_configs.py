@@ -62,6 +62,10 @@ def validateL1Cache(settings):
 	if ( int(il1[2]) != int(settings['fetch:ifqsize']) * 8 ) or ( int(il1[2]) != int(dl1[2]) ):
 		return False
 
+	# Limit the total size of the L1 cache
+	if ((int(il1[1]) * int(il1[2]) * int(il1[3])) not in [8192, 16384, 32768, 65536]):
+		return False
+
 	# Constraint: 
 		# * il1 & dl1 latencies are defined by the il1 sizes:
 	 #  * All of the below also hold for dl1
