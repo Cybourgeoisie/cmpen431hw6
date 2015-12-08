@@ -1,0 +1,92 @@
+
+
+Integer
+dynamic2 ifqsize 8 cachedl2 ul2 4096 128 2 l cacheil1 il1 256  64 2 l	2.3513440603
+dynamic2 ifqsize 8 cachedl2 ul2 2048 128 4 l cacheil1 il1 256  64 2 l	2.34911956008
+dynamic2 ifqsize 4 cachedl2 ul2 4096 128 2 l cacheil1 il1 512  32 2 l	2.34276518792
+dynamic2 ifqsize 4 cachedl2 ul2 2048 128 4 l cacheil1 il1 512  32 2 l	2.33702844288
+dynamic2 ifqsize 4 cachedl2 ul2 4096 128 2 l cacheil1 il1 256  32 2 l	2.30622607429
+dynamic2 ifqsize 8 cachedl2 ul2 4096 128 2 l cacheil1 il1 512  64 2 l	2.30438735084
+dynamic2 ifqsize 8 cachedl2 ul2 2048 128 4 l cacheil1 il1 512  64 2 l	2.30213095123
+dynamic2 ifqsize 4 cachedl2 ul2 2048 128 4 l cacheil1 il1 256  32 2 l	2.29878296804
+dynamic2 ifqsize 4 cachedl2 ul2 4096 128 2 l cacheil1 il1 1024 32 2 l	2.2938077285
+
+dynamic4 ifqsize 8 cachedl2 ul2 4096 1282lcacheil1il1 256 64 2 l 1.89223416956 
+dynamic4 ifqsize 8 cachedl2 ul2 2048 1284lcacheil1il1 256 64 2 l 1.89006029928 
+dynamic4 ifqsize 8 cachedl2 ul2 4096 1282lcacheil1il1 512 64 2 l 1.88667697665 
+dynamic4 ifqsize 8 cachedl2 ul2 2048 1284lcacheil1il1 512 64 2 l 1.88468062571 
+dynamic4 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il1 512 32 2 l 1.88257727707 
+dynamic4 ifqsize 4 cachedl2 ul2 2048 1284lcacheil1il1 512 32 2 l 1.87771533765 
+dynamic4 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il1 1024 32 2 l 1.87523466783
+dynamic4 ifqsize 4 cachedl2 ul2 2048 1284lcacheil1il1 1024 32 2 l 1.87106530709
+dynamic4 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il1 256 32 2 l 1.84259993798 
+dynamic4 ifqsize 4 cachedl2 ul2 2048 1284lcacheil1il1 256 32 2 l 1.84151609104 
+dynamic4 ifqsize 4 cachedl2 ul2 8192 642lcacheil1il1 256 32 2 l 1.82912298899 	
+
+dynamic8 ifqsize 8 cachedl2 ul2 2048 1284lcacheil1il1 256 64 2 l 1.56210992142
+dynamic8 ifqsize 8 cachedl2 ul2 4096 1282lcacheil1il1 256 64 2 l 1.56186029427
+dynamic8 ifqsize 4 cachedl2 ul2 2048 1284lcacheil1il1 512 32 2 l 1.56060232211
+dynamic8 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il1 512 32 2 l 1.56044339048
+dynamic8 ifqsize 8 cachedl2 ul2 2048 1284lcacheil1il1 512 64 2 l 1.55624902046
+dynamic8 ifqsize 8 cachedl2 ul2 4096 1282lcacheil1il1 512 64 2 l 1.55619642594
+dynamic8 ifqsize 4 cachedl2 ul2 2048 1284lcacheil1il1 1024 32 2 l 1.5551445248
+dynamic8 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il1 1024 32 2 l 1.55490455006
+dynamic4 ifqsize 4 cachedl2 ul2 8192 642lcacheil1il1 256 32 1 l 1.55191490192
+
+static1 ifqsize 4 cachedl2 ul2 2048 1284lcacheil1il1256322 l
+static1 ifqsize 8 cachedl2 ul2 2048 1282lcacheil1il1256641 l
+static1 ifqsize 4 cachedl2 ul2 4096 644lcacheil1il1256322 l
+static1 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il1512321 l
+static1 ifqsize 4 cachedl2 ul2 4096 642lcacheil1il1256322 l
+static1 ifqsize 4 cachedl2 ul2 8192 642lcacheil1il1512321 l
+static1 ifqsize 4 cachedl2 ul2 4096 642lcacheil1il1512321 l
+static1 ifqsize 8 cachedl2 ul2 4096 1282lcacheil1il1512641 l
+static1 ifqsize 8 cachedl2 ul2 4096 1282lcacheil1il1256642 l
+static1 ifqsize 8 cachedl2 ul2 2048 1284lcacheil1il1256642 l
+static1 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il11024321 l
+static1 ifqsize 4 cachedl2 ul2 2048 1282lcacheil1il1256321 l
+
+Floating
+dynamic2 ifqsize 8 cachedl2 ul2 4096 128 2 l cacheil1 il1 512  64 1 l	2.01160244416
+dynamic2 ifqsize 4 cachedl2 ul2 8192 64  2 l cacheil1 il1 2048 32 1 l	2.01018754355
+dynamic2 ifqsize 4 cachedl2 ul2 4096 64  4 l cacheil1 il1 2048 32 1 l	2.0076497071
+dynamic2 ifqsize 8 cachedl2 ul2 4096 128 2 l cacheil1 il1 1024 64 1 l	2.00698806786
+dynamic2 ifqsize 4 cachedl2 ul2 4096 128 2 l cacheil1 il1 2048 32 1 l	2.00513757126
+dynamic2 ifqsize 4 cachedl2 ul2 4096 64  2 l cacheil1 il1 2048 32 1 l	2.00347964613
+dynamic2 ifqsize 8 cachedl2 ul2 2048 128 4 l cacheil1 il1 512  64 1 l	2.00203090196
+dynamic2 ifqsize 8 cachedl2 ul2 2048 128 4 l cacheil1 il1 1024 64 1 l	2.00161565401
+dynamic2 ifqsize 4 cachedl2 ul2 2048 64  4 l cacheil1 il1 2048 32 1 l	2.00040916495
+dynamic2 ifqsize 4 cachedl2 ul2 2048 128 4 l cacheil1 il1 2048 32 1 l	1.99998723064
+
+dynamic4 ifqsize 4 cachedl2 ul2 8192 64 2 l cacheil1 il1 2048 32 1 l bpredcomb 	1.6635493168
+dynamic4 ifqsize 4 cachedl2 ul2 4096 64 4 l cacheil1 il1 2048 32 1 l bpredcomb 	1.66178005895
+dynamic4 ifqsize 4 cachedl2 ul2 8192 64 2 l cacheil1 il1 1024 32 2 l bpredcomb 	1.6598658323
+dynamic4 ifqsize 4 cachedl2 ul2 8192 64 2 l cacheil1 il1 512 32  2 l bpredcomb 	1.65983789662
+dynamic4 ifqsize 4 cachedl2 ul2 4096 64 4 l cacheil1 il1 1024 32 2 l bpredcomb 	1.65905261885
+dynamic4 ifqsize 4 cachedl2 ul2 4096 64 2 l cacheil1 il1 2048 32 1 l bpredcomb 	1.65803775471
+dynamic4 ifqsize 4 cachedl2 ul2 4096 64 4 l cacheil1 il1 512 32  2 l bpredcomb 	1.65557704558
+dynamic4 ifqsize 4 cachedl2 ul2 2048 64 4 l cacheil1 il1 2048 32 1 l bpredcomb 	1.65522976395
+dynamic4 ifqsize 4 cachedl2 ul2 4096 64 2 l cacheil1 il1 512 32  2 l bpredcomb 	1.65454472368
+
+dynamic8 ifqsize 4 cachedl2 ul2 8192 64 2 l cacheil1 il1 2048 32 1 l bpredcomb 	1.42554229127
+dynamic8 ifqsize 4 cachedl2 ul2 4096 64 4 l cacheil1 il1 2048 32 1 l bpredcomb 	1.42501533108
+dynamic8 ifqsize 4 cachedl2 ul2 2048 64 4 l cacheil1 il1 2048 32 1 l bpredcomb 	1.41995512996
+dynamic8 ifqsize 4 cachedl2 ul2 4096 64 2 l cacheil1 il1 2048 32 1 l bpredcomb 	1.41978559265
+dynamic8 ifqsize 4 cachedl2 ul2 4096 64 4 l cacheil1 il1 1024 32 2 l bpredcomb 	1.41836589164
+dynamic8 ifqsize 4 cachedl2 ul2 8192 64 2 l cacheil1 il1 1024 32 2 l bpredcomb 	1.4181157242
+dynamic8 ifqsize 4 cachedl2 ul2 4096 64 2 l cacheil1 il1 512 32  2 l bpredcomb 	1.41755436006
+dynamic8 ifqsize 4 cachedl2 ul2 4096 64 4 l cacheil1 il1 512 32  2 l bpredcomb 	1.4173982299
+dynamic8 ifqsize 4 cachedl2 ul2 8192 64 2 l cacheil1 il1 512 32  2 l bpredcomb 	1.41736041377
+
+
+static1 ifqsize 8 cachedl2 ul2 2048 1282lcacheil1il1256641 l  	1.63583501364
+static1 ifqsize 4 cachedl2 ul2 4096 642lcacheil1il1512321 l  	1.5759732
+static1 ifqsize 8 cachedl2 ul2 4096 1282lcacheil1il1512641 l  	1.56550558488
+static1 ifqsize 4 cachedl2 ul2 8192 642lcacheil1il1512321 l  	1.56085663703
+static1 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il1512321 l	1.55877672679
+static1 ifqsize 4 cachedl2 ul2 2048 642lcacheil1il1256321 l  	1.55848490301
+static1 ifqsize 4 cachedl2 ul2 2048 644lcacheil1il1512321 l  	1.55612137656
+static1 ifqsize 4 cachedl2 ul2 2048 642lcacheil1il11024321 l  	1.55305297594
+static1 ifqsize 4 cachedl2 ul2 4096 642lcacheil1il11024321 l  	1.55060210407
+static1 ifqsize 4 cachedl2 ul2 4096 1282lcacheil1il11024321 l  	1.54729202922
+static1 ifqsize 4 cachedl2 ul2 4096 644lcacheil1il11024321 l  	1.54369138753
