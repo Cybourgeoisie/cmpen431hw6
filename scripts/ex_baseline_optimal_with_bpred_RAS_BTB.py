@@ -8,7 +8,7 @@ btb = ["%s %s" %(x,y) for y in [1,2,4]for x in [512,1024]]
 makeConfigs("ex_baseline_optimal_with_bpred_RAS_BTB", 
 	{'bpred': ['2lev', 'comb', 'bimod'],
 	'bpred:ras': range(0,17),
-	'bpred:btb': bpred:btb
+	'bpred:btb': btb
 	},
 
 	{},
