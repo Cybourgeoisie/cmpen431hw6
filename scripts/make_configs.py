@@ -752,7 +752,7 @@ def saveConfig(testSet, title, settings):
 # Construct the config name
 def constructConfigName(superscalar, issue_width, staticParams, params):
 	configName = superscalar + str(issue_width)
-	params.update(staticParams)
+	#params.update(staticParams)
 	for key, value in params.items():
 		if (key not in ["issue:width", "issue:inorder", "issue:wrongpath"]):
 			configName += re.sub("[^a-zA-Z0-9]", "", key + str(value))
