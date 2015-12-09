@@ -1,0 +1,4920 @@
+Quang Nguyen, Ben Heidorn
+Quang NguyenWednesday, December 9, 2015 at 3:27pm EST
+yup
+
+Ben HeidornWednesday, December 9, 2015 at 3:27pm EST
+thanks! I'll talk to you soon.
+
+Quang NguyenWednesday, December 9, 2015 at 3:27pm EST
+best of luck then man!
+
+Quang NguyenWednesday, December 9, 2015 at 3:27pm EST
+dang... that's brutal.
+
+Ben HeidornWednesday, December 9, 2015 at 3:26pm EST
+pretty short notice
+
+Ben HeidornWednesday, December 9, 2015 at 3:26pm EST
+but I have until next week to make the decision, lol
+
+Ben HeidornWednesday, December 9, 2015 at 3:26pm EST
+I'm not sure yet
+
+Ben HeidornWednesday, December 9, 2015 at 3:26pm EST
+yeah
+
+Quang NguyenWednesday, December 9, 2015 at 3:26pm EST
+oh that sucks... is there a posibility that you have to move with her?
+
+Ben HeidornWednesday, December 9, 2015 at 3:26pm EST
+we both received invitations to join her, so it's kind of been a nerve-wracking week
+
+Ben HeidornWednesday, December 9, 2015 at 3:25pm EST
+I got news from my advisor that I was expecting for about a week now (she's moving to another university), so I have plans to discuss that with the post doc in the group tonight
+
+Ben HeidornWednesday, December 9, 2015 at 3:24pm EST
+we can meet up tomorrow, most likely
+
+Quang NguyenWednesday, December 9, 2015 at 3:23pm EST
+2 finals... you lucky dog. Alright. I'm gonna try update the spreadsheet to the best of my ability and we can meet up later tonight or whenever you are free
+
+Ben HeidornWednesday, December 9, 2015 at 3:22pm EST
+I can handle a lot of the paper
+
+Ben HeidornWednesday, December 9, 2015 at 3:22pm EST
+I have some research stuff that has to be done by friday morning, but besides that
+
+Ben HeidornWednesday, December 9, 2015 at 3:22pm EST
+I only have two finals and this project
+
+Ben HeidornWednesday, December 9, 2015 at 3:22pm EST
+don't worry too much about it
+
+Quang NguyenWednesday, December 9, 2015 at 3:21pm EST
+dang... I have so much due on monday...
+
+Ben HeidornWednesday, December 9, 2015 at 3:21pm EST
+yeah
+
+Quang NguyenWednesday, December 9, 2015 at 3:20pm EST
+when is this project due again? Monday?
+
+Quang NguyenWednesday, December 9, 2015 at 3:20pm EST
+Alright and you are probably gonna need to reorder the spreadsheet alittle bit since I don't have a good understanding of the order in which they were ran
+
+Ben HeidornWednesday, December 9, 2015 at 3:19pm EST
+where needed
+
+Ben HeidornWednesday, December 9, 2015 at 3:19pm EST
+I'll also revisit the spreadsheet and update it
+
+Ben HeidornWednesday, December 9, 2015 at 3:19pm EST
+then we can meet up again later tonight or tomorrow to discuss the final hurrah
+
+Ben HeidornWednesday, December 9, 2015 at 3:19pm EST
+now that I can look over the results from the older ifqsize test and all, I'm going to investigate it further
+
+Ben HeidornWednesday, December 9, 2015 at 3:18pm EST
+that's my impression
+
+Quang NguyenWednesday, December 9, 2015 at 3:18pm EST
+just a thought
+
+Quang NguyenWednesday, December 9, 2015 at 3:18pm EST
+The findings of the tests later in the list would invalidate all the findings earlier in the list since they were done with more optimized test cases?
+
+Quang NguyenWednesday, December 9, 2015 at 3:17pm EST
+yea. So I updated the spreadsheet to include all the test cases are that are currently in the ./scripts/ folder. And I also tried to reorganized it in the order in which the tests were executed. If we update or findings in their and make sure the order of the tests are correct, then writing the paper would be as simple as just going down the list and putting it into words
+
+Ben HeidornWednesday, December 9, 2015 at 3:15pm EST
+hey dude - I'm at a computer if you're free for a few minutes
+
+Quang NguyenWednesday, December 9, 2015 at 2:50pm EST
+ok
+
+Ben HeidornWednesday, December 9, 2015 at 2:49pm EST
+I'm on foot now, but I will be on a computer shortly so we can recap.
+
+Ben HeidornWednesday, December 9, 2015 at 2:49pm EST
+They're listed usually as comments in the follow up scripts or are listed / derived from the notes in the research folder.
+
+Quang NguyenWednesday, December 9, 2015 at 2:45pm EST
+or do you just have it in your head?
+
+Quang NguyenWednesday, December 9, 2015 at 2:43pm EST
+Have you been recording you findings for the last couple of tests that you ran?
+
+Ben HeidornWednesday, December 9, 2015 at 2:39pm EST
+Yeah, the numbers are really high, so I'm curious to validate that our latest numbers will beat those.
+
+Quang NguyenWednesday, December 9, 2015 at 2:38pm EST
+or 3.4 in the int case
+
+Quang NguyenWednesday, December 9, 2015 at 2:37pm EST
+I didn't realized that we were hitting closer to 3.0 with that simple test
+
+Quang NguyenWednesday, December 9, 2015 at 2:37pm EST
+for the ifqsize, we agreed that it should not be 1 or 2. That was the only conclusion that we made about it
+
+Ben HeidornWednesday, December 9, 2015 at 2:35pm EST
+There was one thing - you had some tests earlier about the ifq size and fetch speed and all. It looked like you hit really high GMs, which is something I'm curious to review. Beyond that, I think we're nearly done with testing.
+
+Ben HeidornWednesday, December 9, 2015 at 2:34pm EST
+Oh, sweet, that just about wraps up our tests. I committed a ton of stuff earlier this morning. The results for dyn4_* and dyn8_* are particularly interesting, as they're the highest GMs I've seen. I think we have enough to probably make one final test with all we know, and use the top values from that test.
+
+Quang NguyenWednesday, December 9, 2015 at 2:24pm EST
+It supports your earlier findings that the ras should be 8 or 16. The changes between 2/4 ways for the BTB was like +-0.0005
+
+Quang NguyenWednesday, December 9, 2015 at 2:22pm EST
+Quang NguyenWednesday, December 9, 2015 at 2:22pm EST
+Here are my findings from the RAS and BTB test
+
+Quang NguyenWednesday, December 9, 2015 at 12:05am EST
+Haha it's all good. You did all the hard stuff so I can't complain.
+
+Ben HeidornWednesday, December 9, 2015 at 12:02am EST
+I remember now that you asked me, but it slipped my mind pretty quickly
+
+Ben HeidornWednesday, December 9, 2015 at 12:01am EST
+sorry for dropping the ball on the BTB last night
+
+Ben HeidornWednesday, December 9, 2015 at 12:01am EST
+sounds good, man. thanks again
+
+Quang NguyenTuesday, December 8, 2015 at 11:59pm EST
+The RAS_BTB i mean
+
+Quang NguyenTuesday, December 8, 2015 at 11:58pm EST
+That sounds good. I just ran the other test. Now I have to get out of the library before the buses stop coming around
+
+Ben HeidornTuesday, December 8, 2015 at 11:57pm EST
+gonna review it and either call it a night or set up one more, then call it a night
+
+Ben HeidornTuesday, December 8, 2015 at 11:57pm EST
+just got the results for that other test
+
+Quang NguyenTuesday, December 8, 2015 at 11:56pm EST
+yea this is definitely not standard
+
+Ben HeidornTuesday, December 8, 2015 at 11:53pm EST
+and we're abusing github to no end, lol
+
+Ben HeidornTuesday, December 8, 2015 at 11:52pm EST
+normally, I'd say we should keep binaries / data out of the repo, but this isn't a standard code repository
+
+Ben HeidornTuesday, December 8, 2015 at 11:52pm EST
+lol, yeah..
+
+Quang NguyenTuesday, December 8, 2015 at 11:51pm EST
+and we have been zipping our results too... imagine if we didn't zip it all up. I would not want to clone this repo at this point
+
+Ben HeidornTuesday, December 8, 2015 at 11:50pm EST
+that's insane, lol
+
+Ben HeidornTuesday, December 8, 2015 at 11:49pm EST
+oh man, seriously?
+
+Quang NguyenTuesday, December 8, 2015 at 11:48pm EST
+lol the size of our project file is almost half a GB... that's crazy!
+
+Quang NguyenTuesday, December 8, 2015 at 11:42pm EST
+I know one or 2 groups that are using ssh but I don't think they are using at the extent that we are. In fact, it's pretty safe to say that no one is using it at the extent that we are. haha
+
+Ben HeidornTuesday, December 8, 2015 at 11:40pm EST
+I wonder if anyone else has been doing their work over ssh for this class
+
+Ben HeidornTuesday, December 8, 2015 at 11:39pm EST
+lol, I've avoided it like the plague
+
+Quang NguyenTuesday, December 8, 2015 at 11:39pm EST
+Have you seen how busy the lab is lately? That place is packed!!
+
+Ben HeidornTuesday, December 8, 2015 at 11:39pm EST
+looks like the network just slowed to a crawl there
+
+Ben HeidornTuesday, December 8, 2015 at 11:37pm EST
+or someone just overloaded all of the computers in the lab
+
+Ben HeidornTuesday, December 8, 2015 at 11:37pm EST
+either IST internet connection is really bad right now
+
+Ben HeidornTuesday, December 8, 2015 at 11:37pm EST
+lol, thanks. glad that my skills come in handy for this project
+
+Quang NguyenTuesday, December 8, 2015 at 11:34pm EST
+lol I'm still amazed that the speed at which you are cranking these out. You got the system down pat
+
+Ben HeidornTuesday, December 8, 2015 at 11:33pm EST
+it was
+
+Quang NguyenTuesday, December 8, 2015 at 11:33pm EST
+dynamic 8 falling behind pretty badly before right?
+
+Ben HeidornTuesday, December 8, 2015 at 11:33pm EST
+I'm assuming that the floating point ALU / Mult is more or less whatever (set to static values), and I'm trying the remaining combinations of integer values for dyn-4 and dyn-8 - should get results within the hour
+
+Ben HeidornTuesday, December 8, 2015 at 11:32pm EST
+but this is pretty great
+
+Ben HeidornTuesday, December 8, 2015 at 11:32pm EST
+I know! I'm surprised, tbh
+
+Quang NguyenTuesday, December 8, 2015 at 11:31pm EST
+So that means we are pretty set on dynamic 4 and 8 for both of int and float now. sweet!
+
+Quang NguyenTuesday, December 8, 2015 at 11:29pm EST
+oh gotcha
+
+Ben HeidornTuesday, December 8, 2015 at 11:28pm EST
+4 and 8
+
+Quang NguyenTuesday, December 8, 2015 at 11:28pm EST
+what is dynamic 48?
+
+Ben HeidornTuesday, December 8, 2015 at 11:27pm EST
+and 2.9 for dyn-4
+
+Ben HeidornTuesday, December 8, 2015 at 11:27pm EST
+dynamic got as far as 3.1 for dyn-4
+
+Ben HeidornTuesday, December 8, 2015 at 11:27pm EST
+yep
+
+Quang NguyenTuesday, December 8, 2015 at 11:26pm EST
+that's a big difference
+
+Quang NguyenTuesday, December 8, 2015 at 11:26pm EST
+oh wow, static didn't even get over 1.6 and dynamic got up to 2.4
+
+Ben HeidornTuesday, December 8, 2015 at 11:22pm EST
+breaking bad sets the bar for excellence in storytelling
+
+Ben HeidornTuesday, December 8, 2015 at 11:22pm EST
+oh, definitely
+
+Quang NguyenTuesday, December 8, 2015 at 11:21pm EST
+maybe the tv show is better than the book. I gotta watching breaking bad before I watch GoT through
+
+Quang NguyenTuesday, December 8, 2015 at 11:21pm EST
+I listened to half of the audiobook and stopped because it just seems like it was just a drama book + dragons
+
+Ben HeidornTuesday, December 8, 2015 at 11:20pm EST
+pushed, btw
+
+Ben HeidornTuesday, December 8, 2015 at 11:20pm EST
+yeah, I was hesitant about it for a long time, but it's really enjoyable
+
+Quang NguyenTuesday, December 8, 2015 at 11:20pm EST
+do you like it?
+
+Ben HeidornTuesday, December 8, 2015 at 11:19pm EST
+also I've been watching game of thrones for the first time
+
+Ben HeidornTuesday, December 8, 2015 at 11:19pm EST
+...
+
+Ben HeidornTuesday, December 8, 2015 at 11:19pm EST
+I enjoy using elaborate phrases
+
+Ben HeidornTuesday, December 8, 2015 at 11:19pm EST
+lol
+
+Quang NguyenTuesday, December 8, 2015 at 11:18pm EST
+lol this isn't a drama show ben
+
+Ben HeidornTuesday, December 8, 2015 at 11:14pm EST
+because I think this is the death knell for the static issues
+
+Ben HeidornTuesday, December 8, 2015 at 11:14pm EST
+I'll commit these graphs in particular
+
+Ben HeidornTuesday, December 8, 2015 at 11:14pm EST
+I just got results back on various ALUs and Mults
+
+Ben HeidornTuesday, December 8, 2015 at 11:14pm EST
+a hundred tests or two doesn't take too long to run
+
+Ben HeidornTuesday, December 8, 2015 at 11:13pm EST
+If you'd like
+
+Quang NguyenTuesday, December 8, 2015 at 11:13pm EST
+so how should we create the test for the BTB? Should we try every combination of the RAS again with it since it might make a difference?
+
+Quang NguyenTuesday, December 8, 2015 at 11:10pm EST
+I guess its not the same on windows cuz it didn't work. I'll google it then
+
+Ben HeidornTuesday, December 8, 2015 at 11:08pm EST
+at least it is on a mac
+
+Ben HeidornTuesday, December 8, 2015 at 11:08pm EST
+otherwise, it might just be clicking while holding down the alt key
+
+Ben HeidornTuesday, December 8, 2015 at 11:08pm EST
+if I remember correctly
+
+Ben HeidornTuesday, December 8, 2015 at 11:08pm EST
+you can middle click and select multiple cursors
+
+Ben HeidornTuesday, December 8, 2015 at 11:07pm EST
+if you have a mouse
+
+Quang NguyenTuesday, December 8, 2015 at 11:07pm EST
+clever!
+
+Ben HeidornTuesday, December 8, 2015 at 11:07pm EST
+actually
+
+Quang NguyenTuesday, December 8, 2015 at 11:07pm EST
+oh you used that feature that I can never remember the keys for
+
+Ben HeidornTuesday, December 8, 2015 at 11:07pm EST
+a lot of the different values had the same number of characters, so a text editor sufficed
+
+Ben HeidornTuesday, December 8, 2015 at 11:07pm EST
+so it wasn't painful
+
+Ben HeidornTuesday, December 8, 2015 at 11:06pm EST
+the filenames are really standard, so I set multiple cursors and then edited one line, which edited 10 lines at a time
+
+Quang NguyenTuesday, December 8, 2015 at 11:06pm EST
+no way
+
+Quang NguyenTuesday, December 8, 2015 at 11:06pm EST
+oh wow... that's pretty significant
+
+Ben HeidornTuesday, December 8, 2015 at 11:06pm EST
+lol, sublime text
+
+Quang NguyenTuesday, December 8, 2015 at 11:06pm EST
+how did you pull all the caches data apart? regex?
+
+Ben HeidornTuesday, December 8, 2015 at 11:06pm EST
+the GMs jumped by 0.5
+
+Ben HeidornTuesday, December 8, 2015 at 11:06pm EST
+much
+
+Quang NguyenTuesday, December 8, 2015 at 11:05pm EST
+oh really? so you are seeing better spikes?
+
+Ben HeidornTuesday, December 8, 2015 at 11:04pm EST
+and now I'm just back to testing the different combinations of hardware, which is having much more of an effect now
+
+Ben HeidornTuesday, December 8, 2015 at 11:03pm EST
+once I got those values, I came up with the caches I sent you
+
+Ben HeidornTuesday, December 8, 2015 at 11:03pm EST
+topAfterOptimizingCache
+
+Ben HeidornTuesday, December 8, 2015 at 11:03pm EST
+in the research folder
+
+Ben HeidornTuesday, December 8, 2015 at 11:03pm EST
+git pull
+
+Ben HeidornTuesday, December 8, 2015 at 11:03pm EST
+one moment
+
+Ben HeidornTuesday, December 8, 2015 at 11:03pm EST
+I committed something with a lot of raw data of the top matches..
+
+Ben HeidornTuesday, December 8, 2015 at 11:03pm EST
+I think I've been pretty bad at communicating the changes, but I didn't want to inundate you with a bunch of incomplete thoughts
+
+Quang NguyenTuesday, December 8, 2015 at 11:02pm EST
+For you everything is getting blurry. For me, I'm getting lost for what needs to be done since I have been slacking haha
+
+Quang NguyenTuesday, December 8, 2015 at 11:01pm EST
+I'm just not sure if we need to optimize the test or not
+
+Quang NguyenTuesday, December 8, 2015 at 11:01pm EST
+haha. Alright. do you want me just extend the RAS test to include the btb then?
+
+Ben HeidornTuesday, December 8, 2015 at 10:59pm EST
+not going to lie, this work on this project is starting to blur into one continuous memory
+
+Ben HeidornTuesday, December 8, 2015 at 10:58pm EST
+caches, I think
+
+Ben HeidornTuesday, December 8, 2015 at 10:58pm EST
+I already forget what I tested last night
+
+Ben HeidornTuesday, December 8, 2015 at 10:58pm EST
+I tested the RAS.. I can handle that a bit later if you want
+
+Quang NguyenTuesday, December 8, 2015 at 10:57pm EST
+I thought last night we split up the work load. I covered the tlb and you covered the bpred:ras and bpred:btb
+
+Ben HeidornTuesday, December 8, 2015 at 10:56pm EST
+with different caches
+
+Ben HeidornTuesday, December 8, 2015 at 10:56pm EST
+I know we tested the different branch predictors
+
+Ben HeidornTuesday, December 8, 2015 at 10:56pm EST
+did we? I forget
+
+Quang NguyenTuesday, December 8, 2015 at 10:56pm EST
+did we not do a btb test??
+
+Quang NguyenTuesday, December 8, 2015 at 10:56pm EST
+it's an funny and informative video series
+
+Ben HeidornTuesday, December 8, 2015 at 10:55pm EST
+also, that's awesome, I'll check out the video soon!
+
+Ben HeidornTuesday, December 8, 2015 at 10:55pm EST
+we're not sure what is optimal for those
+
+Ben HeidornTuesday, December 8, 2015 at 10:54pm EST
+the BTB values
+
+Ben HeidornTuesday, December 8, 2015 at 10:54pm EST
+one thing does come to mind though
+
+Ben HeidornTuesday, December 8, 2015 at 10:54pm EST
+haha, it's totally cool, I'm just doing little things here and there right now
+
+Quang NguyenTuesday, December 8, 2015 at 10:53pm EST
+Lol I feel like I am letting you do all the work.... is there a part that you want me to tackle?
+
+Quang NguyenTuesday, December 8, 2015 at 10:51pm EST
+I don't know much about machine learning at all so these videos blow my mind away
+
+Quang NguyenTuesday, December 8, 2015 at 10:51pm EST
+I was watching this video series last night and you comment about the big jump reminded be of it. https://www.youtube.com/watch?v=GOFws_hhZs8
+
+Ben HeidornTuesday, December 8, 2015 at 10:50pm EST
+a restricted range, but one that should give us enough info to work with
+
+Ben HeidornTuesday, December 8, 2015 at 10:50pm EST
+so I'm testing 4-wide and 8-wide as well as static once more
+
+Ben HeidornTuesday, December 8, 2015 at 10:50pm EST
+once the ALU went up, and the other hardware components were increased
+
+Ben HeidornTuesday, December 8, 2015 at 10:49pm EST
+I saw a big jump in the GM, btw
+
+Ben HeidornTuesday, December 8, 2015 at 10:49pm EST
+that's what I'm thinking
+
+Quang NguyenTuesday, December 8, 2015 at 10:49pm EST
+2 * issue:width ... that still leaves us with a lot of combinations. We can just pick 2 or 3 best one and run with it so that we don't blow up the size of our test
+
+Ben HeidornTuesday, December 8, 2015 at 10:47pm EST
+everything else is still fuzzy or interchangeable
+
+Ben HeidornTuesday, December 8, 2015 at 10:47pm EST
+no question
+
+Ben HeidornTuesday, December 8, 2015 at 10:47pm EST
+we want at least 2 integer ALUs
+
+Ben HeidornTuesday, December 8, 2015 at 10:47pm EST
+without a doubt
+
+Ben HeidornTuesday, December 8, 2015 at 10:46pm EST
+I just ran one on all of the permutations of FPalu/mult/Ialu/mult/memport for dynamic 2-wide
+
+Quang NguyenTuesday, December 8, 2015 at 10:46pm EST
+what tests are you running now?
+
+Quang NguyenTuesday, December 8, 2015 at 10:45pm EST
+yea i remember you saying that
+
+Ben HeidornTuesday, December 8, 2015 at 10:45pm EST
+note that the IL1 value is duplicated for DL1 in make_config.py
+
+Ben HeidornTuesday, December 8, 2015 at 10:44pm EST
+*wide
+
+Ben HeidornTuesday, December 8, 2015 at 10:44pm EST
+but those are very high quality caches, if not the best we'll see, for dynamic 2-wise
+
+Ben HeidornTuesday, December 8, 2015 at 10:44pm EST
+the latter IL1 and UL2 are just to make my follow-up tests simpler
+
+Ben HeidornTuesday, December 8, 2015 at 10:44pm EST
+# int, followed by fp: il1 = ["il1:256:64:2:l", "il1:512:64:1:l"] il1 = ["il1:256:64:2:l"] # same for int & fp: ul2 = ["ul2:2048:128:4:l", "ul2:4096:128:2:l"] # winner by a hair for both int and fp ul2 = ["ul2:4096:128:2:l"]
+
+Ben HeidornTuesday, December 8, 2015 at 10:44pm EST
+after that test, I found that the best cache values seem to be about...
+
+Quang NguyenTuesday, December 8, 2015 at 10:43pm EST
+I saw from the git pull that you set up some other tests. Anything special from the other cache test?
+
+Quang NguyenTuesday, December 8, 2015 at 10:42pm EST
+there was where the disconnect was
+
+Ben HeidornTuesday, December 8, 2015 at 10:42pm EST
+nah, then we'd look for a smaller value
+
+Quang NguyenTuesday, December 8, 2015 at 10:42pm EST
+i thought we were take cur exe / baseline exe time
+
+Quang NguyenTuesday, December 8, 2015 at 10:42pm EST
+oh got it
+
+Ben HeidornTuesday, December 8, 2015 at 10:42pm EST
+[IC x clock_cycle_time_base]/IPC_base) / [IC x clock_cycle_time_test]/IPC_test)
+
+Ben HeidornTuesday, December 8, 2015 at 10:41pm EST
+you can work it out really quickly if you divide the execution times
+
+Ben HeidornTuesday, December 8, 2015 at 10:41pm EST
+sure
+
+Quang NguyenTuesday, December 8, 2015 at 10:41pm EST
+yea I'm gonna need to take a minute or two to internalize what you just said yet
+
+Ben HeidornTuesday, December 8, 2015 at 10:40pm EST
+but yeah, the larger the geometric mean, the better the set
+
+Ben HeidornTuesday, December 8, 2015 at 10:40pm EST
+haha, sorry, I just wanted to walk through the steps to make sure my thought process was correct
+
+Quang NguyenTuesday, December 8, 2015 at 10:40pm EST
+Oh alright. someone brought it up and it scared the crap out of me '
+
+Ben HeidornTuesday, December 8, 2015 at 10:39pm EST
+because the GM is proportional to the ratio, which depends on a larger IPC for our test set
+
+Ben HeidornTuesday, December 8, 2015 at 10:39pm EST
+so as our IPC increases, so does the GM
+
+Ben HeidornTuesday, December 8, 2015 at 10:39pm EST
+we want our cur_IPC to be larger than the base_IPC
+
+Ben HeidornTuesday, December 8, 2015 at 10:39pm EST
+cur_IPC / base_IPC
+
+Ben HeidornTuesday, December 8, 2015 at 10:39pm EST
+we arrive at:
+
+Ben HeidornTuesday, December 8, 2015 at 10:39pm EST
+base exec time / current exec time, after we eliminate the instruction count (and for simplicity, let's say that the clock cycles are equal)
+
+Ben HeidornTuesday, December 8, 2015 at 10:38pm EST
+if we just look at the ratio..
+
+Ben HeidornTuesday, December 8, 2015 at 10:38pm EST
+GM is a root of the product of all of the ratios of the standard execution times over our current execution times
+
+Quang NguyenTuesday, December 8, 2015 at 10:37pm EST
+and the unit for the execution time is in ps
+
+Quang NguyenTuesday, December 8, 2015 at 10:37pm EST
+so therefore it is the inverse of IPC
+
+Quang NguyenTuesday, December 8, 2015 at 10:36pm EST
+[IC x clock_cycle_time]/IPC)
+
+Ben HeidornTuesday, December 8, 2015 at 10:36pm EST
+why is the execution time divided by the IPC?
+
+Quang NguyenTuesday, December 8, 2015 at 10:01pm EST
+the execution time is divided by the ipc therefore it should decrease as the machine gets better
+
+Quang NguyenTuesday, December 8, 2015 at 9:59pm EST
+Hey, someone brought up a point that shouldn't we look for a lower geometric means?
+
+Quang NguyenTuesday, December 8, 2015 at 5:50pm EST
+Let's hope so.
+
+Ben HeidornTuesday, December 8, 2015 at 5:48pm EST
+Haha, yeah, it's a lot of material, but I suspect that the length of the test will be similar and the depth of the material won't be as great. Just a guess, though.
+
+Quang NguyenTuesday, December 8, 2015 at 5:47pm EST
+Oh good god. That's a lot of stuff...
+
+Ben HeidornTuesday, December 8, 2015 at 5:43pm EST
+Sorry, I wasn't clear.
+
+Ben HeidornTuesday, December 8, 2015 at 5:43pm EST
+Lol, 40% of the material covered on the final is from before the midterm, and 60% is from the midterm to today.
+
+Quang NguyenTuesday, December 8, 2015 at 5:42pm EST
+Wait what?? I don't remember the final being worth that much in the syllabus...
+
+Ben HeidornTuesday, December 8, 2015 at 5:34pm EST
+We have to email the lab TAs apparently to get our lab grades. And there's no class on Thursday, since we finished the slides. Final is 40% everything before midterm, 60% after. He also made fun of our abilities to do math and said the math on the test should be remedial, lol.
+
+Quang NguyenTuesday, December 8, 2015 at 4:16pm EST
+Ok
+
+Ben HeidornTuesday, December 8, 2015 at 4:16pm EST
+Aight. Me neither. I'll ask at the end of class
+
+Quang NguyenTuesday, December 8, 2015 at 4:15pm EST
+Nope. I haven't heard a single thing from any of the TAs
+
+Ben HeidornTuesday, December 8, 2015 at 4:15pm EST
+Question.. did you get your grades for either lab in 514?
+
+Quang NguyenTuesday, December 8, 2015 at 3:27pm EST
+hahaha thanks!
+
+Ben HeidornTuesday, December 8, 2015 at 3:26pm EST
+so if he says anything like that, I'll let you know
+
+Ben HeidornTuesday, December 8, 2015 at 3:26pm EST
+he was pretty pissed about how empty the room was, and in-between slides, he said "that slide is going to be on the midterm"
+
+Ben HeidornTuesday, December 8, 2015 at 3:26pm EST
+the class before the first 431 exam, I reluctantly attended, and the class was almost empty since so many people are also in 431 and decided to study
+
+Ben HeidornTuesday, December 8, 2015 at 3:25pm EST
+I want to skip, but he occasionally says something in-between breaths that's really critical
+
+Ben HeidornTuesday, December 8, 2015 at 3:25pm EST
+lol, thanks
+
+Quang NguyenTuesday, December 8, 2015 at 3:25pm EST
+thanks. Have fun in 514 lol
+
+Ben HeidornTuesday, December 8, 2015 at 3:25pm EST
+good luck!
+
+Quang NguyenTuesday, December 8, 2015 at 3:24pm EST
+yea
+
+Ben HeidornTuesday, December 8, 2015 at 3:24pm EST
+the algorithms homework?
+
+Quang NguyenTuesday, December 8, 2015 at 3:24pm EST
+oh ok. I gotta skip 514 to continue to work on this homework... apparently it's harder than I though... The good news is that it is stumping everyone else too.
+
+Ben HeidornTuesday, December 8, 2015 at 3:23pm EST
+lol, so end of 514
+
+Ben HeidornTuesday, December 8, 2015 at 3:23pm EST
+unfortunately, beginning of 514
+
+Quang NguyenTuesday, December 8, 2015 at 3:23pm EST
+?
+
+Quang NguyenTuesday, December 8, 2015 at 3:23pm EST
+and I didn't know you can chain it up like that. Well, I guess we are just going to have to wait until these 2 tests are done. What's your estimate for how long it is going to take
+
+Ben HeidornTuesday, December 8, 2015 at 3:21pm EST
+haha, I had no idea about the feature until I saw you used it in the first set of cache tests
+
+Quang NguyenTuesday, December 8, 2015 at 3:19pm EST
+Holy crap! You are freaking cranking these out at a crazy pace. Oh and way to abuse the list comprehension feature. lol
+
+Ben HeidornTuesday, December 8, 2015 at 3:18pm EST
+I'm really glad we came up with the same results, more or less
+
+Ben HeidornTuesday, December 8, 2015 at 3:17pm EST
+lol, god I hope this works
+
+Ben HeidornTuesday, December 8, 2015 at 3:17pm EST
+which we should be able to do tonight
+
+Ben HeidornTuesday, December 8, 2015 at 3:16pm EST
+whatever emerges from this, we should use as the default to test the rest of the parameters, like ALU / Mult / TLB, then put it all together for the final push
+
+Ben HeidornTuesday, December 8, 2015 at 3:16pm EST
+that should be the last cache set, save the finale
+
+Ben HeidornTuesday, December 8, 2015 at 3:16pm EST
+I took those parameters, made two tests - one for all static, one for all dynamic, and I'm running them now
+
+Ben HeidornTuesday, December 8, 2015 at 3:15pm EST
+haha
+
+Ben HeidornTuesday, December 8, 2015 at 3:15pm EST
+I know!
+
+Quang NguyenTuesday, December 8, 2015 at 3:14pm EST
+This looks doable at this point haha
+
+Quang NguyenTuesday, December 8, 2015 at 3:14pm EST
+With the number of ways and block size being pretty defined, we can probably generate a reasonable number of sets
+
+Quang NguyenTuesday, December 8, 2015 at 3:12pm EST
+Hey that is looking good!!
+
+Ben HeidornTuesday, December 8, 2015 at 3:03pm EST
+that's L2
+
+Ben HeidornTuesday, December 8, 2015 at 3:03pm EST
+# ifqsize = [4,8,16] # nsets: # int: 2048, 4096 # fp: 4096, 8192 # blocks: # int: 128 # fp: 64, 128 # ways: # int: 2, 4 # fp: 2, (4)
+
+Ben HeidornTuesday, December 8, 2015 at 3:03pm EST
+anything in parentheses is "could be included, but probably not"
+
+Ben HeidornTuesday, December 8, 2015 at 3:02pm EST
+# ifqsize = [4,8] # nsets: # int: 256, 512, (1024) # fp: 512, 1024, 2048 # blocks: # int: 32, 64 # fp: 32, 64 # ways: # int: (1,) 2 # fp: 1
+
+Ben HeidornTuesday, December 8, 2015 at 3:02pm EST
+L1:
+
+Ben HeidornTuesday, December 8, 2015 at 3:02pm EST
+I have the most comprehensive findings for the cache yet, and it's narrowed down enough that we could probably go with it
+
+Ben HeidornTuesday, December 8, 2015 at 3:02pm EST
+alright
+
+Ben HeidornTuesday, December 8, 2015 at 2:10pm EST
+sounds good
+
+Quang NguyenTuesday, December 8, 2015 at 2:09pm EST
+Oh ok. Let me know when you get the result for your cache check. We can make some tests after that then
+
+Ben HeidornTuesday, December 8, 2015 at 2:08pm EST
+pretty much the same as what we've been doing
+
+Ben HeidornTuesday, December 8, 2015 at 2:08pm EST
+eliminate all of the parameters that are unlikely to produce a top design
+
+Quang NguyenTuesday, December 8, 2015 at 2:07pm EST
+what do you mean by limit the caches to their bare essentials?
+
+Ben HeidornTuesday, December 8, 2015 at 2:06pm EST
+then top it off with a final set with all of the "most likely" parameters
+
+Ben HeidornTuesday, December 8, 2015 at 2:06pm EST
+and then I guess we can start testing combinations of the other parameters, get those down to the most performant values..
+
+Ben HeidornTuesday, December 8, 2015 at 2:06pm EST
+then we should limit the caches to their bare essentials
+
+Ben HeidornTuesday, December 8, 2015 at 2:05pm EST
+should be done in about an hour
+
+Ben HeidornTuesday, December 8, 2015 at 2:05pm EST
+I'm running one sanity check on the cache
+
+Ben HeidornTuesday, December 8, 2015 at 2:05pm EST
+I think we're coming really close to that
+
+Quang NguyenTuesday, December 8, 2015 at 2:03pm EST
+or we can break the static and dynamic into their issue:width also
+
+Quang NguyenTuesday, December 8, 2015 at 2:02pm EST
+What do you think we should do at this point. make 2 massive tests, one for static and one for static and run it?
+
+Ben HeidornTuesday, December 8, 2015 at 2:01pm EST
+it's dense
+
+Ben HeidornTuesday, December 8, 2015 at 2:01pm EST
+haha, yeah
+
+Quang NguyenTuesday, December 8, 2015 at 2:01pm EST
+That makes my head hurts haha
+
+Ben HeidornTuesday, December 8, 2015 at 1:59pm EST
+http://bruxy.regnet.cz/linux/bash_cheatsheet/bash_cheatsheet.pdf
+
+Ben HeidornTuesday, December 8, 2015 at 1:59pm EST
+btw, I found this crazy bash cheat sheet
+
+Ben HeidornTuesday, December 8, 2015 at 1:53pm EST
+that looks right to me
+
+Quang NguyenTuesday, December 8, 2015 at 1:51pm EST
+Quang NguyenTuesday, December 8, 2015 at 1:51pm EST
+This is putting your findings in a concise format. Also, I combined it with what I found also. Let me know if you think it is relevant since your test consider other options that I didnt'
+
+Ben HeidornTuesday, December 8, 2015 at 1:40pm EST
+good finds
+
+Quang NguyenTuesday, December 8, 2015 at 1:40pm EST
+Again my findings are based on the ex_BT_comb_dynamic/static tests only
+
+Quang NguyenTuesday, December 8, 2015 at 1:39pm EST
+the # of ways for L1 differ depending if it is int or float
+
+Quang NguyenTuesday, December 8, 2015 at 1:38pm EST
+Quang NguyenTuesday, December 8, 2015 at 1:38pm EST
+Ok I made some modification to my findings in regard to L1
+
+Ben HeidornTuesday, December 8, 2015 at 1:35pm EST
+for float, ul2 does best with 4096 / 8192
+
+Ben HeidornTuesday, December 8, 2015 at 1:34pm EST
+okay
+
+Ben HeidornTuesday, December 8, 2015 at 1:34pm EST
+oh wow
+
+Ben HeidornTuesday, December 8, 2015 at 1:34pm EST
+for int
+
+Quang NguyenTuesday, December 8, 2015 at 1:34pm EST
+actually for L1, the 1/2/4 way differ by +- 0.0005
+
+Ben HeidornTuesday, December 8, 2015 at 1:34pm EST
+followed by the rest
+
+Ben HeidornTuesday, December 8, 2015 at 1:34pm EST
+8192 in a distant 3rd
+
+Ben HeidornTuesday, December 8, 2015 at 1:34pm EST
+ul2 - 2048, 4096 for number of sets is performing best
+
+Ben HeidornTuesday, December 8, 2015 at 1:32pm EST
+but I'm finding 2/4-way for L2
+
+Ben HeidornTuesday, December 8, 2015 at 1:31pm EST
+instead of 2/4-way
+
+Ben HeidornTuesday, December 8, 2015 at 1:30pm EST
+I'm actually finding 1/2-way for L1
+
+Quang NguyenTuesday, December 8, 2015 at 1:30pm EST
+oh gotcha
+
+Ben HeidornTuesday, December 8, 2015 at 1:30pm EST
+optimal_caches.py
+
+Quang NguyenTuesday, December 8, 2015 at 1:29pm EST
+Which test are you getting these results from cuz I thought all the BT tests have fixed block size
+
+Ben HeidornTuesday, December 8, 2015 at 1:28pm EST
+the middle one is cache block size
+
+Ben HeidornTuesday, December 8, 2015 at 1:28pm EST
+ul2:%s:%s:%s:l
+
+Quang NguyenTuesday, December 8, 2015 at 1:27pm EST
+wait how did you calculate cache block size?
+
+Ben HeidornTuesday, December 8, 2015 at 1:27pm EST
+in all cases, though, assoc is low
+
+Ben HeidornTuesday, December 8, 2015 at 1:27pm EST
+I'm also finding that, for floating point, L1 can be direct mapped
+
+Ben HeidornTuesday, December 8, 2015 at 1:26pm EST
+awesome
+
+Ben HeidornTuesday, December 8, 2015 at 1:26pm EST
+almost exactly what I'm finding
+
+Ben HeidornTuesday, December 8, 2015 at 1:26pm EST
+that's like
+
+Quang NguyenTuesday, December 8, 2015 at 1:25pm EST
+Quang NguyenTuesday, December 8, 2015 at 1:25pm EST
+this looks better.
+
+Quang NguyenTuesday, December 8, 2015 at 1:25pm EST
+static int - 1,2,4: {L2 : [2 way, 232768 sets] , L1: [There is no conclusive pattern]} Static float - 1,2,4: {L2 : [2 way, 24096/22048 sets], L1: [2/4 way, No conclusive pattern for the # of sets]} Dynamic int - 2,4,8: {L2 : [2 way, 232768 sets], L1: [2/4 way, No conclusive pattern for the # of sets]} Dynamic float: - 2,4,8: {L2 : [2 way, 24096/22048 sets], L1: [2/4 way, No conclusive pattern for the # of sets]}
+
+Quang NguyenTuesday, December 8, 2015 at 1:25pm EST
+here are my finding for the comb cache tests
+
+Ben HeidornTuesday, December 8, 2015 at 1:25pm EST
+ul2 associativity - probably best at 2 or 4
+
+Ben HeidornTuesday, December 8, 2015 at 1:23pm EST
+128 or 64 are fairly equal for floating point
+
+Ben HeidornTuesday, December 8, 2015 at 1:23pm EST
+let me amend my statement - 128 for a cache size is far superior for integer tests
+
+Ben HeidornTuesday, December 8, 2015 at 1:22pm EST
+integer: ifqsize is 2, 4 or 8
+
+Ben HeidornTuesday, December 8, 2015 at 1:22pm EST
+but not 2
+
+Ben HeidornTuesday, December 8, 2015 at 1:22pm EST
+floating point: ifqsize is 4, 8 or 16
+
+Ben HeidornTuesday, December 8, 2015 at 1:21pm EST
+32 barely makes a scratch
+
+Ben HeidornTuesday, December 8, 2015 at 1:21pm EST
+*superior
+
+Ben HeidornTuesday, December 8, 2015 at 1:21pm EST
+128 is far superioir
+
+Ben HeidornTuesday, December 8, 2015 at 1:21pm EST
+ul2 - cache block size of 64 or 128
+
+Ben HeidornTuesday, December 8, 2015 at 1:21pm EST
+these are my findings:
+
+Ben HeidornTuesday, December 8, 2015 at 1:21pm EST
+just ran a number of cache tests
+
+Quang NguyenTuesday, December 8, 2015 at 12:34pm EST
+oh nvm. that's because I did a commit before I do the git stash and git pull
+
+Quang NguyenTuesday, December 8, 2015 at 12:33pm EST
+I'm so confused.... the resulting graph folders aren't showing up on my git stage. It is there in my directory but I can't seem to be able to add it to my stage...
+
+Ben HeidornTuesday, December 8, 2015 at 9:59am EST
+our systems are beating the homework GMs, which is a nice sanity check
+
+Ben HeidornTuesday, December 8, 2015 at 9:58am EST
+also, for good measure, I re-ran the homework sets through the process to see how they fare
+
+Ben HeidornTuesday, December 8, 2015 at 9:58am EST
+awesome, thanks - I'll update what I've got there
+
+Quang NguyenTuesday, December 8, 2015 at 1:10am EST
+I marked the one that I ran on the google spreadsheet if you want a ref
+
+Quang NguyenTuesday, December 8, 2015 at 1:09am EST
+Ben so I just checked the on the lab computers and apparently I ran out disk space so all the test cases were killed. So I removed all the files and start "ex_BT_comb_dynamic" and " ex_BT_comb_static" again. Feel free to start the other 2/4 when you get up. Lets hope that these 2 experiments don't crash my disk space again
+
+Ben HeidornMonday, December 7, 2015 at 10:49pm EST
+sounds good
+
+Ben HeidornMonday, December 7, 2015 at 10:49pm EST
+okay
+
+Quang NguyenMonday, December 7, 2015 at 10:48pm EST
+Alright. I fixed the BT tests. I'm gonna run them and then get back to this hw
+
+Quang NguyenMonday, December 7, 2015 at 10:44pm EST
+haha congrats
+
+Ben HeidornMonday, December 7, 2015 at 10:44pm EST
+yeeeessss
+
+Ben HeidornMonday, December 7, 2015 at 10:44pm EST
+screen's working
+
+Ben HeidornMonday, December 7, 2015 at 10:43pm EST
+oh man
+
+Quang NguyenMonday, December 7, 2015 at 10:38pm EST
+Alright. I might get to it tonight. I'll post something if I do
+
+Ben HeidornMonday, December 7, 2015 at 10:37pm EST
+yup
+
+Quang NguyenMonday, December 7, 2015 at 10:37pm EST
+*not
+
+Quang NguyenMonday, December 7, 2015 at 10:37pm EST
+Oh this is the test it self now the make config script. gotcha
+
+Ben HeidornMonday, December 7, 2015 at 10:35pm EST
+I didn't - the original tests are still written as direct mapped
+
+Ben HeidornMonday, December 7, 2015 at 10:35pm EST
+ifqsize - definitely not 1, but could be 2 in some cases
+
+Quang NguyenMonday, December 7, 2015 at 10:35pm EST
+You fixed the hard coded bug right?
+
+Ben HeidornMonday, December 7, 2015 at 10:34pm EST
+I'm okay with leaving it for later
+
+Ben HeidornMonday, December 7, 2015 at 10:34pm EST
+your call
+
+Quang NguyenMonday, December 7, 2015 at 10:34pm EST
+Oh I forgot, do you want to run all the BT tests again so we know whether or not L2 cache should be direct mapped?
+
+Ben HeidornMonday, December 7, 2015 at 10:33pm EST
+I think we need to amend that
+
+Ben HeidornMonday, December 7, 2015 at 10:33pm EST
+I ran one more test, this time validating the assumption that ifqsize must be greater than 2
+
+Ben HeidornMonday, December 7, 2015 at 10:33pm EST
+okay, final musings for the night
+
+Ben HeidornMonday, December 7, 2015 at 9:54pm EST
+or, sometimes, if you show up late
+
+Ben HeidornMonday, December 7, 2015 at 9:53pm EST
+I only show up because he more or less penalizes everyone if not enough people show up
+
+Ben HeidornMonday, December 7, 2015 at 9:53pm EST
+haha, yeah.. he's kind of a dick
+
+Quang NguyenMonday, December 7, 2015 at 9:51pm EST
+unfortunately, the teacher doesn't give a crap about the students so I don't give a crap about the class....
+
+Quang NguyenMonday, December 7, 2015 at 9:51pm EST
+The weird thing is that 514 would be one of my most interesting classes if we just consider about how much I have been enjoying the material
+
+Quang NguyenMonday, December 7, 2015 at 9:50pm EST
+but you'll be fine though.
+
+Ben HeidornMonday, December 7, 2015 at 9:50pm EST
+and yeah, 514 is not the most interesting class either
+
+Quang NguyenMonday, December 7, 2015 at 9:50pm EST
+ok... I lied. Its moderately hard for me. I don't have a strong math background so I was struggling in the beginning
+
+Ben HeidornMonday, December 7, 2015 at 9:50pm EST
+haha, awesome
+
+Quang NguyenMonday, December 7, 2015 at 9:49pm EST
+undergrad. It's part of the track that I have to take. It's isn't hard at all. The hard part is paying attention in class haha
+
+Ben HeidornMonday, December 7, 2015 at 9:47pm EST
+undergrad or grad? I'm slated to take the undergrad one next semester, and that sounds terrifying, lol
+
+Quang NguyenMonday, December 7, 2015 at 9:46pm EST
+yea
+
+Ben HeidornMonday, December 7, 2015 at 9:46pm EST
+is that for algorithms?
+
+Quang NguyenMonday, December 7, 2015 at 9:46pm EST
+so my hw for one of my class is proving the correctness of the Dijkstra's algorithm and I'm having a problem with it. That speaks to how much I have been learning in 514....
+
+Ben HeidornMonday, December 7, 2015 at 9:43pm EST
+also, I learned a lot of python tricks in reading your code, which is great
+
+Quang NguyenMonday, December 7, 2015 at 9:43pm EST
+thanks man. I appreciate it
+
+Ben HeidornMonday, December 7, 2015 at 9:43pm EST
+it's not, and I mean it, haha. you're a good developer, and you have a good instinct for what needs to be done
+
+Quang NguyenMonday, December 7, 2015 at 9:42pm EST
+I hope that's a joke haha
+
+Ben HeidornMonday, December 7, 2015 at 9:41pm EST
+haha, I agree - I'm glad you're learning a lot about coding skills! you're a solid coder, and honestly a lot better than most of the developers I've worked with at my previous job
+
+Quang NguyenMonday, December 7, 2015 at 9:40pm EST
+but we can't celebrate yet. The project isn't done haha
+
+Quang NguyenMonday, December 7, 2015 at 9:39pm EST
+I heard the word alot, but I'm starting to get the understand of why it is important
+
+Quang NguyenMonday, December 7, 2015 at 9:38pm EST
+haha no not at all. Honestly, I'm learning a crap load about basic coding skills. I have been developing a better understanding of what you mean by my code was too tighly coupled
+
+Ben HeidornMonday, December 7, 2015 at 9:36pm EST
+that said, I apologize if I'm driving you up a wall
+
+Ben HeidornMonday, December 7, 2015 at 9:36pm EST
+I enjoy working with you - I don't think many other people would tolerate putting in this much effort, lol
+
+Quang NguyenMonday, December 7, 2015 at 9:36pm EST
+I'm glad I asked you cuz I definitely wouldn't have gotten this far with someone else
+
+Ben HeidornMonday, December 7, 2015 at 9:36pm EST
+which should be a breeze compared to the testing portion
+
+Quang NguyenMonday, December 7, 2015 at 9:35pm EST
+yea I agree. We are pretty darn close to the end of our testing stage and onto the paper writing stage
+
+Ben HeidornMonday, December 7, 2015 at 9:34pm EST
+so I'd say we're most of the way finished with our tests
+
+Ben HeidornMonday, December 7, 2015 at 9:33pm EST
+plus we have a ton of material to write a paper
+
+Ben HeidornMonday, December 7, 2015 at 9:33pm EST
+I think we're on the right track, so I'm confident that we can start taking it easy soon
+
+Ben HeidornMonday, December 7, 2015 at 9:33pm EST
+I'm probably going to crash pretty soon
+
+Ben HeidornMonday, December 7, 2015 at 9:33pm EST
+lol
+
+Ben HeidornMonday, December 7, 2015 at 9:33pm EST
+this project has slowly devoured me from the inside
+
+Ben HeidornMonday, December 7, 2015 at 9:33pm EST
+I'm a shell of a man, Quang
+
+Quang NguyenMonday, December 7, 2015 at 9:32pm EST
+You're still going strong aren't you?? Committing new tests still. I admire your stamina lol
+
+Ben HeidornMonday, December 7, 2015 at 9:29pm EST
+niiice
+
+Quang NguyenMonday, December 7, 2015 at 9:28pm EST
+Quang NguyenMonday, December 7, 2015 at 9:28pm EST
+yea so i guess it doesn't matter at all.
+
+Ben HeidornMonday, December 7, 2015 at 9:18pm EST
+probably means that the L1 cache and L2 cache will play a much larger role in the final system
+
+Ben HeidornMonday, December 7, 2015 at 9:17pm EST
+and it makes sense, since the earlier test on the ifqsize, speed and L1 cache showed massive improvements based on how the L1 cache was designed
+
+Ben HeidornMonday, December 7, 2015 at 9:17pm EST
+that's good to know
+
+Ben HeidornMonday, December 7, 2015 at 9:17pm EST
+looks like the TLB only matters down to a factor of 10^-3
+
+Ben HeidornMonday, December 7, 2015 at 9:04pm EST
+lol, it can wait if need be
+
+Ben HeidornMonday, December 7, 2015 at 9:04pm EST
+only if you want
+
+Quang NguyenMonday, December 7, 2015 at 9:03pm EST
+I guess that makes sense since it would affect all the machines equally. the tlb test just finished. I can analyze it now
+
+Ben HeidornMonday, December 7, 2015 at 8:54pm EST
+*bpred
+
+Ben HeidornMonday, December 7, 2015 at 8:54pm EST
+fetch:speed, like bored:ras, has minimal impact on the final result
+
+Quang NguyenMonday, December 7, 2015 at 8:28pm EST
+lol its all good
+
+Quang NguyenMonday, December 7, 2015 at 8:28pm EST
+we just need to add this constraint to the validation. maximum ul2 block size is 128 B, must be at least double the dl1 block size
+
+Ben HeidornMonday, December 7, 2015 at 8:27pm EST
+sorry to bother you
+
+Ben HeidornMonday, December 7, 2015 at 8:27pm EST
+lol, if I missed it, I won't anymore
+
+Ben HeidornMonday, December 7, 2015 at 8:27pm EST
+oh well
+
+Ben HeidornMonday, December 7, 2015 at 8:27pm EST
+which doesn't really say that the block size has to be at least the size of the L1 block size
+
+Ben HeidornMonday, December 7, 2015 at 8:27pm EST
+yeah.. the only thing I see is "Y >= size(cache:dl1)+size(cache:il1) && Y <= 128"
+
+Quang NguyenMonday, December 7, 2015 at 8:26pm EST
+nope. I just checked. we must have missed it
+
+Ben HeidornMonday, December 7, 2015 at 8:26pm EST
+I don't think it was coded
+
+Quang NguyenMonday, December 7, 2015 at 8:25pm EST
+wait... I thought we already added a constraint to make sure that y >= x
+
+Ben HeidornMonday, December 7, 2015 at 8:25pm EST
+it could be some multiple of Y and another of the parameters, but I'm pretty sure it's just simply if X > Y
+
+Ben HeidornMonday, December 7, 2015 at 8:25pm EST
+I'm not 100% that the above is true, but for everything I've tried so far, it is true
+
+Ben HeidornMonday, December 7, 2015 at 8:24pm EST
+a lot of trial and error, lol
+
+Quang NguyenMonday, December 7, 2015 at 8:24pm EST
+oh nice! how in the world did you figure that part out?
+
+Ben HeidornMonday, December 7, 2015 at 8:22pm EST
+if X is ever bigger than Y, simple scalar does not throw an error, but it just automatically fails every test
+
+Ben HeidornMonday, December 7, 2015 at 8:22pm EST
+-cache:il1 il1:1024:X:1:r -cache:dl2 ul2:2048:Y:2:r
+
+Ben HeidornMonday, December 7, 2015 at 8:21pm EST
+found out why some of our simple scalar tests were failing
+
+Quang NguyenMonday, December 7, 2015 at 7:21pm EST
+alright good luck
+
+Ben HeidornMonday, December 7, 2015 at 7:21pm EST
+good luck, man
+
+Ben HeidornMonday, December 7, 2015 at 7:21pm EST
+will do
+
+Quang NguyenMonday, December 7, 2015 at 7:21pm EST
+Oh no. definitely keep me posted.
+
+Ben HeidornMonday, December 7, 2015 at 7:21pm EST
+unless you want me not to, so you can get some peace about this, lol
+
+Ben HeidornMonday, December 7, 2015 at 7:21pm EST
+I'll keep you posted on anything else I find
+
+Ben HeidornMonday, December 7, 2015 at 7:21pm EST
+as long as you want, really
+
+Ben HeidornMonday, December 7, 2015 at 7:21pm EST
+oh, yeah, feel free to take a break
+
+Quang NguyenMonday, December 7, 2015 at 7:20pm EST
+oh gotcha
+
+Ben HeidornMonday, December 7, 2015 at 7:20pm EST
+I'm not really concerned
+
+Ben HeidornMonday, December 7, 2015 at 7:20pm EST
+also, it's programming languages
+
+Ben HeidornMonday, December 7, 2015 at 7:20pm EST
+that's entirely my own fault
+
+Ben HeidornMonday, December 7, 2015 at 7:20pm EST
+I haven't been able to go to class due to obsession, lol
+
+Quang NguyenMonday, December 7, 2015 at 7:20pm EST
+Oh did you try the screen command again? I just realized why you said you weren't able to go to class
+
+Quang NguyenMonday, December 7, 2015 at 7:19pm EST
+I'll report back once I get the result for the tlb stuff
+
+Quang NguyenMonday, December 7, 2015 at 7:19pm EST
+Alright. Do you mind if I call it quit for a while? I have a homework assignment due on wednesday that I'm pretty stumped on.
+
+Ben HeidornMonday, December 7, 2015 at 7:18pm EST
+I might do that. I'm still thinking of any other quick tests to run to further narrow down our options
+
+Ben HeidornMonday, December 7, 2015 at 7:18pm EST
+that's not a bad idea
+
+Quang NguyenMonday, December 7, 2015 at 7:18pm EST
+*change
+
+Quang NguyenMonday, December 7, 2015 at 7:18pm EST
+why don't you just chance the hard-coded part and run it now and grab the results tomorrow morning?
+
+Quang NguyenMonday, December 7, 2015 at 7:17pm EST
+oh that's right. you said that
+
+Ben HeidornMonday, December 7, 2015 at 7:17pm EST
+I want to rerun those with fewer other constraints to see how it fares
+
+Ben HeidornMonday, December 7, 2015 at 7:17pm EST
+it turned out that the test I ran had it hard-coded to direct mapped
+
+Ben HeidornMonday, December 7, 2015 at 7:17pm EST
+oh, I'm not confident about that anymore
+
+Quang NguyenMonday, December 7, 2015 at 7:16pm EST
+also, l2 cache should be direct mapped
+
+Quang NguyenMonday, December 7, 2015 at 7:16pm EST
+yup!
+
+Ben HeidornMonday, December 7, 2015 at 7:15pm EST
+where applicable
+
+Ben HeidornMonday, December 7, 2015 at 7:15pm EST
+and ifqsize > 2
+
+Ben HeidornMonday, December 7, 2015 at 7:15pm EST
+at least, I'm going to make those changes
+
+Ben HeidornMonday, December 7, 2015 at 7:15pm EST
+bpred = comb
+
+Ben HeidornMonday, December 7, 2015 at 7:15pm EST
+RAS = 8, not permanent
+
+Ben HeidornMonday, December 7, 2015 at 7:15pm EST
+so, to summarize..
+
+Ben HeidornMonday, December 7, 2015 at 7:15pm EST
+okay
+
+Quang NguyenMonday, December 7, 2015 at 7:15pm EST
+nah thats fine. we can start making those decisions once we see that our make_configs file generate too many configs
+
+Ben HeidornMonday, December 7, 2015 at 7:14pm EST
+we are looking for two "best" designs, one for int and another for floating point. I don't know if they'll be two different issue widths, but they could be.. but it's not looking likely
+
+Ben HeidornMonday, December 7, 2015 at 7:14pm EST
+unless you disagree
+
+Ben HeidornMonday, December 7, 2015 at 7:14pm EST
+I'm thinking we should keep testing all of them until we've ruled out most of the possible opportunities for a certain issue width to pull through
+
+Ben HeidornMonday, December 7, 2015 at 7:13pm EST
+but I'm still not certain that some other config won't completely change things up
+
+Ben HeidornMonday, December 7, 2015 at 7:13pm EST
+I want to say that we should dump static issue 4-wide..
+
+Quang NguyenMonday, December 7, 2015 at 7:13pm EST
+yea i know that kinda complicates things
+
+Ben HeidornMonday, December 7, 2015 at 7:13pm EST
+it's gonna be impressive if issue width 8 wins
+
+Ben HeidornMonday, December 7, 2015 at 7:12pm EST
+I'm kinda thinking that
+
+Ben HeidornMonday, December 7, 2015 at 7:12pm EST
+yeah
+
+Ben HeidornMonday, December 7, 2015 at 7:12pm EST
+well..
+
+Quang NguyenMonday, December 7, 2015 at 7:12pm EST
+So basically, the final test should only consider issue:width of 2 or 4 for dynamic...
+
+Ben HeidornMonday, December 7, 2015 at 7:12pm EST
+I'm still pretty disappointed about the lack of solidarity with the ALUs and Mults
+
+Ben HeidornMonday, December 7, 2015 at 7:12pm EST
+these results are making me feel a lot better about this project
+
+Ben HeidornMonday, December 7, 2015 at 7:11pm EST
+thanks
+
+Ben HeidornMonday, December 7, 2015 at 7:11pm EST
+awesome
+
+Quang NguyenMonday, December 7, 2015 at 7:11pm EST
+I logged the your findings in the excel file
+
+Ben HeidornMonday, December 7, 2015 at 7:11pm EST
+because I don't think it will matter
+
+Quang NguyenMonday, December 7, 2015 at 7:11pm EST
+yea, we can just have it set at 8 or 16 only
+
+Ben HeidornMonday, December 7, 2015 at 7:11pm EST
+so for tests leading up to our final test, we can just set the RAS to 8 or whatever
+
+Ben HeidornMonday, December 7, 2015 at 7:10pm EST
+and we can still mess with RAS, but the difference is down to 10^-3
+
+Ben HeidornMonday, December 7, 2015 at 7:10pm EST
+only test comb
+
+Ben HeidornMonday, December 7, 2015 at 7:10pm EST
+I'm suggesting that we..
+
+Ben HeidornMonday, December 7, 2015 at 7:10pm EST
+ex_baseline_optimal_bpred_ras produced the right-hand side
+
+Ben HeidornMonday, December 7, 2015 at 7:10pm EST
+ex_baseline_optimal_bpred is the test that produced the results you see on the left-hand side of the image
+
+Ben HeidornMonday, December 7, 2015 at 7:09pm EST
+ex_baseline_optimal is just the baseline test with changes made to optimize RUU / LSQ / memwidth
+
+Ben HeidornMonday, December 7, 2015 at 7:09pm EST
+pretty handily
+
+Ben HeidornMonday, December 7, 2015 at 7:09pm EST
+but from the left-hand side, you can see that comb dominates
+
+Ben HeidornMonday, December 7, 2015 at 7:09pm EST
+the right is RAS = 8 or 16
+
+Ben HeidornMonday, December 7, 2015 at 7:09pm EST
+on the left-hand side is RAS = 0
+
+Ben HeidornMonday, December 7, 2015 at 7:08pm EST
+with Integer sorted
+
+Ben HeidornMonday, December 7, 2015 at 7:08pm EST
+that's the screenshot, btw
+
+Ben HeidornMonday, December 7, 2015 at 7:08pm EST
+I added a new parameter to makeConfigs
+
+Quang NguyenMonday, December 7, 2015 at 7:08pm EST
+what is ex_baseline_optimal?
+
+Ben HeidornMonday, December 7, 2015 at 7:05pm EST
+of what I'm seeing
+
+Ben HeidornMonday, December 7, 2015 at 7:05pm EST
+send you a snapshot
+
+Ben HeidornMonday, December 7, 2015 at 7:05pm EST
+let me..
+
+Ben HeidornMonday, December 7, 2015 at 7:05pm EST
+I'm proposing we use comb
+
+Ben HeidornMonday, December 7, 2015 at 7:05pm EST
+I just wanted to compare it once more
+
+Ben HeidornMonday, December 7, 2015 at 7:05pm EST
+yeah
+
+Quang NguyenMonday, December 7, 2015 at 7:05pm EST
+we already figured that out in one of our hw
+
+Quang NguyenMonday, December 7, 2015 at 7:05pm EST
+Are you proposing that we use comb from now on then
+
+Ben HeidornMonday, December 7, 2015 at 7:04pm EST
+not surprising, but a RAS of 0 is bad
+
+Quang NguyenMonday, December 7, 2015 at 7:04pm EST
+haha thanks.
+
+Ben HeidornMonday, December 7, 2015 at 7:03pm EST
+very clever implementations, btw
+
+Ben HeidornMonday, December 7, 2015 at 7:03pm EST
+your test looks good
+
+Ben HeidornMonday, December 7, 2015 at 7:02pm EST
+I've got it down to a system, lol
+
+Ben HeidornMonday, December 7, 2015 at 7:02pm EST
+yeah, I've been running these tests rapidfire
+
+Quang NguyenMonday, December 7, 2015 at 7:02pm EST
+wait you already got the results?
+
+Ben HeidornMonday, December 7, 2015 at 7:01pm EST
+I'll check it over now
+
+Ben HeidornMonday, December 7, 2015 at 7:01pm EST
+comb pretty much has it in the bag
+
+Ben HeidornMonday, December 7, 2015 at 7:01pm EST
+but even with either RAS, the 2lev and bimod are competing for second and third place
+
+Ben HeidornMonday, December 7, 2015 at 7:01pm EST
+for some, 8 is better, for others, 16 is better
+
+Ben HeidornMonday, December 7, 2015 at 7:01pm EST
+the RAS is mixed
+
+Quang NguyenMonday, December 7, 2015 at 6:56pm EST
+ok. I wrote the test. It was pretty simple. take a look at it and let me know what you think
+
+Quang NguyenMonday, December 7, 2015 at 6:46pm EST
+ok
+
+Ben HeidornMonday, December 7, 2015 at 6:46pm EST
+I'm going to test the RAS
+
+Quang NguyenMonday, December 7, 2015 at 6:45pm EST
+yup.
+
+Ben HeidornMonday, December 7, 2015 at 6:44pm EST
+the TLB should be standalone, so whatever you find from that, we can implement those optimizations
+
+Ben HeidornMonday, December 7, 2015 at 6:44pm EST
+I think I'm getting good information
+
+Ben HeidornMonday, December 7, 2015 at 6:44pm EST
+I'm running tests starting from the baseline and changing only those parameters that I'm confident about
+
+Ben HeidornMonday, December 7, 2015 at 6:43pm EST
+git pull
+
+Ben HeidornMonday, December 7, 2015 at 6:43pm EST
+sounds good to me
+
+Quang NguyenMonday, December 7, 2015 at 6:43pm EST
+Does that sounds like a decent game plan?
+
+Quang NguyenMonday, December 7, 2015 at 6:43pm EST
+Ok so for the tlb. We don't have latency parameters that are based on how large it is. So I'm just going to max it out and change the level of associativity of it
+
+Ben HeidornMonday, December 7, 2015 at 6:18pm EST
+okay
+
+Quang NguyenMonday, December 7, 2015 at 6:16pm EST
+alright. I'm gonna take a quick 20 minutes nap. When I get up, I'll tackle one of them.
+
+Ben HeidornMonday, December 7, 2015 at 6:15pm EST
+yeah, I think that's it
+
+Quang NguyenMonday, December 7, 2015 at 6:15pm EST
+So... the only 3 things that we still need to test for are the tlb, bpred:ras and bpred:btb right?
+
+Quang NguyenMonday, December 7, 2015 at 6:06pm EST
+and I don't think we will need to fix that bug another way. the graph function would take care of the problem since it sorts the results
+
+Ben HeidornMonday, December 7, 2015 at 6:05pm EST
+I'm wondering if we found a bug with simple scalar.. not too surprising, but I wonder what's causing it
+
+Ben HeidornMonday, December 7, 2015 at 6:05pm EST
+it's a small step forward
+
+Quang NguyenMonday, December 7, 2015 at 6:04pm EST
+alright. I agree with you that ifqsize of 1 and 2 doesn't do anything and the rest of the parameters doesn't affect the systems at all
+
+Ben HeidornMonday, December 7, 2015 at 6:02pm EST
+likely not
+
+Ben HeidornMonday, December 7, 2015 at 6:02pm EST
+lol
+
+Quang NguyenMonday, December 7, 2015 at 6:02pm EST
+lol I don't think screamo is going to make you mood improve with this project
+
+Ben HeidornMonday, December 7, 2015 at 6:01pm EST
+I've regressed to listening to screamo from the late 90s / early 2000s to cope with this project
+
+Quang NguyenMonday, December 7, 2015 at 6:01pm EST
+alright
+
+Ben HeidornMonday, December 7, 2015 at 5:59pm EST
+we'll fix it when we know what graphs we want to include in the paper
+
+Quang NguyenMonday, December 7, 2015 at 5:58pm EST
+but you're right. that did do the trick
+
+Quang NguyenMonday, December 7, 2015 at 5:58pm EST
+without that, our plot is going to look really weird
+
+Ben HeidornMonday, December 7, 2015 at 5:58pm EST
+comment that line out
+
+Ben HeidornMonday, December 7, 2015 at 5:57pm EST
+#plt.tight_layout(pad=.2,)
+
+Ben HeidornMonday, December 7, 2015 at 5:57pm EST
+another hack
+
+Ben HeidornMonday, December 7, 2015 at 5:57pm EST
+I found a bug that has a quick fix
+
+Quang NguyenMonday, December 7, 2015 at 5:57pm EST
+lol now my graphing script doesn't even run on my computer... this is terrible
+
+Ben HeidornMonday, December 7, 2015 at 5:51pm EST
+this is what the first CSE 514 project did to me
+
+Ben HeidornMonday, December 7, 2015 at 5:51pm EST
+I wish this wasn't such a time suck
+
+Ben HeidornMonday, December 7, 2015 at 5:51pm EST
+lol
+
+Ben HeidornMonday, December 7, 2015 at 5:51pm EST
+god, me too
+
+Quang NguyenMonday, December 7, 2015 at 5:50pm EST
+I freaking hate this project lol
+
+Ben HeidornMonday, December 7, 2015 at 5:49pm EST
+yeah
+
+Quang NguyenMonday, December 7, 2015 at 5:47pm EST
+hmm... that's interesting
+
+Quang NguyenMonday, December 7, 2015 at 5:47pm EST
+oh really? like a blank sim_IPC
+
+Ben HeidornMonday, December 7, 2015 at 5:47pm EST
+0s and null values
+
+Ben HeidornMonday, December 7, 2015 at 5:47pm EST
+it just produced bad results
+
+Ben HeidornMonday, December 7, 2015 at 5:47pm EST
+is that simple scalar still ran
+
+Ben HeidornMonday, December 7, 2015 at 5:47pm EST
+well, the funny thing
+
+Quang NguyenMonday, December 7, 2015 at 5:46pm EST
+so we didn't covered some required cases in our validation function then. We just need to fix that function, not so much the extract function
+
+Ben HeidornMonday, December 7, 2015 at 5:45pm EST
+pushed
+
+Ben HeidornMonday, December 7, 2015 at 5:44pm EST
+I'll commit it as-is for now
+
+Ben HeidornMonday, December 7, 2015 at 5:44pm EST
+well, we could print out those files that are
+
+Quang NguyenMonday, December 7, 2015 at 5:43pm EST
+nah I was asking if you meant that there were files in the results directory that were bad
+
+Ben HeidornMonday, December 7, 2015 at 5:42pm EST
+if we wanted
+
+Ben HeidornMonday, December 7, 2015 at 5:42pm EST
+yeah, it could
+
+Quang NguyenMonday, December 7, 2015 at 5:42pm EST
+do you mean files in the ./results/ directory?
+
+Ben HeidornMonday, December 7, 2015 at 5:41pm EST
+should it print anything to notify us that there were files with unusable data?
+
+Ben HeidornMonday, December 7, 2015 at 5:41pm EST
+okay
+
+Quang NguyenMonday, December 7, 2015 at 5:40pm EST
+yea go for it for now
+
+Ben HeidornMonday, December 7, 2015 at 5:40pm EST
+I wasn't planning to push it since it's so hacky, but I can if you want
+
+Quang NguyenMonday, December 7, 2015 at 5:40pm EST
+yea can you push the bug fix
+
+Ben HeidornMonday, December 7, 2015 at 5:40pm EST
+but besides that..
+
+Ben HeidornMonday, December 7, 2015 at 5:40pm EST
+but it looks like ifqsize = 4,8,16 performs way better than 1,2
+
+Ben HeidornMonday, December 7, 2015 at 5:40pm EST
+check the results for yourself in case I missed something
+
+Ben HeidornMonday, December 7, 2015 at 5:39pm EST
+noope
+
+Quang NguyenMonday, December 7, 2015 at 5:38pm EST
+so increasing the ifq size beyond 2 didnt make any differences?
+
+Quang NguyenMonday, December 7, 2015 at 5:38pm EST
+haha this project is killing me too.
+
+Ben HeidornMonday, December 7, 2015 at 5:37pm EST
+it's kind of my moby dick right now
+
+Ben HeidornMonday, December 7, 2015 at 5:37pm EST
+this project has been keeping me out of class..
+
+Ben HeidornMonday, December 7, 2015 at 5:36pm EST
+no problem
+
+Quang NguyenMonday, December 7, 2015 at 5:36pm EST
+I was in class so sorry I didn't get on top of that
+
+Ben HeidornMonday, December 7, 2015 at 5:36pm EST
+yup
+
+Quang NguyenMonday, December 7, 2015 at 5:36pm EST
+So it worked for you with the try catch modification?
+
+Ben HeidornMonday, December 7, 2015 at 5:31pm EST
+regardless of the caches, decode width or fetch speed
+
+Ben HeidornMonday, December 7, 2015 at 5:31pm EST
+for a given issue width
+
+Ben HeidornMonday, December 7, 2015 at 5:31pm EST
+all of the GMs are the same
+
+Ben HeidornMonday, December 7, 2015 at 5:31pm EST
+beyond that, though..
+
+Ben HeidornMonday, December 7, 2015 at 5:30pm EST
+and they look pretty convincing that we shouldn't set ifqsize to 1 or 2
+
+Ben HeidornMonday, December 7, 2015 at 5:30pm EST
+I'm looking over the results that come out of the tests you ran
+
+Quang NguyenMonday, December 7, 2015 at 5:29pm EST
+Alright. I'll give that a shot
+
+Ben HeidornMonday, December 7, 2015 at 5:28pm EST
+it just avoids those files that provide bad values
+
+Ben HeidornMonday, December 7, 2015 at 5:28pm EST
+try: simIPC = float(matchObj.group(1)) except ValueError: continue
+
+Ben HeidornMonday, December 7, 2015 at 5:28pm EST
+replace the bad line with..
+
+Ben HeidornMonday, December 7, 2015 at 5:27pm EST
+I found a hack around it
+
+Ben HeidornMonday, December 7, 2015 at 5:27pm EST
+okay
+
+Ben HeidornMonday, December 7, 2015 at 5:25pm EST
+so, not sure what's going on there
+
+Ben HeidornMonday, December 7, 2015 at 5:25pm EST
+then picked another at random that had valid results
+
+Ben HeidornMonday, December 7, 2015 at 5:25pm EST
+not sure which one it was, though, I just picked it at random
+
+Ben HeidornMonday, December 7, 2015 at 5:25pm EST
+I found one file with bad values
+
+Ben HeidornMonday, December 7, 2015 at 5:25pm EST
+I meant the ./results/ex_ifq.../ files
+
+Quang NguyenMonday, December 7, 2015 at 5:24pm EST
+That's the problem. I'm not even getting the raw results. Do you mean the rawTable?
+
+Ben HeidornMonday, December 7, 2015 at 5:23pm EST
+one moment
+
+Ben HeidornMonday, December 7, 2015 at 5:23pm EST
+some aren't
+
+Ben HeidornMonday, December 7, 2015 at 5:23pm EST
+hmm, some are valid
+
+Ben HeidornMonday, December 7, 2015 at 5:22pm EST
+did you look at the raw results?
+
+Quang NguyenMonday, December 7, 2015 at 5:21pm EST
+So the extract function didn't give you any problems before or was this something that got introducted not too long ago?
+
+Ben HeidornMonday, December 7, 2015 at 5:14pm EST
+I looked at one of the results files on a whim, it didn't return any valid results
+
+Ben HeidornMonday, December 7, 2015 at 5:14pm EST
+it doesn't return anything - the string it captured is null
+
+Quang NguyenMonday, December 7, 2015 at 5:13pm EST
+well, the problem that I'm having doesn't have anyting to do with the config. But what does group() returns for re again?
+
+Ben HeidornMonday, December 7, 2015 at 5:12pm EST
+gonna look over the configs and I'll let you know if I find anything weird
+
+Ben HeidornMonday, December 7, 2015 at 5:12pm EST
+I'm prepping a run with the optimal values for that test
+
+Ben HeidornMonday, December 7, 2015 at 5:12pm EST
+I just read over it, tested some values
+
+Quang NguyenMonday, December 7, 2015 at 5:12pm EST
+so it ran fine for you?
+
+Ben HeidornMonday, December 7, 2015 at 5:10pm EST
+er, with the script that generates them
+
+Ben HeidornMonday, December 7, 2015 at 5:10pm EST
+I haven't found anything wrong with the configs
+
+Ben HeidornMonday, December 7, 2015 at 4:55pm EST
+the results came back with 0s and null values
+
+Ben HeidornMonday, December 7, 2015 at 4:55pm EST
+yeah, I just investigated that
+
+Quang NguyenMonday, December 7, 2015 at 4:55pm EST
+en431hw6/scripts$ python ex_ifq_speed_decode.py Traceback (most recent call last): File "ex_ifq_speed_decode.py", line 22, in <module> extractDataFromResults(["sim_IPC"], ["ex_ifq_speed_decode"]) File "/mnt/windows/Users/quang/Dropbox/School/Penn State/Fall/CMPEN 431 Comp Arch/cmpen431hw6/scripts/main_script.py", line 220, in extractDataFromResults simIPC = float(matchObj.group(1)) ValueError: could not convert string to float: quang@quang-XPS-13-9343:~/Dropbox/School/Penn State/Fall/CMPEN 431 Comp Arch/cmpen431hw6/scripts$
+
+Quang NguyenMonday, December 7, 2015 at 4:55pm EST
+hey did you do any bug fixes on the extract from result function and didn't commit it? cuz I go tthis error when I try to extract the result from the ex_ifq test
+
+Ben HeidornMonday, December 7, 2015 at 4:44pm EST
+etc
+
+Ben HeidornMonday, December 7, 2015 at 4:44pm EST
+that means mem:width=16, maxed RUU/LSQ
+
+Ben HeidornMonday, December 7, 2015 at 4:44pm EST
+I'm going to update the setOptimalVariables method and add a flag that allows you to turn on / off whether you want the optimal variables to be automatically set
+
+Quang NguyenMonday, December 7, 2015 at 4:43pm EST
+Huh? What do you mean? The make config method hard set the value?
+
+Ben HeidornMonday, December 7, 2015 at 4:40pm EST
+I'm going to isolate all variables that we should set for all future experiments to narrow down our options
+
+Ben HeidornMonday, December 7, 2015 at 4:39pm EST
+the associativity was hard set
+
+Ben HeidornMonday, December 7, 2015 at 4:39pm EST
+disregard the results we have so far
+
+Ben HeidornMonday, December 7, 2015 at 4:39pm EST
+of course
+
+Ben HeidornMonday, December 7, 2015 at 4:38pm EST
+hold the phone..
+
+Ben HeidornMonday, December 7, 2015 at 4:35pm EST
+where parameter options battle against each other for dominance
+
+Ben HeidornMonday, December 7, 2015 at 4:35pm EST
+I'm kind of imaging this as a sort of "survival of the fittest"
+
+Ben HeidornMonday, December 7, 2015 at 4:35pm EST
+that one will probably have to be tested in the final rounds of our testing
+
+Ben HeidornMonday, December 7, 2015 at 4:34pm EST
+nothing consistent
+
+Ben HeidornMonday, December 7, 2015 at 4:34pm EST
+as for the L1 cache...
+
+Ben HeidornMonday, December 7, 2015 at 4:34pm EST
+oh, that's cool - thanks!
+
+Quang NguyenMonday, December 7, 2015 at 4:32pm EST
+The only problem is that it doesn't allow you to have more than one project until you pay. but we just need it to examine the data
+
+Quang NguyenMonday, December 7, 2015 at 4:31pm EST
+https://plot.ly/~quang319/49/execution-time-ms/
+
+Quang NguyenMonday, December 7, 2015 at 4:31pm EST
+also, a good resource for viewing these results is plotly. It allows you to zoom in and out pretty easily. the link below is the graph for functional units test.
+
+Quang NguyenMonday, December 7, 2015 at 4:30pm EST
+Did you get any obvious results for the l1 cache?
+
+Ben HeidornMonday, December 7, 2015 at 4:30pm EST
+I guess you're right
+
+Ben HeidornMonday, December 7, 2015 at 4:30pm EST
+oh, yeah
+
+Ben HeidornMonday, December 7, 2015 at 4:30pm EST
+whoops
+
+Quang NguyenMonday, December 7, 2015 at 4:29pm EST
+I just can't see why the RAS would affect the l2 cache performance
+
+Ben HeidornMonday, December 7, 2015 at 4:28pm EST
+like setting the RAS to 8 or 16 instead of baseline 0
+
+Quang NguyenMonday, December 7, 2015 at 4:28pm EST
+Alright, should we make the prelimary decision to fix the rest of our tests with l2 cache as direct associative and no bimod bpred
+
+Ben HeidornMonday, December 7, 2015 at 4:28pm EST
+I'm worried that maybe some other parameter will change things up
+
+Ben HeidornMonday, December 7, 2015 at 4:28pm EST
+like, absolutely dominates
+
+Ben HeidornMonday, December 7, 2015 at 4:28pm EST
+because direct mapped blows these numbers away
+
+Ben HeidornMonday, December 7, 2015 at 4:28pm EST
+that's kind of what it looks like now
+
+Quang NguyenMonday, December 7, 2015 at 4:27pm EST
+Maybe she set the latencies so that students would make the wrong assumptions...
+
+Ben HeidornMonday, December 7, 2015 at 4:27pm EST
+direct mapped is the fastest
+
+Ben HeidornMonday, December 7, 2015 at 4:26pm EST
+I think it has to do with the latencies
+
+Quang NguyenMonday, December 7, 2015 at 4:26pm EST
+This is still weird. I'm still trying to make sense of it.
+
+Ben HeidornMonday, December 7, 2015 at 4:24pm EST
+already sent that to you
+
+Ben HeidornMonday, December 7, 2015 at 4:24pm EST
+whoops
+
+Ben HeidornMonday, December 7, 2015 at 4:24pm EST
+static int 1,2,4: dl2 65536 16 1 l static fp 1,2,4: dl2 4096 16 1 l dynamic int 2,4,8: dl2 65536 16 1 l all except comb 8wide: dl2 32768 16 1 l dynamic fp 2,4,8: dl2 4096 16 1 l except comb 2wide: dl2 65536 16 1 l
+
+Ben HeidornMonday, December 7, 2015 at 4:21pm EST
+we might be able to drop bimod
+
+Ben HeidornMonday, December 7, 2015 at 4:21pm EST
+comb is still performing a lot better
+
+Ben HeidornMonday, December 7, 2015 at 4:21pm EST
+I dunno, maybe we need to set the RAS to 16 or something
+
+Ben HeidornMonday, December 7, 2015 at 4:21pm EST
+but..
+
+Ben HeidornMonday, December 7, 2015 at 4:21pm EST
+I'm super confused by it
+
+Ben HeidornMonday, December 7, 2015 at 4:21pm EST
+that's what I'm thinking
+
+Quang NguyenMonday, December 7, 2015 at 4:20pm EST
+the direct mapped is the winner for l2 cache?? how is that possible?
+
+Ben HeidornMonday, December 7, 2015 at 4:20pm EST
+*way
+
+Ben HeidornMonday, December 7, 2015 at 4:20pm EST
+direct mapped is one tway
+
+Ben HeidornMonday, December 7, 2015 at 4:20pm EST
+fully assoc would be one set, but a ton of ways
+
+Quang NguyenMonday, December 7, 2015 at 4:19pm EST
+But thats directory associative isn't it?
+
+Ben HeidornMonday, December 7, 2015 at 4:18pm EST
+probably worst around this time of the day
+
+Ben HeidornMonday, December 7, 2015 at 4:18pm EST
+yeah, it's ridiculously slow
+
+Quang NguyenMonday, December 7, 2015 at 4:18pm EST
+I hate ssh... I takes me forever to get anything done
+
+Ben HeidornMonday, December 7, 2015 at 4:17pm EST
+it's always direct mapped, and the block size is 16
+
+Ben HeidornMonday, December 7, 2015 at 4:17pm EST
+okay, I'm mistaken - the number of sets is nearly identical in all cases
+
+Ben HeidornMonday, December 7, 2015 at 4:17pm EST
+<name>:<nsets>:<bsize>:<assoc>:<repl>
+
+Ben HeidornMonday, December 7, 2015 at 4:16pm EST
+let me review the config
+
+Ben HeidornMonday, December 7, 2015 at 4:16pm EST
+wait..
+
+Ben HeidornMonday, December 7, 2015 at 4:15pm EST
+*won
+
+Ben HeidornMonday, December 7, 2015 at 4:15pm EST
+in every single case, 16-way one
+
+Ben HeidornMonday, December 7, 2015 at 4:15pm EST
+static int 1,2,4: dl2 65536 16 1 l static fp 1,2,4: dl2 4096 16 1 l dynamic int 2,4,8: dl2 65536 16 1 l all except comb 8wide: dl2 32768 16 1 l dynamic fp 2,4,8: dl2 4096 16 1 l except comb 2wide: dl2 65536 16 1 l
+
+Ben HeidornMonday, December 7, 2015 at 4:09pm EST
+it's the same across the board for all b-pred types so far
+
+Ben HeidornMonday, December 7, 2015 at 4:09pm EST
+our L2 cache might have a really obvious winner
+
+Ben HeidornMonday, December 7, 2015 at 4:09pm EST
+uh wow
+
+Ben HeidornMonday, December 7, 2015 at 4:07pm EST
+notice that bimod doesn't show up at all
+
+Ben HeidornMonday, December 7, 2015 at 4:07pm EST
+gonna look at caches now
+
+Ben HeidornMonday, December 7, 2015 at 4:07pm EST
+static int 1 comb 2 comb 4 2lev static fp 1 comb 2 comb 4 comb dynamic int 2 comb 4 2lev 8 2lev dynamic fp 2 comb 4 comb 8 comb
+
+Ben HeidornMonday, December 7, 2015 at 4:07pm EST
+quick glance at the top winners for each issue width:
+
+Ben HeidornMonday, December 7, 2015 at 3:49pm EST
+2lev outperforms bimod mostly, but is pretty close
+
+Ben HeidornMonday, December 7, 2015 at 3:49pm EST
+comb seems to have a fairly confident lead
+
+Ben HeidornMonday, December 7, 2015 at 3:49pm EST
+glancing over the top ~10 GMs in all pairs
+
+Ben HeidornMonday, December 7, 2015 at 3:48pm EST
+I'm eyeballing the top geometric means for dynamic and static for all three branch prediction methods
+
+Quang NguyenMonday, December 7, 2015 at 3:47pm EST
+are you just going through these values and glancing at it or are you doing some other comparision?
+
+Ben HeidornMonday, December 7, 2015 at 3:46pm EST
+gonna compare to bimod now
+
+Ben HeidornMonday, December 7, 2015 at 3:46pm EST
+it's not as cut and dry as that, as the follow ups seem to interleave values
+
+Ben HeidornMonday, December 7, 2015 at 3:46pm EST
+but the winners in all four cases were comb
+
+Ben HeidornMonday, December 7, 2015 at 3:45pm EST
+not by much
+
+Ben HeidornMonday, December 7, 2015 at 3:45pm EST
+btw, at first glance, comb outperformed 2lev for dynamic and static tests, both integer and floating point
+
+Ben HeidornMonday, December 7, 2015 at 3:45pm EST
+same for static 2 and 4
+
+Ben HeidornMonday, December 7, 2015 at 3:45pm EST
+when we expect them to outperform
+
+Ben HeidornMonday, December 7, 2015 at 3:45pm EST
+because without them, dynamic 4 and 8 wide are being left in the dust
+
+Ben HeidornMonday, December 7, 2015 at 3:44pm EST
+though I'm starting to think we'll want to include some of our optimizations soon
+
+Ben HeidornMonday, December 7, 2015 at 3:44pm EST
+I think that's valid
+
+Quang NguyenMonday, December 7, 2015 at 3:41pm EST
+We can right a test for the TLB in completely isolation right? I can't think of a reason why we would need couple it with anything else
+
+Ben HeidornMonday, December 7, 2015 at 3:34pm EST
+the results are still a bit fuzzy, but at least we can start to see how to isolate our variables
+
+Ben HeidornMonday, December 7, 2015 at 3:33pm EST
+I know! this is exciting
+
+Quang NguyenMonday, December 7, 2015 at 3:32pm EST
+we are making progress!!
+
+Quang NguyenMonday, December 7, 2015 at 3:32pm EST
+Thats great!
+
+Quang NguyenMonday, December 7, 2015 at 3:32pm EST
+Oh I must be wrong then
+
+Ben HeidornMonday, December 7, 2015 at 3:30pm EST
+not sure what the trend is yet, though
+
+Ben HeidornMonday, December 7, 2015 at 3:30pm EST
+I think there are some very clear winners
+
+Ben HeidornMonday, December 7, 2015 at 3:30pm EST
+btw, I'm just now looking at the results for the BT tests
+
+Ben HeidornMonday, December 7, 2015 at 3:27pm EST
+I'm not sure I follow - I did a file count of all of the configs and came up with 360
+
+Quang NguyenMonday, December 7, 2015 at 3:26pm EST
+but yea I ran it
+
+Quang NguyenMonday, December 7, 2015 at 3:25pm EST
+you gotta cut that in half since it also considers the folder
+
+Ben HeidornMonday, December 7, 2015 at 3:25pm EST
+go for it
+
+Ben HeidornMonday, December 7, 2015 at 3:25pm EST
+looks like it produces 361
+
+Quang NguyenMonday, December 7, 2015 at 3:22pm EST
+alright.
+
+Ben HeidornMonday, December 7, 2015 at 3:22pm EST
+sweet, that sounds good
+
+Quang NguyenMonday, December 7, 2015 at 3:21pm EST
+it only produces 150 or so files so it won't take too long
+
+Ben HeidornMonday, December 7, 2015 at 3:20pm EST
+Okay, cool, I'll check it out now
+
+Ben HeidornMonday, December 7, 2015 at 3:20pm EST
+The commit has it turned off on the master branch, but I switched it on for the tests
+
+Quang NguyenMonday, December 7, 2015 at 3:20pm EST
+I uploaded the modified ex_ifq_speed_decode script. I'm about to run it so let me know if you see a problem
+
+Quang NguyenMonday, December 7, 2015 at 3:19pm EST
+oh ok.
+
+Ben HeidornMonday, December 7, 2015 at 3:18pm EST
+I updated the optimal options code to include copying the il1 cache to dl1 so that it matched for every test
+
+Quang NguyenMonday, December 7, 2015 at 3:13pm EST
+I just looked at the modification that you to the BT experiments and I see you only only set the il1 cache. That wouldn't be valid cuz dl1 cache must matches il1 cache. Since dl1 is let to be at baseline, you would invalidate all the other options
+
+Quang NguyenMonday, December 7, 2015 at 3:00pm EST
+I'll look at it and see what I can come up with
+
+Quang NguyenMonday, December 7, 2015 at 3:00pm EST
+alright. I committed the bug fix. ex_int_alu_mult_memport is able to run again.
+
+Ben HeidornMonday, December 7, 2015 at 2:57pm EST
+If you think of a good test, feel free to overwrite it.
+
+Ben HeidornMonday, December 7, 2015 at 2:57pm EST
+Yeah, I haven't spent a lot of time on it. I started working on it, then realized how many configs it would create.
+
+Quang NguyenMonday, December 7, 2015 at 2:56pm EST
+oh dl2lat and il2lat different. the ex_ifq_speed_decode script is failing on l1 cache also though
+
+Ben HeidornMonday, December 7, 2015 at 2:55pm EST
+Fix
+
+Ben HeidornMonday, December 7, 2015 at 2:55pm EST
+It's pretty simple to gix
+
+Ben HeidornMonday, December 7, 2015 at 2:55pm EST
+The L2 validation has a bug in it. I found it again this morning, if you look at the if statements for all associativity greater than 1.
+
+Quang NguyenMonday, December 7, 2015 at 2:54pm EST
+Just figured that function out. We got invalid l1 and l2 cache. The thing that worries me is the ex_int_alu_mult_memport is no longer producing results.
+
+Ben HeidornMonday, December 7, 2015 at 2:51pm EST
+As for ifq, I'm not confident about that script yet.
+
+Ben HeidornMonday, December 7, 2015 at 2:51pm EST
+You can debug it by changing the debug boolean at the top of make_configs
+
+Quang NguyenMonday, December 7, 2015 at 2:35pm EST
+not even ex_int_alu_mult_memport will run
+
+Quang NguyenMonday, December 7, 2015 at 2:30pm EST
+any idea why the script ex_ifq_speed_decode won't run. It won't even make the config files. I run one of the big test script and that works just fine...
+
+Quang NguyenMonday, December 7, 2015 at 2:11pm EST
+do we still need to run the other ex_BTs yet?
+
+Ben HeidornMonday, December 7, 2015 at 1:59pm EST
+bbl
+
+Ben HeidornMonday, December 7, 2015 at 1:59pm EST
+pushed
+
+Ben HeidornMonday, December 7, 2015 at 1:57pm EST
+I'll commit the tables so you can look at the results and produce the graphs
+
+Ben HeidornMonday, December 7, 2015 at 1:56pm EST
+let me hold my tongue on that until after I look at this more deeply
+
+Ben HeidornMonday, December 7, 2015 at 1:56pm EST
+actually
+
+Ben HeidornMonday, December 7, 2015 at 1:56pm EST
+first thing that jumps out - taken and not-taken are off the table
+
+Ben HeidornMonday, December 7, 2015 at 1:56pm EST
+taking a first glance at the results for the 6 tests I ran this morning, based heavily on what you wrote last night
+
+Ben HeidornMonday, December 7, 2015 at 1:55pm EST
+filled in what I know so far into the doc
+
+Quang NguyenMonday, December 7, 2015 at 1:23pm EST
+Ok
+
+Ben HeidornMonday, December 7, 2015 at 1:22pm EST
+That sounds good to me! I'll start filling it out soon. I'm running some errands at the moment.
+
+Quang NguyenMonday, December 7, 2015 at 1:15pm EST
+This came about because I'm having a hard time of wrapping my head around what needs to be done. I know that I need to analyze some results but I'm not sure which one I need to do
+
+Quang NguyenMonday, December 7, 2015 at 1:08pm EST
+Let me know what you think
+
+Quang NguyenMonday, December 7, 2015 at 1:04pm EST
+I tried to keep it really simple so hopefully it won't make our process any more complicated
+
+Quang NguyenMonday, December 7, 2015 at 1:04pm EST
+https://docs.google.com/spreadsheets/d/1Z-ALktnUdF6VdzY6vCkTMIA2cPbumE-xfZRn9Jjqhyo/edit#gid=0&vpid=A1
+
+Quang NguyenMonday, December 7, 2015 at 1:04pm EST
+sorry I was trying to get something together. So I'm not trying to add complications. but I updated the readme file with a link to a spreadsheet. We can use this spreadsheet to keep track of all the tests that needs to be run yet. That way we both don't run the same test by accident. Also it keeps track of whether or not a test has been analyzed
+
+Ben HeidornMonday, December 7, 2015 at 1:01pm EST
+I'll push some of the results I've gotten soon
+
+Ben HeidornMonday, December 7, 2015 at 12:57pm EST
+mem:width = 16, definitely
+
+Ben HeidornMonday, December 7, 2015 at 12:37pm EST
+probably needs to be matched with greater ifqsize and whatnot
+
+Ben HeidornMonday, December 7, 2015 at 12:37pm EST
+also, nothing conclusive with fetch:speed in isolation
+
+Ben HeidornMonday, December 7, 2015 at 12:35pm EST
+but otherwise, got 5 out of 6 tests finished for the BPred and such
+
+Ben HeidornMonday, December 7, 2015 at 12:35pm EST
+looks like one of the computers was restarted
+
+Ben HeidornMonday, December 7, 2015 at 12:34pm EST
+wrote up some findings in the drive doc
+
+Ben HeidornMonday, December 7, 2015 at 12:33pm EST
+but beyond that..
+
+Ben HeidornMonday, December 7, 2015 at 12:33pm EST
+and there's never really a case where we'd set both the ALU and Mult to 1
+
+Ben HeidornMonday, December 7, 2015 at 12:33pm EST
+I'm pretty confident that we want the memport=2 for dynamic
+
+Ben HeidornMonday, December 7, 2015 at 12:32pm EST
+I think we need to mix the tests in with other combinations
+
+Ben HeidornMonday, December 7, 2015 at 12:32pm EST
+yeah, it's really up in the air
+
+Quang NguyenMonday, December 7, 2015 at 12:29pm EST
+So no conclusive results for the functional units and memport to 2 right?
+
+Ben HeidornMonday, December 7, 2015 at 12:06pm EST
+memport seems to have minimal effect on static, but seems to affect dynamic integer ALU / multiplier
+
+Ben HeidornMonday, December 7, 2015 at 12:06pm EST
+otherwise, the results for dynamic / floating point tests are identical
+
+Ben HeidornMonday, December 7, 2015 at 12:05pm EST
+fpalu/fpmult - don't set both to 1, lol. that's the only obvious trend in the data for those
+
+Quang NguyenMonday, December 7, 2015 at 12:00pm EST
+Nice! I haven't gotten a chance to pour over any of the data yet
+
+Ben HeidornMonday, December 7, 2015 at 11:55am EST
+integer ALU*
+
+Ben HeidornMonday, December 7, 2015 at 11:54am EST
+I'm finding a trend that the floating point numbers work best in dynamic for memport = 2, with more than one ALU
+
+Ben HeidornMonday, December 7, 2015 at 11:54am EST
+going over the results from the fp / int ALU / multiplier tests from last night
+
+Ben HeidornMonday, December 7, 2015 at 11:51am EST
+lol, I've been running the tests on a bunch of open terminal windows
+
+Ben HeidornMonday, December 7, 2015 at 11:51am EST
+that's awesome!
+
+Ben HeidornMonday, December 7, 2015 at 11:51am EST
+I probably ran a bad command, then
+
+Quang NguyenMonday, December 7, 2015 at 11:49am EST
+It worked for me on the first try
+
+Quang NguyenMonday, December 7, 2015 at 11:48am EST
+Did you try typing "screen" before killing putty?
+
+Ben HeidornMonday, December 7, 2015 at 11:47am EST
+but I didn't try to trouble shoot it, so maybe it could still work!
+
+Ben HeidornMonday, December 7, 2015 at 11:46am EST
+I tried screen a few days ago actually, and ran into some issues
+
+Quang NguyenMonday, December 7, 2015 at 11:45am EST
+http://ubuntuforums.org/showthread.php?t=1424109
+
+Quang NguyenMonday, December 7, 2015 at 11:45am EST
+jackpot. This page shows us how we can start a process, close putty, and log back in when the test is finish
+
+Ben HeidornMonday, December 7, 2015 at 9:37am EST
+lol
+
+Ben HeidornMonday, December 7, 2015 at 9:37am EST
+as long as no one gets sick of how slow the computers are and turns them off...
+
+Ben HeidornMonday, December 7, 2015 at 9:37am EST
+I'm hoping we'll get results for all of them around noon or 1 today
+
+Ben HeidornMonday, December 7, 2015 at 9:36am EST
+I'm running another test now on six computers, similar to the ones from last night, except the dl1 cache is now always the same as the il1 cache - this reduced the number of tests to a grand total around 1690
+
+Ben HeidornMonday, December 7, 2015 at 9:34am EST
+that's awesome
+
+Ben HeidornMonday, December 7, 2015 at 9:34am EST
+nice!
+
+Quang NguyenMonday, December 7, 2015 at 1:39am EST
+And I figured out the ssh for Windows!!
+
+Quang NguyenMonday, December 7, 2015 at 1:31am EST
+ok. the problem fixed
+
+Quang NguyenMonday, December 7, 2015 at 12:12am EST
+haha np. you too!
+
+Ben HeidornMonday, December 7, 2015 at 12:11am EST
+we'll figure out what the issue is - it's probably something about simple scalar we didn't know about
+
+Ben HeidornMonday, December 7, 2015 at 12:11am EST
+thanks for working on this for so long
+
+Ben HeidornMonday, December 7, 2015 at 12:11am EST
+awesome job, btw
+
+Quang NguyenMonday, December 7, 2015 at 12:11am EST
+yea. alright. Have a good night man
+
+Ben HeidornMonday, December 7, 2015 at 12:11am EST
+since we'll be able to run all of these on multiple computers with minimal effort
+
+Ben HeidornMonday, December 7, 2015 at 12:10am EST
+since we know that none of the tests will take more than 12 hours to run, I'm going to head to bed now
+
+Ben HeidornMonday, December 7, 2015 at 12:10am EST
+I think this will require some additional investigation
+
+Ben HeidornMonday, December 7, 2015 at 12:09am EST
+it looks that way
+
+Ben HeidornMonday, December 7, 2015 at 12:09am EST
+apparently..
+
+Quang NguyenMonday, December 7, 2015 at 12:09am EST
+for all of them?
+
+Ben HeidornMonday, December 7, 2015 at 12:09am EST
+that's the error in the simple scalar output files
+
+Quang NguyenMonday, December 7, 2015 at 12:08am EST
+huh? what is that?
+
+Ben HeidornMonday, December 7, 2015 at 12:08am EST
+at least we know all of the tests will run, lol
+
+Ben HeidornMonday, December 7, 2015 at 12:08am EST
+fatal: bad 2-level pred config (<l1size> <l2size> <hist_size> <xor>)
+
+Ben HeidornMonday, December 7, 2015 at 12:08am EST
+ah, crap
+
+Quang NguyenMonday, December 7, 2015 at 12:07am EST
+oh nice! so they will run for 24 hours now right?
+
+Ben HeidornMonday, December 7, 2015 at 12:06am EST
+but on 9 computers, so sets of 2
+
+Ben HeidornMonday, December 7, 2015 at 12:06am EST
+no prob! I just started all 18 of them
+
+Quang NguyenMonday, December 7, 2015 at 12:06am EST
+sweet! thanks!
+
+Ben HeidornMonday, December 7, 2015 at 12:05am EST
+there you are
+
+Ben HeidornMonday, December 7, 2015 at 12:05am EST
+Ben HeidornMonday, December 7, 2015 at 12:05am EST
+one moment
+
+Ben HeidornMonday, December 7, 2015 at 12:05am EST
+looks like the spaces were needed
+
+Quang NguyenMonday, December 7, 2015 at 12:04am EST
+Quang NguyenMonday, December 7, 2015 at 12:04am EST
+try it with space here is the link from the pdf
+
+Ben HeidornMonday, December 7, 2015 at 12:04am EST
+I'm not finding it there.. one moment..
+
+Ben HeidornMonday, December 7, 2015 at 12:04am EST
+haha
+
+Quang NguyenMonday, December 7, 2015 at 12:03am EST
+I'm still working on the ssh problem haha
+
+Quang NguyenMonday, December 7, 2015 at 12:03am EST
+this is the correct link. https://www.cse.psu.edu/it/documentation/vpn/vpnsoftware/ISPtoCSE.pcf
+
+Quang NguyenMonday, December 7, 2015 at 12:02am EST
+is there anyway you can use your ssh to grab this file for me? https://www.cse.psu.edu/it/documentation/vpn/vpnsoftware/ISP
+
+Ben HeidornSunday, December 6, 2015 at 11:46pm EST
+She goofed up apparently. She sent out an email saying that issue width 3 didn't work, so we don't have to do it.
+
+Quang NguyenSunday, December 6, 2015 at 11:44pm EST
+Oh really? Why in the world did she have it in the prompt then?
+
+Ben HeidornSunday, December 6, 2015 at 11:44pm EST
+Lol, still a lot! But I think it should be workable
+
+Ben HeidornSunday, December 6, 2015 at 11:43pm EST
+We could definitely run all of them on different computers. And we won't need to do issue width 3 since simple scalar doesn't support it, so that brings us to 18 tests
+
+Quang NguyenSunday, December 6, 2015 at 11:43pm EST
+There are 21 tests.... That's why I said that I wish I could split the load with ya haha
+
+Quang NguyenSunday, December 6, 2015 at 11:42pm EST
+Well, the original plan was to have each of the test run on a different computer but if you are going to run them selectively then I was start with the highest issue and work your way down
+
+Ben HeidornSunday, December 6, 2015 at 11:41pm EST
+Do you have certain tests I should run, or should we run all of them?
+
+Quang NguyenSunday, December 6, 2015 at 11:39pm EST
+Woah... Really?? That's awesome!!
+
+Ben HeidornSunday, December 6, 2015 at 11:39pm EST
+1/4 the original configs
+
+Ben HeidornSunday, December 6, 2015 at 11:39pm EST
+Okay! That looks much better
+
+Ben HeidornSunday, December 6, 2015 at 11:37pm EST
+Let's see...
+
+Ben HeidornSunday, December 6, 2015 at 11:37pm EST
+The configs were made in under a minute for the test I updated
+
+Ben HeidornSunday, December 6, 2015 at 11:36pm EST
+No problem! And absolutely, haha
+
+Quang NguyenSunday, December 6, 2015 at 11:36pm EST
+Nice!! That's definitely doable. Sorry for the mistake. I guess that's why peer review exists haha
+
+Ben HeidornSunday, December 6, 2015 at 11:35pm EST
+Which is doable!
+
+Ben HeidornSunday, December 6, 2015 at 11:35pm EST
+So.. 12ish hours instead of 46, if my guess is correct
+
+Ben HeidornSunday, December 6, 2015 at 11:35pm EST
+It looks like it took each string to be an array
+
+Ben HeidornSunday, December 6, 2015 at 11:34pm EST
+Yup
+
+Quang NguyenSunday, December 6, 2015 at 11:33pm EST
+Oh the bred should be in the static not the dynamic right?? It just came to me
+
+Quang NguyenSunday, December 6, 2015 at 11:33pm EST
+Wait what??
+
+Ben HeidornSunday, December 6, 2015 at 11:32pm EST
+Oh wait, I think I found a bug. By fixing this, it should drop the time by three quarters..
+
+Quang NguyenSunday, December 6, 2015 at 11:32pm EST
+Like divide the l2 cache into 2 pieces kind of deal?
+
+Ben HeidornSunday, December 6, 2015 at 11:30pm EST
+Instead of doing it all at once
+
+Ben HeidornSunday, December 6, 2015 at 11:30pm EST
+One thing we could do.. is to break up the tests into level 1 and level 2 tests
+
+Ben HeidornSunday, December 6, 2015 at 11:29pm EST
+I do, unfortunately. I tried to run the tests through screen, but it doesn't work for some reason.
+
+Quang NguyenSunday, December 6, 2015 at 11:29pm EST
+That's a hard call. But I guess we can always do other experiments on the side. Do you need to be connected to the VPN at all time?
+
+Quang NguyenSunday, December 6, 2015 at 11:27pm EST
+Good god... So... Are we gonna go through with it?
+
+Ben HeidornSunday, December 6, 2015 at 11:23pm EST
+A napkin estimate gives us 46 hours per set of configs
+
+Ben HeidornSunday, December 6, 2015 at 11:21pm EST
+Lol, holy crap. 5000 configs per test.
+
+Quang NguyenSunday, December 6, 2015 at 11:15pm EST
+Crossing my fingers!
+
+Ben HeidornSunday, December 6, 2015 at 11:13pm EST
+Haha. Yeah, I feel the same way. I'm really hoping that these tests show some very clear winners, which will make the rest of our project a breeze
+
+Quang NguyenSunday, December 6, 2015 at 11:10pm EST
+You know, I would have really enjoyed this whole entire project and the path that we heading down if it wasn't for the fact that finals are next week... At this point, it's just a pain in the ass for me haha
+
+Ben HeidornSunday, December 6, 2015 at 10:59pm EST
+Will do. Thanks! I'll let you know how it goes
+
+Quang NguyenSunday, December 6, 2015 at 10:59pm EST
+Alright. I'm gonna head home and work on hw for a different class. let me know if you run into any problems
+
+Ben HeidornSunday, December 6, 2015 at 10:59pm EST
+Lol, I hope not! We'll find out. If they do, it'll make a great intro to our paper
+
+Quang NguyenSunday, December 6, 2015 at 10:58pm EST
+Or the IT department noticed that you are using up so much resources haha
+
+Ben HeidornSunday, December 6, 2015 at 10:58pm EST
+But I'd say that's unlikely
+
+Ben HeidornSunday, December 6, 2015 at 10:58pm EST
+Hopefully no one restarts a computer
+
+Ben HeidornSunday, December 6, 2015 at 10:57pm EST
+Lol, I'm just going to leave a bunch of terminal windows open all night
+
+Quang NguyenSunday, December 6, 2015 at 10:57pm EST
+Lol... I just wish that we can divide and conquer on this part...
+
+Ben HeidornSunday, December 6, 2015 at 10:57pm EST
+Okay, I'll log on and start it up
+
+Ben HeidornSunday, December 6, 2015 at 10:56pm EST
+Lol, oh lord
+
+Quang NguyenSunday, December 6, 2015 at 10:55pm EST
+"BT" stands for Big Test haha...
+
+Quang NguyenSunday, December 6, 2015 at 10:54pm EST
+this scares me cuz it took my computer over 4 minutes to just compute the config files for a single test case...
+
+Quang NguyenSunday, December 6, 2015 at 10:53pm EST
+ok its commited
+
+Ben HeidornSunday, December 6, 2015 at 10:49pm EST
+Besides, we might get some really good data
+
+Ben HeidornSunday, December 6, 2015 at 10:49pm EST
+I don't mind. I'm still awake, and getting them started wouldn't be a big deal
+
+Quang NguyenSunday, December 6, 2015 at 10:48pm EST
+actually. nvm... I don't want to make you stay up later than you have too
+
+Quang NguyenSunday, December 6, 2015 at 10:48pm EST
+consider that we have 5000 configs... I don't think its going to be done until mid day tomorrow if we start now
+
+Ben HeidornSunday, December 6, 2015 at 10:46pm EST
+Want me to run them?
+
+Quang NguyenSunday, December 6, 2015 at 10:45pm EST
+alright... I'll be done in a the next 5 minutes or so then
+
+Ben HeidornSunday, December 6, 2015 at 10:43pm EST
+If it's divided among 5 or more computers, it could be done by the morning
+
+Ben HeidornSunday, December 6, 2015 at 10:43pm EST
+Well
+
+Ben HeidornSunday, December 6, 2015 at 10:42pm EST
+Probably not
+
+Ben HeidornSunday, December 6, 2015 at 10:42pm EST
+267ish configs took about 2.5 hours to run...
+
+Ben HeidornSunday, December 6, 2015 at 10:42pm EST
+Well let's see
+
+Ben HeidornSunday, December 6, 2015 at 10:42pm EST
+Crap
+
+Quang NguyenSunday, December 6, 2015 at 10:41pm EST
+So... a single test has 5000 configs.... do we still want to go down this route?
+
+Quang NguyenSunday, December 6, 2015 at 9:56pm EST
+ok
+
+Ben HeidornSunday, December 6, 2015 at 9:48pm EST
+Just wanted to give you a heads up about what I saw, to avoid any potential pitfalls
+
+Ben HeidornSunday, December 6, 2015 at 9:48pm EST
+Oh, okay. I don't have it open right now, but I probably misread something.
+
+Quang NguyenSunday, December 6, 2015 at 9:38pm EST
+Since you set both the il2 and dl2 to be the same value, the validation function just assumes that it only needs to check one of the two
+
+Quang NguyenSunday, December 6, 2015 at 9:36pm EST
+what bug are you talk about cuz i'm looking at both of the functions and I don't see the differences. I mean, other than the fact that I forgot to multiply it by the # of ways
+
+Quang NguyenSunday, December 6, 2015 at 9:30pm EST
+ok
+
+Ben HeidornSunday, December 6, 2015 at 9:28pm EST
+Oh, I think the L2 cache validation has a few bugs in it that I cleaned up only in the function to set dependent vars. If you keep the validation, you may need to update the L2 validation to set the latencies for both instruction and data caches to the same value
+
+Quang NguyenSunday, December 6, 2015 at 9:25pm EST
+oh i see now
+
+Ben HeidornSunday, December 6, 2015 at 9:22pm EST
+Or.. just remove the validation portion if you think we can cover everything by automatically setting the latencies
+
+Ben HeidornSunday, December 6, 2015 at 9:22pm EST
+Good catch. I hadn't dug that deep into the cache yet. When you take a look at that, also update the function that automatically sets the cache latency near the bottom
+
+Quang NguyenSunday, December 6, 2015 at 9:21pm EST
+I found a bug with the validation function. The cache validation function didn't multiply be the # of ways
+
+Ben HeidornSunday, December 6, 2015 at 9:11pm EST
+raw results are pushed
+
+Ben HeidornSunday, December 6, 2015 at 9:11pm EST
+I hope the vpn works
+
+Ben HeidornSunday, December 6, 2015 at 9:11pm EST
+good luck
+
+Quang NguyenSunday, December 6, 2015 at 9:09pm EST
+we'll see
+
+Ben HeidornSunday, December 6, 2015 at 9:09pm EST
+not sure if they're useful, since it's fetch speed in isolation
+
+Quang NguyenSunday, December 6, 2015 at 9:09pm EST
+sweet
+
+Ben HeidornSunday, December 6, 2015 at 9:09pm EST
+gonna commit those raw results as well
+
+Ben HeidornSunday, December 6, 2015 at 9:09pm EST
+I just saw that the fetch_speed tests finished
+
+Ben HeidornSunday, December 6, 2015 at 9:08pm EST
+text me or message me if you can't get on VPN but want to run some tests
+
+Ben HeidornSunday, December 6, 2015 at 9:08pm EST
+sounds good, man
+
+Quang NguyenSunday, December 6, 2015 at 9:08pm EST
+Alright sounds good. Well, you should go get some rest then. I'll try to write these scripts
+
+Ben HeidornSunday, December 6, 2015 at 9:08pm EST
+agreed
+
+Ben HeidornSunday, December 6, 2015 at 9:08pm EST
+yeah
+
+Ben HeidornSunday, December 6, 2015 at 9:07pm EST
+except when the associativity is greater than 16, we'll probably see a drop
+
+Quang NguyenSunday, December 6, 2015 at 9:07pm EST
+we definitely don't want to do both at this time.
+
+Ben HeidornSunday, December 6, 2015 at 9:07pm EST
+L will perform better than R in almost all cases
+
+Quang NguyenSunday, December 6, 2015 at 9:07pm EST
+and that bring me to the question, don't we just want to use "l" instead of "r" for the big test for the caches?
+
+Ben HeidornSunday, December 6, 2015 at 9:07pm EST
+last recently used
+
+Ben HeidornSunday, December 6, 2015 at 9:07pm EST
+oh
+
+Ben HeidornSunday, December 6, 2015 at 9:07pm EST
+it basically keeps track which set was used last, then boots the last recently used
+
+Ben HeidornSunday, December 6, 2015 at 9:06pm EST
+LRU - something like least reuse or something
+
+Quang NguyenSunday, December 6, 2015 at 9:06pm EST
+oh and r stands for random. what does "l" stands for again?
+
+Quang NguyenSunday, December 6, 2015 at 9:06pm EST
+I have no idea. I tried to follow some instructions for windows the other day but I wasn't successful then either. Hopefull second time is the charm
+
+Ben HeidornSunday, December 6, 2015 at 9:05pm EST
+putty?
+
+Ben HeidornSunday, December 6, 2015 at 9:05pm EST
+oh, yeah, that should work
+
+Quang NguyenSunday, December 6, 2015 at 9:05pm EST
+Nah, I'll write these and then I'm gonna try to switch to windows to see if you can vpn in from there instead
+
+Ben HeidornSunday, December 6, 2015 at 9:05pm EST
+don't feel like you have to keep working on anything tonight, but if you commit anything and want to run it, let me know, and I'll get that going
+
+Quang NguyenSunday, December 6, 2015 at 9:04pm EST
+sure. That way you can call it a day
+
+Ben HeidornSunday, December 6, 2015 at 9:04pm EST
+I'm starting to burn out hard, but if you've got some tests to run in the next hour or two, I'll run them when they're committed
+
+Ben HeidornSunday, December 6, 2015 at 9:04pm EST
+if you want, I can run the big tests throughout the day tomorrow
+
+Ben HeidornSunday, December 6, 2015 at 9:01pm EST
+I couldn't test the ifqsize in isolation without touching the cache
+
+Ben HeidornSunday, December 6, 2015 at 9:01pm EST
+running a test on fetch speed now
+
+Ben HeidornSunday, December 6, 2015 at 8:59pm EST
+aye
+
+Quang NguyenSunday, December 6, 2015 at 8:59pm EST
+oh, if the second para is empty then it grab all the results
+
+Ben HeidornSunday, December 6, 2015 at 8:58pm EST
+so you'll need to extract the results from them
+
+Ben HeidornSunday, December 6, 2015 at 8:57pm EST
+nothing new, but I only committed the raw results, for example
+
+Ben HeidornSunday, December 6, 2015 at 8:57pm EST
+it was a helper function - I was re-running a bunch of tests by recalculating values based on the raw data
+
+Ben HeidornSunday, December 6, 2015 at 8:57pm EST
+committed
+
+Quang NguyenSunday, December 6, 2015 at 8:57pm EST
+huh... wait what is the function of the extract_from_results?
+
+Ben HeidornSunday, December 6, 2015 at 8:54pm EST
+and commit that
+
+Ben HeidornSunday, December 6, 2015 at 8:54pm EST
+I'll clean up what I did for making the configs easier regarding the cache latencies..
+
+Ben HeidornSunday, December 6, 2015 at 8:54pm EST
+let me know if you see anything in particular
+
+Ben HeidornSunday, December 6, 2015 at 8:54pm EST
+and then the graphing_script.py script
+
+Ben HeidornSunday, December 6, 2015 at 8:54pm EST
+you'll need to run python extract_from_results.py (just a wrapper for your function)
+
+Ben HeidornSunday, December 6, 2015 at 8:53pm EST
+I just committed the raw results, btw, for fpalu and all that
+
+Ben HeidornSunday, December 6, 2015 at 8:53pm EST
+let me commit something I did..
+
+Ben HeidornSunday, December 6, 2015 at 8:53pm EST
+oh
+
+Ben HeidornSunday, December 6, 2015 at 8:53pm EST
+certainly
+
+Quang NguyenSunday, December 6, 2015 at 8:52pm EST
+Alright can I go and create these 21 test scripts now? with no other static variables of course
+
+Ben HeidornSunday, December 6, 2015 at 8:52pm EST
+awesome, thank you
+
+Quang NguyenSunday, December 6, 2015 at 8:51pm EST
+so this is your current https url right? "https://github.com/Cybourgeoisie/cmpen431hw6.git" you are going to change it to "https://username:password@github.com/Cybourgeoisie/cmpen431hw6.git"
+
+Ben HeidornSunday, December 6, 2015 at 8:50pm EST
+so I agree with you there
+
+Ben HeidornSunday, December 6, 2015 at 8:50pm EST
+yeah, if static single issue won everything, I'd eat my socks
+
+Quang NguyenSunday, December 6, 2015 at 8:49pm EST
+Just for 1 test para that we know won't perform well
+
+Quang NguyenSunday, December 6, 2015 at 8:49pm EST
+I'm just think of you having to do ssh into 3 different machines for that
+
+Ben HeidornSunday, December 6, 2015 at 8:49pm EST
+I haven't actually pushed from the lab computers yet
+
+Ben HeidornSunday, December 6, 2015 at 8:49pm EST
+btw, how did you get the git pushes to work?
+
+Ben HeidornSunday, December 6, 2015 at 8:48pm EST
+I'm just a wary dude - we can eliminate some tests if you're confident that they'll be useless
+
+Quang NguyenSunday, December 6, 2015 at 8:48pm EST
+Do you want to test for static 1 at all? I feel like that's work on 3 machine for now reason.
+
+Quang NguyenSunday, December 6, 2015 at 8:47pm EST
+Alright you know what. Now that I think about it, I agree with you that it is not necessary to make those assumptions at this point.
+
+Ben HeidornSunday, December 6, 2015 at 8:46pm EST
+lol
+
+Ben HeidornSunday, December 6, 2015 at 8:46pm EST
+I'm starting to fade out here
+
+Ben HeidornSunday, December 6, 2015 at 8:46pm EST
+er, the ALU / multipliers..
+
+Ben HeidornSunday, December 6, 2015 at 8:45pm EST
+gonna commit them shortly
+
+Ben HeidornSunday, December 6, 2015 at 8:45pm EST
+hey, the floating point and integer tests finished
+
+Ben HeidornSunday, December 6, 2015 at 8:45pm EST
+lol
+
+Ben HeidornSunday, December 6, 2015 at 8:45pm EST
+we better kick everyone's asses after all this
+
+Ben HeidornSunday, December 6, 2015 at 8:44pm EST
+we're gonna end up running some several thousands of tests either way
+
+Ben HeidornSunday, December 6, 2015 at 8:44pm EST
+I'm hesitant to make too many assumptions without results to back them up, but..
+
+Ben HeidornSunday, December 6, 2015 at 8:44pm EST
+definitely the cache / bpred idea
+
+Ben HeidornSunday, December 6, 2015 at 8:44pm EST
+I agree with most of the setup you've proposed above
+
+Ben HeidornSunday, December 6, 2015 at 8:43pm EST
+lol, it's fair game, I'd say
+
+Quang NguyenSunday, December 6, 2015 at 8:43pm EST
+lol nah... that's not our problem
+
+Ben HeidornSunday, December 6, 2015 at 8:43pm EST
+I feel bad for the dudes who are using the lab computers that I'm ssh'd into..
+
+Ben HeidornSunday, December 6, 2015 at 8:42pm EST
+99% of the work is the coding and thinking that we're doing
+
+Ben HeidornSunday, December 6, 2015 at 8:42pm EST
+it's no burden - I literally just run it and let it go
+
+Quang NguyenSunday, December 6, 2015 at 8:41pm EST
+so what do you think about the setup above?
+
+Quang NguyenSunday, December 6, 2015 at 8:41pm EST
+darn it... I hate the fact that I putting alot of the burden on you...
+
+Ben HeidornSunday, December 6, 2015 at 8:40pm EST
+I'm not sure, I've never tried it, but I suspect that you'd need the vpn
+
+Quang NguyenSunday, December 6, 2015 at 8:40pm EST
+here is a random question, can ssh into the lab computer from the library computer?
+
+Quang NguyenSunday, December 6, 2015 at 8:29pm EST
+To speed up the time, we can make the assumption that 2 way for L2 cache won't perform any better than 4,8 and 16
+
+Quang NguyenSunday, December 6, 2015 at 8:24pm EST
+Quang NguyenSunday, December 6, 2015 at 8:24pm EST
+And these can be the static variables
+
+Quang NguyenSunday, December 6, 2015 at 8:22pm EST
+Quang NguyenSunday, December 6, 2015 at 8:22pm EST
+Alright. What do you think about this structure for the big test tonight. If you think its good and we can agree on all the static variables then I can go ahead and create the script files
+
+Quang NguyenSunday, December 6, 2015 at 8:14pm EST
+alright... I would argue that is purely due to mis branch prediction but i guess we can include it
+
+Ben HeidornSunday, December 6, 2015 at 8:14pm EST
+dynamic 2 did best, followed by 4 and lastly 8, in the RUU / LSQ test
+
+Quang NguyenSunday, December 6, 2015 at 8:14pm EST
+those are the things that I feel like we should have for the test tonight.
+
+Ben HeidornSunday, December 6, 2015 at 8:13pm EST
+well.. not sure about that yet
+
+Quang NguyenSunday, December 6, 2015 at 8:13pm EST
+Ben HeidornSunday, December 6, 2015 at 8:11pm EST
+er, configs
+
+Ben HeidornSunday, December 6, 2015 at 8:11pm EST
+they each have nearly 300 tests to run
+
+Ben HeidornSunday, December 6, 2015 at 8:11pm EST
+I'll commit those results when they finish
+
+Ben HeidornSunday, December 6, 2015 at 8:11pm EST
+I'm still running a more comprehensive test on two of the lab computers
+
+Ben HeidornSunday, December 6, 2015 at 8:10pm EST
+it's still all over the map
+
+Ben HeidornSunday, December 6, 2015 at 8:10pm EST
+yeah, I've been trying to get decent results
+
+Quang NguyenSunday, December 6, 2015 at 8:10pm EST
+nvm... that hasn't been updated
+
+Quang NguyenSunday, December 6, 2015 at 8:10pm EST
+Oh i forgot to look at the functional units result with the correct GM. Did you find any connections with that?
+
+Quang NguyenSunday, December 6, 2015 at 8:08pm EST
+lol
+
+Ben HeidornSunday, December 6, 2015 at 8:08pm EST
+I was hoping you'd say that
+
+Ben HeidornSunday, December 6, 2015 at 8:08pm EST
+lol
+
+Ben HeidornSunday, December 6, 2015 at 8:08pm EST
+thank you
+
+Quang NguyenSunday, December 6, 2015 at 8:08pm EST
+Let just write it in code. No need to get fancy att this point
+
+Ben HeidornSunday, December 6, 2015 at 8:06pm EST
+or make it more versatile?
+
+Ben HeidornSunday, December 6, 2015 at 8:06pm EST
+when it comes to "no brainers" that change based on the issue width, should we just add code to automatically set these in the make_config file?
+
+Ben HeidornSunday, December 6, 2015 at 8:05pm EST
+sweet
+
+Quang NguyenSunday, December 6, 2015 at 8:05pm EST
+yes! I glanced over the results and I agree with you
+
+Ben HeidornSunday, December 6, 2015 at 8:05pm EST
+for example, if you agree with the RUU / LSQ diagnosis, we should be able to set those to static values permanently
+
+Ben HeidornSunday, December 6, 2015 at 8:04pm EST
+I'm pretty sure we can knock out a ton of the excess variables with these smaller tests
+
+Quang NguyenSunday, December 6, 2015 at 8:04pm EST
+haha same here
+
+Quang NguyenSunday, December 6, 2015 at 8:04pm EST
+We didn't get a result for the ifsize yet but I feel like we can just max that for the big test. Let me know if you think that we are introducing too many variables
+
+Ben HeidornSunday, December 6, 2015 at 8:04pm EST
+I'm so eager for this project to end
+
+Ben HeidornSunday, December 6, 2015 at 8:03pm EST
+yeah, that's probably valid
+
+Quang NguyenSunday, December 6, 2015 at 8:02pm EST
+if we don't get to it, I think we should assume the fetch speed of 4 for the big test
+
+Quang NguyenSunday, December 6, 2015 at 8:02pm EST
+since the fetch:speed is represented at "1" and not "1.0" I think that we should just increments of 1
+
+Ben HeidornSunday, December 6, 2015 at 8:02pm EST
+for the block size
+
+Ben HeidornSunday, December 6, 2015 at 8:02pm EST
+if we can determine the ideal ifqsize, we'll eliminate a lot of excess tests for the cache per this requirement: fetch:ifqsize * 8
+
+Quang NguyenSunday, December 6, 2015 at 8:01pm EST
+lol. glad it was useful
+
+Ben HeidornSunday, December 6, 2015 at 8:01pm EST
+tried to generate a bunch of invalid configs without realizing it
+
+Ben HeidornSunday, December 6, 2015 at 8:01pm EST
+good job on the validation functions, btw
+
+Quang NguyenSunday, December 6, 2015 at 8:01pm EST
+oh gotcha
+
+Ben HeidornSunday, December 6, 2015 at 7:59pm EST
+that way, we can set these values as the defaults for the bigger test
+
+Ben HeidornSunday, December 6, 2015 at 7:59pm EST
+I'm trying to see if we can isolate any other values with the kind of confidence we're seeing with RUU/LSQ
+
+Ben HeidornSunday, December 6, 2015 at 7:59pm EST
+a pre-big-test test
+
+Quang NguyenSunday, December 6, 2015 at 7:58pm EST
+is this for the test tonight or for a different test?
+
+Ben HeidornSunday, December 6, 2015 at 7:57pm EST
+smart. I'm on board with that.
+
+Ben HeidornSunday, December 6, 2015 at 7:57pm EST
+question.. should we test fetch:speed in increments of 0.5 or 1?
+
+Quang NguyenSunday, December 6, 2015 at 7:57pm EST
+I just don't think we will get a correct picture of the performance of the caches if we don't at least use some decent form of branch prediction. I was thinking that we can only need to test the default value of each of the branch prediction mode
+
+Ben HeidornSunday, December 6, 2015 at 7:57pm EST
+okay
+
+Quang NguyenSunday, December 6, 2015 at 7:55pm EST
+I don't think that the cache would be very efficient without a proper branch predictor so I think we will need to change the bpred value as well
+
+Ben HeidornSunday, December 6, 2015 at 7:54pm EST
+ooh, okay
+
+Quang NguyenSunday, December 6, 2015 at 7:54pm EST
+I'm thinking that we should just hit both the l1 and l2 cache in one hit. and just divide up the issue:width between multiple machines.
+
+Quang NguyenSunday, December 6, 2015 at 7:53pm EST
+so let's talk about how what we want to run for the big test tonight
+
+Ben HeidornSunday, December 6, 2015 at 7:53pm EST
+if you mentioned it before, I missed it
+
+Ben HeidornSunday, December 6, 2015 at 7:53pm EST
+no problem
+
+Ben HeidornSunday, December 6, 2015 at 7:53pm EST
+I'm also going to run one on the ifqsize, decode width, and.. fetch speed
+
+Quang NguyenSunday, December 6, 2015 at 7:53pm EST
+sorry
+
+Ben HeidornSunday, December 6, 2015 at 7:52pm EST
+I'll handle it
+
+Ben HeidornSunday, December 6, 2015 at 7:52pm EST
+it's a very short test
+
+Ben HeidornSunday, December 6, 2015 at 7:52pm EST
+lol, no problem
+
+Quang NguyenSunday, December 6, 2015 at 7:51pm EST
+oh... I thought you were gonna run that too.... sorry man. Dang... I definitely didn't communication that very clearly
+
+Quang NguyenSunday, December 6, 2015 at 7:51pm EST
+I just got the pull now
+
+Ben HeidornSunday, December 6, 2015 at 7:50pm EST
+any consensus on the mem:width?
+
+Ben HeidornSunday, December 6, 2015 at 7:49pm EST
+as for how many ALUs, Mults and memports to use.. those results are not so clear
+
+Ben HeidornSunday, December 6, 2015 at 7:48pm EST
+I think we should max out the RUU and LSQ
+
+Ben HeidornSunday, December 6, 2015 at 7:48pm EST
+scratch that - those tests won in both floating point and int GMs
+
+Ben HeidornSunday, December 6, 2015 at 7:48pm EST
+pretty obvious to see the connection
+
+Ben HeidornSunday, December 6, 2015 at 7:48pm EST
+in integer GM
+
+Ben HeidornSunday, December 6, 2015 at 7:48pm EST
+dynamic8ruusize64lsqsize32 won for 8-wide
+
+Ben HeidornSunday, December 6, 2015 at 7:47pm EST
+dynamic4ruusize32lsqsize16 won for 4-wide
+
+Ben HeidornSunday, December 6, 2015 at 7:47pm EST
+dynamic2ruusize16lsqsize8 won for 2-wide
+
+Quang NguyenSunday, December 6, 2015 at 7:47pm EST
+sure.
+
+Ben HeidornSunday, December 6, 2015 at 7:46pm EST
+as for LSQ / RUU - check the results when you get the chance, but this is what I found...
+
+Ben HeidornSunday, December 6, 2015 at 7:46pm EST
+if you're comfortable talking over IM, it's easier with a traceable record of what we're doing.. because I can be really forgetful if something isn't written down
+
+Ben HeidornSunday, December 6, 2015 at 7:45pm EST
+okay. I'm re-running the fp/int ALU/Mult test with memport on two different computers in the lab.. so that should take half of the time as before
+
+Quang NguyenSunday, December 6, 2015 at 7:42pm EST
+well, shoot me a call when you get a chance and we can just talk through how we want to break up the big test for tonight. It'll go quicker if we just talk haha (or maybe cuz i'm lazy.... who knows)
+
+Quang NguyenSunday, December 6, 2015 at 7:39pm EST
+oh yea go for it
+
+Ben HeidornSunday, December 6, 2015 at 7:35pm EST
+I won't do it if you want me to leave them be
+
+Ben HeidornSunday, December 6, 2015 at 7:35pm EST
+would you mind if I removed the Validation and testing folders from the table / graph / results folders?
+
+Ben HeidornSunday, December 6, 2015 at 7:34pm EST
+I also ran some tests on memport / fpalu / fpmult, only for dynamic 8-wide, but I'm not really pleased with them
+
+Ben HeidornSunday, December 6, 2015 at 7:33pm EST
+there, pushed the baseline and the RUU/LSQ results
+
+Ben HeidornSunday, December 6, 2015 at 7:31pm EST
+that's my suspicion
+
+Ben HeidornSunday, December 6, 2015 at 7:31pm EST
+okay, I think that the LSQ / RUU results gives us significant information that we can set those to static values for each issue width
+
+Ben HeidornSunday, December 6, 2015 at 7:30pm EST
+yeah
+
+Quang NguyenSunday, December 6, 2015 at 7:29pm EST
+hahah were you refering to the baseline floating point plot that you sent me?
+
+Ben HeidornSunday, December 6, 2015 at 7:29pm EST
+I'm going to push that up soon.
+
+Ben HeidornSunday, December 6, 2015 at 7:29pm EST
+hell yeah
+
+Ben HeidornSunday, December 6, 2015 at 7:29pm EST
+we got useful data from the RUU / LSQ results
+
+Ben HeidornSunday, December 6, 2015 at 7:28pm EST
+oh wait
+
+Ben HeidornSunday, December 6, 2015 at 7:27pm EST
+to be expected - the runtime does go up in all cases
+
+Ben HeidornSunday, December 6, 2015 at 7:27pm EST
+you can see that the baseline performs best
+
+Ben HeidornSunday, December 6, 2015 at 7:27pm EST
+I sent you an image of one of the results from that
+
+Ben HeidornSunday, December 6, 2015 at 7:27pm EST
+the only thing that changes is the issue width, in-order and wrongpath
+
+Ben HeidornSunday, December 6, 2015 at 7:27pm EST
+I just ran the baseline values
+
+Ben HeidornSunday, December 6, 2015 at 7:27pm EST
+it's kind of weird
+
+Ben HeidornSunday, December 6, 2015 at 7:26pm EST
+okay
+
+Quang NguyenSunday, December 6, 2015 at 7:26pm EST
+let me give it some thought.
+
+Ben HeidornSunday, December 6, 2015 at 7:26pm EST
+I'm kinda getting tired of worrying about what tests to run
+
+Ben HeidornSunday, December 6, 2015 at 7:26pm EST
+we might as well
+
+Ben HeidornSunday, December 6, 2015 at 7:26pm EST
+lol
+
+Quang NguyenSunday, December 6, 2015 at 7:25pm EST
+lol we are going all out here...
+
+Ben HeidornSunday, December 6, 2015 at 7:25pm EST
+that's one idea..
+
+Ben HeidornSunday, December 6, 2015 at 7:25pm EST
+oh, we could split it by issue width.. one test, six computers for each issue width..
+
+Ben HeidornSunday, December 6, 2015 at 7:25pm EST
+but I fear that, even split among multiple computers and running all night, it would still not be finished
+
+Ben HeidornSunday, December 6, 2015 at 7:24pm EST
+and just let it run all night
+
+Ben HeidornSunday, December 6, 2015 at 7:24pm EST
+I kind of just want to make one really big test
+
+Ben HeidornSunday, December 6, 2015 at 7:23pm EST
+haha
+
+Quang NguyenSunday, December 6, 2015 at 7:23pm EST
+I will always take up that offer lol
+
+Ben HeidornSunday, December 6, 2015 at 7:23pm EST
+we can divide it up if you want me to do more writing, you could create more graphs
+
+Quang NguyenSunday, December 6, 2015 at 7:23pm EST
+oh and I noticed what you did with the ruu there. pretty clever!
+
+Ben HeidornSunday, December 6, 2015 at 7:23pm EST
+no worries there! I can write really quickly
+
+Quang NguyenSunday, December 6, 2015 at 7:23pm EST
+haha don't remind me about the paper. I'm dreading every minute of it haha
+
+Ben HeidornSunday, December 6, 2015 at 7:22pm EST
+these graphs are going to look really good in the paper
+
+Quang NguyenSunday, December 6, 2015 at 7:21pm EST
+No you definitely got a point there.
+
+Ben HeidornSunday, December 6, 2015 at 7:21pm EST
+besides that, the function is great, though
+
+Ben HeidornSunday, December 6, 2015 at 7:21pm EST
+it's also the wrong units - geometric mean is unitless
+
+Ben HeidornSunday, December 6, 2015 at 7:20pm EST
+yeah, I hate to sound like a literalist, but that had me scratching my head for a bit
+
+Quang NguyenSunday, December 6, 2015 at 7:20pm EST
+Oh its the geometric mean of the execution time. I got you though
+
+Ben HeidornSunday, December 6, 2015 at 7:18pm EST
+it says that the execution time drops (y-axis), but that's not the case, as the data being provided is the geometric mean
+
+Ben HeidornSunday, December 6, 2015 at 7:17pm EST
+Ben HeidornSunday, December 6, 2015 at 7:17pm EST
+I'll show you
+
+Ben HeidornSunday, December 6, 2015 at 7:17pm EST
+one moment
+
+Ben HeidornSunday, December 6, 2015 at 7:17pm EST
+as for the graphs
+
+Ben HeidornSunday, December 6, 2015 at 7:17pm EST
+I'll fix my scripts to follow that notation
+
+Ben HeidornSunday, December 6, 2015 at 7:16pm EST
+certainly
+
+Quang NguyenSunday, December 6, 2015 at 7:16pm EST
+Also, in the future, can we prefix our scripts for the experiments with "ex_" or something? that way it stands out and we can group them easily
+
+Quang NguyenSunday, December 6, 2015 at 7:16pm EST
+what do you mean?
+
+Ben HeidornSunday, December 6, 2015 at 7:15pm EST
+I'm going to change that to geometric mean before I commit, if that's alright
+
+Ben HeidornSunday, December 6, 2015 at 7:15pm EST
+I noticed in the geometric means graphs, that you're labeling the geometric means as execution times
+
+Ben HeidornSunday, December 6, 2015 at 7:14pm EST
+I'll commit a bunch pretty soon
+
+Quang NguyenSunday, December 6, 2015 at 7:14pm EST
+ok
+
+Ben HeidornSunday, December 6, 2015 at 7:14pm EST
+trying to make sense of them
+
+Ben HeidornSunday, December 6, 2015 at 7:14pm EST
+I'm still poring over the results
+
+Ben HeidornSunday, December 6, 2015 at 7:14pm EST
+not yet
+
+Quang NguyenSunday, December 6, 2015 at 7:14pm EST
+did you push any other test results yet?
+
+Ben HeidornSunday, December 6, 2015 at 7:08pm EST
+but you might be right
+
+Ben HeidornSunday, December 6, 2015 at 7:08pm EST
+I think there's a way to automatically file to have one personally rescheduled
+
+Ben HeidornSunday, December 6, 2015 at 7:08pm EST
+you can check on elion in the final exam page, I think
+
+Quang NguyenSunday, December 6, 2015 at 7:07pm EST
+Oh really? I don't think I can request for that this late in the game thogh
+
+Ben HeidornSunday, December 6, 2015 at 7:07pm EST
+I'm pretty sure it's a school policy
+
+Ben HeidornSunday, December 6, 2015 at 7:07pm EST
+because that's ridiculous
+
+Ben HeidornSunday, December 6, 2015 at 7:07pm EST
+since you have three finals in a 36 hour period, I think you can ask to defer one
+
+Ben HeidornSunday, December 6, 2015 at 7:07pm EST
+I figured
+
+Quang NguyenSunday, December 6, 2015 at 7:07pm EST
+the following monday
+
+Ben HeidornSunday, December 6, 2015 at 7:07pm EST
+yeah, I've got a final on monday and that tuesday.. actually, we have the same one on tuesday
+
+Quang NguyenSunday, December 6, 2015 at 7:06pm EST
+Not tomorrow i meant
+
+Quang NguyenSunday, December 6, 2015 at 7:06pm EST
+Yea. I'm gonna give up. I don't feel like wasting any more time on this. I have 2 finals on monday so I'm already tight on time to begin with
+
+Ben HeidornSunday, December 6, 2015 at 7:04pm EST
+or several
+
+Ben HeidornSunday, December 6, 2015 at 7:04pm EST
+if you have tests you want me to run, let me know - I'm thinking of running a big test over night
+
+Ben HeidornSunday, December 6, 2015 at 7:03pm EST
+sorry to hear about that..
+
+Ben HeidornSunday, December 6, 2015 at 7:03pm EST
+yeah, don't do that
+
+Ben HeidornSunday, December 6, 2015 at 7:03pm EST
+oh jesus
+
+Quang NguyenSunday, December 6, 2015 at 7:01pm EST
+I'm about to give up doing this stupid vpn man. I'm modifying my kernel at this point...
+
+Ben HeidornSunday, December 6, 2015 at 6:46pm EST
+these graphs that your script produce are super helpful
+
+Ben HeidornSunday, December 6, 2015 at 5:28pm EST
+Totally plausible
+
+Ben HeidornSunday, December 6, 2015 at 5:28pm EST
+Yup, so if we really do want to run 30 tests at once...
+
+Quang NguyenSunday, December 6, 2015 at 5:28pm EST
+oh really?? that's awesome!!
+
+Ben HeidornSunday, December 6, 2015 at 5:27pm EST
+Which is what I've been doing, lol
+
+Ben HeidornSunday, December 6, 2015 at 5:27pm EST
+You can ssh into any of the computers even if someone else is using it
+
+Quang NguyenSunday, December 6, 2015 at 5:26pm EST
+the lab is completely packed so you might have a hard time finding an open computr
+
+Ben HeidornSunday, December 6, 2015 at 5:04pm EST
+okay
+
+Quang NguyenSunday, December 6, 2015 at 5:04pm EST
+Alright. I'm probably gonna head to the lab and give this vpn thin one last try then.
+
+Ben HeidornSunday, December 6, 2015 at 5:03pm EST
+I'm going to migrate back to my house, so I'll be able to run tests for as long as we like
+
+Ben HeidornSunday, December 6, 2015 at 5:03pm EST
+if you want, I can run them over ssh if you don't want to enter the lab
+
+Ben HeidornSunday, December 6, 2015 at 5:03pm EST
+I'm writing one for the dynamic params - RUU and LSQ
+
+Ben HeidornSunday, December 6, 2015 at 5:02pm EST
+perfect
+
+Quang NguyenSunday, December 6, 2015 at 5:01pm EST
+I added an experiment for the mem:width
+
+Ben HeidornSunday, December 6, 2015 at 5:00pm EST
+sounds good to me
+
+Ben HeidornSunday, December 6, 2015 at 5:00pm EST
+okay
+
+Quang NguyenSunday, December 6, 2015 at 5:00pm EST
+from all the previous outputs, the commit width defaulted to 4
+
+Quang NguyenSunday, December 6, 2015 at 5:00pm EST
+I vote that we leave it alone for now. if we have extra time in the end then we can test for it
+
+Ben HeidornSunday, December 6, 2015 at 5:00pm EST
+it's a parameter that exists and is supported... I think
+
+Ben HeidornSunday, December 6, 2015 at 5:00pm EST
+yeah, the documentation doesn't say anything about it
+
+Quang NguyenSunday, December 6, 2015 at 4:59pm EST
+I did a search on th e simplescalar documnt but I couldn't find anything... We don't even know what values are valid then...
+
+Ben HeidornSunday, December 6, 2015 at 4:55pm EST
+do you want to test the commit:width param?
+
+Quang NguyenSunday, December 6, 2015 at 4:55pm EST
+It ran slower on my computer for some reaso
+
+Ben HeidornSunday, December 6, 2015 at 4:55pm EST
+question for you..
+
+Ben HeidornSunday, December 6, 2015 at 4:51pm EST
+but really, I think if we got simple scalar to work on our own computers, it would run a lot faster
+
+Quang NguyenSunday, December 6, 2015 at 4:49pm EST
+haha
+
+Ben HeidornSunday, December 6, 2015 at 4:48pm EST
+I had to do something similar for my research, and I was not eager to relive that pain with simple scalar
+
+Ben HeidornSunday, December 6, 2015 at 4:48pm EST
+ah, crap, that sucks
+
+Quang NguyenSunday, December 6, 2015 at 4:48pm EST
+I spent so much time on setting up the simultor at the begining of the semester too...
+
+Ben HeidornSunday, December 6, 2015 at 4:48pm EST
+we'd have to copy the binaries directly from the lab machines, which (a) I don't think we have permission to do, and (b) would probably not run on anything that isn't an identical system anyway
+
+Ben HeidornSunday, December 6, 2015 at 4:47pm EST
+yeah, that's what kept me from doing it
+
+Quang NguyenSunday, December 6, 2015 at 4:47pm EST
+and the raspberry pi idea wouln't work anyway cuz the simultor would give you a different result from what the lab machines will give you. I installed simplescalar on my computer but I can't seem to get my machine to produce the same result for some reason. I made sure that I used benchmarks and everything but the results were still different
+
+Quang NguyenSunday, December 6, 2015 at 4:45pm EST
+oops yea. I remember now.
+
+Ben HeidornSunday, December 6, 2015 at 4:44pm EST
+but not 9 and 7 or anything where the number of ALUs or multipliers are greater than 8
+
+Ben HeidornSunday, December 6, 2015 at 4:44pm EST
+so, the most we can do is 8 and 8 for dynamic 8-wide
+
+Ben HeidornSunday, December 6, 2015 at 4:43pm EST
+otherwise the experiment will fail
+
+Ben HeidornSunday, December 6, 2015 at 4:43pm EST
+which happens to be 8
+
+Ben HeidornSunday, December 6, 2015 at 4:43pm EST
+ah, if you recall from the thousand messages I spammed you with, there's a simple scalar inherent limit on what the ALU and multiplier values can be
+
+Quang NguyenSunday, December 6, 2015 at 4:43pm EST
+actually it should be (1,16)
+
+Ben HeidornSunday, December 6, 2015 at 4:43pm EST
+I have a cluster of raspberry pis, and I really wish I could install simple scalar on all of them to run the simulations in parallel (which is what got me thinking about ssh'ing into a bunch of lab computers at once)
+
+Quang NguyenSunday, December 6, 2015 at 4:43pm EST
+for your "alu_mult_memport" experiment, why do you have the range to be (1,9) shouldn't it be (1,17)?
+
+Ben HeidornSunday, December 6, 2015 at 4:36pm EST
+to only run dynamic, 8-wide
+
+Ben HeidornSunday, December 6, 2015 at 4:36pm EST
+makeConfigs("fpalu_fpmult_memport_dyn8", {'res:fpalu': range(1,9), 'res:fpmult': range(1,9), 'res:memport': [1,2]}, {}, {"static": [], "dynamic": [8]} )
+
+Ben HeidornSunday, December 6, 2015 at 4:36pm EST
+for example:
+
+Quang NguyenSunday, December 6, 2015 at 4:36pm EST
+oh nice. I didn't noticed that until now
+
+Ben HeidornSunday, December 6, 2015 at 4:31pm EST
+I added logic to allow us to choose which issue widths to run, so we can restrict the systems we generate tests for
+
+Ben HeidornSunday, December 6, 2015 at 4:30pm EST
+one thought - if it becomes painfully obvious that, for example, dynamic 8-wide is going to blow away the remaining systems, we might want to limit our tests to those that we think will "win"
+
+Quang NguyenSunday, December 6, 2015 at 4:30pm EST
+{Test Name} can the be the name of our script file. like "alu_mult_memport" for example
+
+Ben HeidornSunday, December 6, 2015 at 4:29pm EST
+sounds good to me!
+
+Quang NguyenSunday, December 6, 2015 at 4:28pm EST
+Quang NguyenSunday, December 6, 2015 at 4:28pm EST
+So, I'm thinking that we run experiments, get the result, and recording our findings on the google drive document that we made earlier. I can try to go for the follow format
+
+Quang NguyenSunday, December 6, 2015 at 4:26pm EST
+nice. Yea I definitely expected some bugs on that one
+
+Ben HeidornSunday, December 6, 2015 at 4:24pm EST
+they all look good - I found one or two bugs (and created one by accident) and committed the fixes
+
+Ben HeidornSunday, December 6, 2015 at 4:24pm EST
+yup
+
+Quang NguyenSunday, December 6, 2015 at 4:24pm EST
+did you get a chance to double check the constraints that I had for the validation function?
+
+Ben HeidornSunday, December 6, 2015 at 4:23pm EST
+nah, as long as the tests are given different names
+
+Quang NguyenSunday, December 6, 2015 at 4:23pm EST
+yea I don't think we will have any conflicts at all with generating the benchmark results
+
+Ben HeidornSunday, December 6, 2015 at 4:22pm EST
+okay
+
+Quang NguyenSunday, December 6, 2015 at 4:20pm EST
+No I haven't tried it yet I'm gonna head over to the lap in alittle bit here and give it another try
+
+Quang NguyenSunday, December 6, 2015 at 4:20pm EST
+I'm looking back at the functions right to see there would be any conflicts.
+
+Ben HeidornSunday, December 6, 2015 at 4:20pm EST
+you mentioned that the VPN is hard to install on linux.. I haven't tried it yet, but if you can get that working, you should be able to ssh into the lab
+
+Ben HeidornSunday, December 6, 2015 at 4:19pm EST
+good idea
+
+Ben HeidornSunday, December 6, 2015 at 4:19pm EST
+ooh, yeah
+
+Quang NguyenSunday, December 6, 2015 at 4:18pm EST
+just have each computer do it own commit message.
+
+Quang NguyenSunday, December 6, 2015 at 4:18pm EST
+you can run a test on a computer then commit thaot test result as an individual commit.
+
+Ben HeidornSunday, December 6, 2015 at 4:16pm EST
+haha, I was wondering how we'd run all of the tests we want..
+
+Quang NguyenSunday, December 6, 2015 at 4:15pm EST
+haha I don't have ssh, but that's a briliant idea
+
+Ben HeidornSunday, December 6, 2015 at 4:15pm EST
+over ssh
+
+Ben HeidornSunday, December 6, 2015 at 4:15pm EST
+and then run them simultaneously on a bunch of the computers in the lab
+
+Ben HeidornSunday, December 6, 2015 at 4:15pm EST
+that we can make a bunch of tests
+
+Ben HeidornSunday, December 6, 2015 at 4:15pm EST
+I have this kind of evil idea
+
+Quang NguyenSunday, December 6, 2015 at 4:14pm EST
+Yea I think we do havei some dependencies with the path
+
+Ben HeidornSunday, December 6, 2015 at 4:11pm EST
+I thought about putting the experiments into a subfolder, but we have some dependencies of referring to files / folders relative to the python scripts
+
+Ben HeidornSunday, December 6, 2015 at 4:10pm EST
+in ./scripts/
+
+Ben HeidornSunday, December 6, 2015 at 4:10pm EST
+if you pull from the repo, you'll see that it's 6 files smaller now
+
+Ben HeidornSunday, December 6, 2015 at 4:10pm EST
+I replaced all of the experiment files with one file
+
+Ben HeidornSunday, December 6, 2015 at 4:10pm EST
+if you unzipped using the command line, I think the inclusion / exclusion of the forward slash at the end of the folder changes the behavior of the unzip package
+
+Quang NguyenSunday, December 6, 2015 at 4:09pm EST
+haha that's weird cuz it as running fine for me earlier. anway, is there anyway that we can generate the script files to run the experiment in a different way? It's so cluttered that I'm having a hard time keeping track of all the experiements that you want to run
+
+Ben HeidornSunday, December 6, 2015 at 4:07pm EST
+by unzipping into another directory, it unzipped as a folder containing everything, creating the second level
+
+Ben HeidornSunday, December 6, 2015 at 4:07pm EST
+you'll need to rename it
+
+Quang NguyenSunday, December 6, 2015 at 4:06pm EST
+yea I unzip that the zipped file that you uploaded.
+
+Ben HeidornSunday, December 6, 2015 at 4:06pm EST
+when you unzip ialu_imult_test.zip, you'll notice that the folder name is ialu_imult_test_2
+
+Ben HeidornSunday, December 6, 2015 at 4:06pm EST
+just a guess - did you unzip into a folder called ./ialu_imult_test/ that you made?
+
+Ben HeidornSunday, December 6, 2015 at 4:05pm EST
+ah, I get it
+
+Quang NguyenSunday, December 6, 2015 at 4:05pm EST
+oh alright.
+
+Ben HeidornSunday, December 6, 2015 at 4:05pm EST
+*the...
+
+Ben HeidornSunday, December 6, 2015 at 4:05pm EST
+*they
+
+Ben HeidornSunday, December 6, 2015 at 4:05pm EST
+that's probably a mistake somewhere along he way
+
+Ben HeidornSunday, December 6, 2015 at 4:05pm EST
+oh, we shouldn't
+
+Quang NguyenSunday, December 6, 2015 at 4:04pm EST
+the extractFromResult is not executing. the directory hierarchy got changed. so question, why do we have ./results/ ./ialu_imult_test/ ./ialu_imult_test_2/
+
+Quang NguyenSunday, December 6, 2015 at 3:59pm EST
+true.
+
+Ben HeidornSunday, December 6, 2015 at 3:54pm EST
+ultimately, a ratio is a ratio, and if we use the baseline for this assignment, we'll still get the same best design even if we use a different baseline
+
+Ben HeidornSunday, December 6, 2015 at 3:53pm EST
+but not floating point..
+
+Ben HeidornSunday, December 6, 2015 at 3:53pm EST
+because we're given absolute numbers that we can use for the integer spec ratio
+
+Ben HeidornSunday, December 6, 2015 at 3:53pm EST
+this is a big question, though
+
+Ben HeidornSunday, December 6, 2015 at 3:53pm EST
+and the baseline is probably the values of our baseline machine
+
+Ben HeidornSunday, December 6, 2015 at 3:52pm EST
+but for homework 5, I realized that there are no floating point SPEC baselines at all
+
+Ben HeidornSunday, December 6, 2015 at 3:52pm EST
+I was, too, for a while
+
+Quang NguyenSunday, December 6, 2015 at 3:52pm EST
+really?? hmm... I must have been doing my geometric means wrong then
+
+Quang NguyenSunday, December 6, 2015 at 3:50pm EST
+actually no. let me take back what I said
+
+Quang NguyenSunday, December 6, 2015 at 3:49pm EST
+oh nvm... that is because you multiply by the baseline also.
+
+Ben HeidornSunday, December 6, 2015 at 3:49pm EST
+we call it the SPEC ratio, but in our case, we our baseline isn't some absolute SPEC benchmark, but just a baseline benchmark of our choosing (or really, of dr. irwin's choosing)
+
+Ben HeidornSunday, December 6, 2015 at 3:49pm EST
+the ratio is between the current exec time and the baseline time
+
+Ben HeidornSunday, December 6, 2015 at 3:49pm EST
+the geometric mean takes in a ratio, not the absolute execution time
+
+Quang NguyenSunday, December 6, 2015 at 3:47pm EST
+another question, why do you divide the product of the execution time by the baesline? I thought geometric means is when you multiply all the results and take the n root? I didn't think you have to perform a divide
+
+Ben HeidornSunday, December 6, 2015 at 3:47pm EST
+np
+
+Quang NguyenSunday, December 6, 2015 at 3:45pm EST
+I didnt see that part
+
+Quang NguyenSunday, December 6, 2015 at 3:44pm EST
+oh gotcha
+
+Ben HeidornSunday, December 6, 2015 at 3:44pm EST
+I put it back in the main_script.py so it would be included in the original table files
+
+Ben HeidornSunday, December 6, 2015 at 3:43pm EST
+yeah, if you look back a few messages, I moved that logic to earlier in the process
+
+Quang NguyenSunday, December 6, 2015 at 3:43pm EST
+Quang NguyenSunday, December 6, 2015 at 3:43pm EST
+because you use the folowing code but you removed the line of code where the function created the execution time column
+
+Ben HeidornSunday, December 6, 2015 at 3:43pm EST
+not yet - I made a few changes to it as well, but it looks like they merged safely
+
+Quang NguyenSunday, December 6, 2015 at 3:41pm EST
+did you get a chance to test the modified graph_script yet?
+
+Ben HeidornSunday, December 6, 2015 at 3:39pm EST
+if you have questions or concerns about what I committed, let me know
+
+Ben HeidornSunday, December 6, 2015 at 3:29pm EST
+notably, I moved the exec time calculation to earlier in the process so we could view the results in the tables
+
+Ben HeidornSunday, December 6, 2015 at 3:29pm EST
+you'll probably want to pull since I touched a lot of files
+
+Ben HeidornSunday, December 6, 2015 at 3:29pm EST
+committed
+
+Ben HeidornSunday, December 6, 2015 at 3:26pm EST
+and floating for floating
+
+Ben HeidornSunday, December 6, 2015 at 3:26pm EST
+the integer ALU / multipliers only mostly affect the integer GMs
+
+Ben HeidornSunday, December 6, 2015 at 3:26pm EST
+if you notice from the results
+
+Quang NguyenSunday, December 6, 2015 at 3:26pm EST
+alright. I'll take your word it then
+
+Ben HeidornSunday, December 6, 2015 at 3:25pm EST
+they can - they're treated separately
+
+Quang NguyenSunday, December 6, 2015 at 3:25pm EST
+you tested the interger alu and floating point alu separately. I'm not sure if those 2 things can be isolated like that or not
+
+Ben HeidornSunday, December 6, 2015 at 3:24pm EST
+what do you mean?
+
+Ben HeidornSunday, December 6, 2015 at 3:24pm EST
+lol, so.. I won't be able to thoroughly vet what I'm committing, but I'm fairly confident about it
+
+Quang NguyenSunday, December 6, 2015 at 3:24pm EST
+question, why didn't you just group all the functional units into one test? I feel like they all would affect each other in some way.
+
+Ben HeidornSunday, December 6, 2015 at 3:23pm EST
+I'm at a cafe, and the wifi is so poor that I can't get the results from the school server
+
+Ben HeidornSunday, December 6, 2015 at 3:23pm EST
+ah crap
+
+Ben HeidornSunday, December 6, 2015 at 3:22pm EST
+so I'm not sure yet - I think we need to experiment with increasing the out-of-order parameters to see a difference
+
+Ben HeidornSunday, December 6, 2015 at 3:21pm EST
+which helps a little bit, but the same general trend appears in the results
+
+Ben HeidornSunday, December 6, 2015 at 3:21pm EST
+I found a bug with the geometric mean calc
+
+Quang NguyenSunday, December 6, 2015 at 3:21pm EST
+so I was trying to make some conclusion out of the results and I couldn't really see a pattern... I mean, I noticed that the best performing machine is when the ialu = 1, but I'm not sure why that is true.
+
+Ben HeidornSunday, December 6, 2015 at 3:13pm EST
+I saw your commit - I'm just cleaning up a conflict, then I'm going to push some fixes / updates
+
+Ben HeidornSunday, December 6, 2015 at 3:13pm EST
+since the assignment says that the exec time should be reported in microseconds
+
+Ben HeidornSunday, December 6, 2015 at 3:13pm EST
+Hey Quang - I'm going to change the execution time units from ms to us
+
+Quang NguyenSaturday, December 5, 2015 at 6:31pm EST
+Oh and I used the config_restrictons.md file for all the restrictions
+
+Quang NguyenSaturday, December 5, 2015 at 6:22pm EST
+Ok ben, I commited the new make_configs file with all the necessary constraints. I gotta leave so I haven't had a chance to double check for any errors though. When you get a chance take a look at the one for "bpred:btb" I had a question on that one
+
+Ben HeidornSaturday, December 5, 2015 at 5:47pm EST
+Okay, sounds good! I'll probably run one or two random tests tonight and pick it up tomorrow.
+
+Quang NguyenSaturday, December 5, 2015 at 5:45pm EST
+I'm trying to write down all the constraints right now. I gotta head out in the next 30 minutes so I don't think I will finish it but i'll commit what I have before i leave
+
+Ben HeidornSaturday, December 5, 2015 at 5:41pm EST
+Assuming we don't crash the computer or someone decides to turn off whatever computer we're connected to.
+
+Ben HeidornSaturday, December 5, 2015 at 5:41pm EST
+If you think of any tests you want to run, or commit any tests you want me to run, I can ssh into the lab and run them throughout the night.
+
+Quang NguyenSaturday, December 5, 2015 at 5:39pm EST
+Oh alright. I'll look it up later then
+
+Ben HeidornSaturday, December 5, 2015 at 5:35pm EST
+I can't remember for certain, but there was a slide that I'm pretty sure clarified it.
+
+Ben HeidornSaturday, December 5, 2015 at 5:35pm EST
+No, but I think we figured it out, if you review our chat log.
+
+Quang NguyenSaturday, December 5, 2015 at 5:24pm EST
+* maximum tlb sizes of 256 entries for itlb and 512 entries for dtlb * itlb entries: 1,2,4,8,16,32,64,128,256 * dtlb entries: 1,2,4,8,16,32,64,128,256,512 * **Question: Does "entries" mean sets or sets x associativity?**
+
+Quang NguyenSaturday, December 5, 2015 at 5:24pm EST
+did she ever answer this question?
+
+Quang NguyenSaturday, December 5, 2015 at 4:36pm EST
+I was trying to do that before but the legend of my resulting table keep getting cut off and I couldn't figure out how to expand the size of the plot so that the legend doesn't get cut offf
+
+Ben HeidornSaturday, December 5, 2015 at 4:34pm EST
+Sounds good to me! If you saw the graph for the integer alu / mult tests, the labels alone covered the entire righthand side, so it'll probably make sense to bring the labels outside of the graph as well.
+
+Quang NguyenSaturday, December 5, 2015 at 4:32pm EST
+Also, let me throw this idea at you. I was thinking that maybe we should have the graph function output 2 graphs, one for the interter GM and another for the floating point GM. We can then restrict it to show only the top 10 or something. We still have the resulting table to look at if we want to see the rest of the data but at least this way we have a quick way to look though our results. With the way that the script is currently producing the graph, we can't really sense of any of the data
+
+Quang NguyenSaturday, December 5, 2015 at 4:26pm EST
+Ok. I just checked a couple of the geometric mean results and they came out to be correct. We're safe haha. Alright, I'll add some of the other constraints then
+
+Ben HeidornSaturday, December 5, 2015 at 4:09pm EST
+Ah yeah, I already added the fp ALU and mult restriction when I added the integer ones.
+
+Ben HeidornSaturday, December 5, 2015 at 4:08pm EST
+And sounds good! I'll also review the calculation when I get a chance
+
+Quang NguyenSaturday, December 5, 2015 at 4:08pm EST
+fill in the validation function i meant
+
+Ben HeidornSaturday, December 5, 2015 at 4:08pm EST
+Fill in the restriction?
+
+Quang NguyenSaturday, December 5, 2015 at 4:08pm EST
+Also, don't we need to fill in the restriction first?
+
+Quang NguyenSaturday, December 5, 2015 at 4:07pm EST
+*make sure
+
+Quang NguyenSaturday, December 5, 2015 at 4:07pm EST
+let me make sure that the geometric means are correct first. I first wrote the function with some mock result files so I wasn't able to verify that everything is 100% correct. I'm gonna do a couple hand calculation really quick to makes ure
+
+Ben HeidornSaturday, December 5, 2015 at 4:02pm EST
+If you order the geometric means, you'll see that the best performance seemed to have high number of mults, low alus.
+
+Ben HeidornSaturday, December 5, 2015 at 4:00pm EST
+Btw the results for the integer values was not what I expected at all.
+
+Ben HeidornSaturday, December 5, 2015 at 4:00pm EST
+Let's start thinking up, making and running tests. I ran tests for integer alu / mult and now running them for fp.
+
+Quang NguyenSaturday, December 5, 2015 at 3:53pm EST
+Nice!! So what part can I contribute to at this point?
+
+Ben HeidornSaturday, December 5, 2015 at 3:27pm EST
+yup, 8: http://lca.ece.utexas.edu/people/jryoo/young/Wattch/wattch-dac/resource.h
+
+Ben HeidornSaturday, December 5, 2015 at 3:26pm EST
+sorry for the flood of messages
+
+Ben HeidornSaturday, December 5, 2015 at 3:26pm EST
+not sure what MAX_INSTS_PER_CLASS is set to, but I'm guessing 8
+
+Ben HeidornSaturday, December 5, 2015 at 3:25pm EST
+if you read through it, or just search for MAX_INSTS_PER_CLASS, you'll see all of the constraints that sim-outorder apparently uses
+
+Ben HeidornSaturday, December 5, 2015 at 3:25pm EST
+ftp://ftp.mcs.anl.gov/pub/alice/10x10/sst-2.1/sst/elements/genericProc/ssBackEnd/ssb_sim-outorder-options.cc
+
+Ben HeidornSaturday, December 5, 2015 at 3:25pm EST
+found this file
+
+Ben HeidornSaturday, December 5, 2015 at 3:23pm EST
+yeah, I'm pretty sure that's the case
+
+Ben HeidornSaturday, December 5, 2015 at 3:23pm EST
+just sorted the results to see which tests didn't return a geometric mean - I'm guessing that the maximum number of ALUs and multipliers is 8
+
+Ben HeidornSaturday, December 5, 2015 at 3:17pm EST
+but hey, another constraint
+
+Ben HeidornSaturday, December 5, 2015 at 3:17pm EST
+not really sure what MAX_INSTS_PER_CLASS is yet
+
+Ben HeidornSaturday, December 5, 2015 at 3:17pm EST
+"fatal: number of integer mult/div's must be <= MAX_INSTS_PER_CLASS"
+
+Ben HeidornSaturday, December 5, 2015 at 3:17pm EST
+found a bug with some of the config files, since not all results returned sim_IPC, but if you look at the corresponding configs, you'll see an error message
+
+Ben HeidornSaturday, December 5, 2015 at 3:14pm EST
+I'm going to commit a few minor bug fixes and the results
+
+Ben HeidornSaturday, December 5, 2015 at 3:10pm EST
+solid.
+
+Ben HeidornSaturday, December 5, 2015 at 3:10pm EST
+I was able to zip the results, transfer them locally and then run your graphing script to get the results
+
+Ben HeidornSaturday, December 5, 2015 at 3:09pm EST
+it took about 20 to 30 minutes to run however many tests those were
+
+Ben HeidornSaturday, December 5, 2015 at 3:09pm EST
+Just got all of the ialu / imult configs to run through your runBenchmarksOnTestSets function and got the results from extractDataFromResults, all over ssh
+
+Quang NguyenFriday, December 4, 2015 at 6:47pm EST
+Did it work?
+
+Quang NguyenFriday, December 4, 2015 at 6:16pm EST
+I don't see why not. I tested the main script with python2.6
+
+Ben HeidornFriday, December 4, 2015 at 6:14pm EST
+we'll see
+
+Ben HeidornFriday, December 4, 2015 at 6:14pm EST
+but I'm kinda curious if I could run all of the experiments this way..
+
+Ben HeidornFriday, December 4, 2015 at 6:13pm EST
+I'm about ready to call it a night
+
+Ben HeidornFriday, December 4, 2015 at 6:13pm EST
+no worries
+
+Ben HeidornFriday, December 4, 2015 at 6:13pm EST
+not the shell
+
+Ben HeidornFriday, December 4, 2015 at 6:13pm EST
+at least, in vim
+
+Ben HeidornFriday, December 4, 2015 at 6:13pm EST
+so like, the backspace key is printing characters, lol
+
+Quang NguyenFriday, December 4, 2015 at 6:13pm EST
+Hmm... Maybe I'll try it again tomorrow. I gave up cuz I already wasted too much time on it haha
+
+Ben HeidornFriday, December 4, 2015 at 6:13pm EST
+the problem is that my keyboard isn't properly mapped over ssh..
+
+Ben HeidornFriday, December 4, 2015 at 6:12pm EST
+that's what I used, anyway
+
+Ben HeidornFriday, December 4, 2015 at 6:12pm EST
+yeah
+
+Quang NguyenFriday, December 4, 2015 at 6:12pm EST
+Wait....do you need that hyphen? I didn't think that was required
+
+Ben HeidornFriday, December 4, 2015 at 6:11pm EST
+ssh [username]@lab-218.cse.psu.edu
+
+Ben HeidornFriday, December 4, 2015 at 6:11pm EST
+once you're logged into the vpn, then you can ssh using..
+
+Ben HeidornFriday, December 4, 2015 at 6:11pm EST
+yeah, I think it's required
+
+Ben HeidornFriday, December 4, 2015 at 6:11pm EST
+ahh
+
+Quang NguyenFriday, December 4, 2015 at 6:11pm EST
+I was trying to download it on Linux but I was having some problems with it
+
+Quang NguyenFriday, December 4, 2015 at 6:10pm EST
+Can't say I'm not jealous right now haha
+
+Ben HeidornFriday, December 4, 2015 at 6:10pm EST
+do you have the VPN to log into the penn state cse network?
+
+Ben HeidornFriday, December 4, 2015 at 6:10pm EST
+I ssh'd in
+
+Ben HeidornFriday, December 4, 2015 at 6:10pm EST
+welp
+
+Ben HeidornFriday, December 4, 2015 at 5:58pm EST
+That's true. Originally, I was only checking the static and dynamic parameters. I think it's safe to remove those checks.
+
+Quang NguyenFriday, December 4, 2015 at 5:54pm EST
+Another comment. Don't we already made the assumption that we have included all the variables that we need in our original config file? If that is the case, then we don't really need to check if the variable exists in our settings dict in the validation function right?
+
+Quang NguyenFriday, December 4, 2015 at 5:42pm EST
+Sweet!
+
+Ben HeidornFriday, December 4, 2015 at 5:41pm EST
+Yeah! Definitely. That's a good idea.
+
+Quang NguyenFriday, December 4, 2015 at 5:40pm EST
+Let me know what you think. It was just a thought
+
+Quang NguyenFriday, December 4, 2015 at 5:40pm EST
+Quang NguyenFriday, December 4, 2015 at 5:40pm EST
+I wish I can ssh into the stupid computer haha. The only changes that I would suggest is to break the validation function even further. The structure that I have in mind is like similar to the mock function below. The reason for this is because I think it will allows us to work on the functions without conflicting each other and it is more descriptive.
+
+Ben HeidornFriday, December 4, 2015 at 5:33pm EST
+I just biked home, and while I was biking, it occurred to me that I could call your functions from the same experiment script. I'm gonna see if I can ssh into the lab computer from home. If I can, I'll send you what I used
+
+Ben HeidornFriday, December 4, 2015 at 5:32pm EST
+Haha, I was worried I really messed something up
+
+Quang NguyenFriday, December 4, 2015 at 5:31pm EST
+oh my bad. I must have overlooked that line by accident.
+
+Ben HeidornFriday, December 4, 2015 at 5:31pm EST
+Unless I made a big mistake
+
+Ben HeidornFriday, December 4, 2015 at 5:31pm EST
+The static parameters should already be part of the settings before the validation
+
+Ben HeidornFriday, December 4, 2015 at 5:31pm EST
+Do you mean the config name construction?
+
+Quang NguyenFriday, December 4, 2015 at 5:28pm EST
+I swear I learn something new whenever I look at someone else's python code. The if/else statement in one line and the dict.update function blew my mind away. Anway, was there any particular reason why you update the setting dict with StaticParams dict after the validation? Wouldn't it make more sense to update it before the validation?
+
+Ben HeidornFriday, December 4, 2015 at 4:09pm EST
+Sure - done at 530?
+
+Quang NguyenFriday, December 4, 2015 at 4:05pm EST
+I have a class at 4 40 also. would you be up for meeting up for a little bit after your 440 class?
+
+Ben HeidornFriday, December 4, 2015 at 4:04pm EST
+I have a class at 440, but I'll skip it to make progress on this lab.
+
+Ben HeidornFriday, December 4, 2015 at 4:04pm EST
+Haha, stop by whenever if you're still on campus after class. I'm sitting in the same place as before.
+
+Quang NguyenFriday, December 4, 2015 at 3:47pm EST
+I have an idea on how we should the validation but I don't feel like explaining it through typing haha
+
+Quang NguyenFriday, December 4, 2015 at 3:44pm EST
+nice!
+
+Ben HeidornFriday, December 4, 2015 at 3:43pm EST
+Permutation, yes. Validation is just done by eye so far.
+
+Quang NguyenFriday, December 4, 2015 at 3:42pm EST
+did you figure out the permutation and validation already?
+
+Ben HeidornFriday, December 4, 2015 at 1:54pm EST
+sweeet
+
+Quang NguyenFriday, December 4, 2015 at 1:51pm EST
+Oh hey!! I figure out how to push to github from the lab computer!
+
+Ben HeidornFriday, December 4, 2015 at 1:49pm EST
+sounds good
+
+Ben HeidornFriday, December 4, 2015 at 1:49pm EST
+okay
+
+Quang NguyenFriday, December 4, 2015 at 1:49pm EST
+*lab
+
+Quang NguyenFriday, December 4, 2015 at 1:49pm EST
+Alright. I'll be in late 218
+
+Ben HeidornFriday, December 4, 2015 at 1:49pm EST
+I'll be down in about 15 to 30 minutes
+
+Ben HeidornFriday, December 4, 2015 at 1:48pm EST
+if you're still in the lab / planning to stick around
+
+Quang NguyenFriday, December 4, 2015 at 1:11pm EST
+No not at all I don't have class until 3 30
+
+Ben HeidornFriday, December 4, 2015 at 1:11pm EST
+if you have some things you need to do, no worries
+
+Quang NguyenFriday, December 4, 2015 at 1:10pm EST
+no, you would only need to use a single baseline file. If you want, I'll stick around in the lab until 3:15 pm. we can just run through everything together if you want
+
+Ben HeidornFriday, December 4, 2015 at 1:04pm EST
+if we want to run tests for all 6 combinations of issue widths and static/dynamic, do I need to make 6 different baselines?
+
+Quang NguyenFriday, December 4, 2015 at 1:03pm EST
+*program
+
+Quang NguyenFriday, December 4, 2015 at 1:02pm EST
+If you read through my functions, I make the assumption that if the output file of the benchmarks for the test sets are already there then the problem will not run the benchmarks. So in the worse case, you'll run my test sets one time
+
+Quang NguyenFriday, December 4, 2015 at 1:01pm EST
+you also need to make sure that the main_script and run_experiement get the permission to run (chmod +x)
+
+Ben HeidornFriday, December 4, 2015 at 1:00pm EST
+is there a way that I can only have it run my own tests and create the config files, or do I need to comment things out in the main_script file?
+
+Ben HeidornFriday, December 4, 2015 at 1:00pm EST
+alright
+
+Quang NguyenFriday, December 4, 2015 at 1:00pm EST
+yea
+
+Ben HeidornFriday, December 4, 2015 at 1:00pm EST
+so, it reads a csv?
+
+Quang NguyenFriday, December 4, 2015 at 1:00pm EST
+yea, you need to make sure to export the spreadsheet file to csv though.
+
+Ben HeidornFriday, December 4, 2015 at 12:59pm EST
+do I just add a new folder to the csv folder and then run main_script.py?
+
+Ben HeidornFriday, December 4, 2015 at 12:58pm EST
+can you run me through this process of making tests
+
+Ben HeidornFriday, December 4, 2015 at 12:56pm EST
+essentially linux
+
+Ben HeidornFriday, December 4, 2015 at 12:56pm EST
+mac
+
+Quang NguyenFriday, December 4, 2015 at 12:55pm EST
+no and i'm probably gonna give up trying because I'm keep running into problems with it. Are you sshing into the computer using linux or windows?
+
+Ben HeidornFriday, December 4, 2015 at 12:55pm EST
+then push from your local computer
+
+Ben HeidornFriday, December 4, 2015 at 12:55pm EST
+and just grab everything in a compressed file
+
+Ben HeidornFriday, December 4, 2015 at 12:55pm EST
+if you can do that, you can sftp
+
+Ben HeidornFriday, December 4, 2015 at 12:55pm EST
+have you been able to ssh into the lab from your computer?
+
+Quang NguyenFriday, December 4, 2015 at 12:54pm EST
+hmm... there must be a way to push to a remote branch from these computer....
+
+Ben HeidornFriday, December 4, 2015 at 12:54pm EST
+unfortunately, no, I haven't done that
+
+Quang NguyenFriday, December 4, 2015 at 12:52pm EST
+obviously this is not ideal. Have you have any experiences with using the lab computer and github?
+
+Quang NguyenFriday, December 4, 2015 at 12:52pm EST
+No I don't think so. What I ended up doing was just zipping my results up and put it in my dropbox folder, copy the results into the git folder in my personal computer, and pushing it to github
+
+Ben HeidornFriday, December 4, 2015 at 12:50pm EST
+does the lab have box?
+
+Ben HeidornFriday, December 4, 2015 at 12:50pm EST
+ah..
+
+Quang NguyenFriday, December 4, 2015 at 12:49pm EST
+I don't think the lab computer has an ssh client installed either so I wasn't able to generate a ssh key...
+
+Quang NguyenFriday, December 4, 2015 at 12:49pm EST
+One problem that I see with running these test cases is how are we going to sync it? I tried to push to the remote from the lab computer yesterday but I was having problem with authentication
+
+Ben HeidornFriday, December 4, 2015 at 12:48pm EST
+yup
+
+Quang NguyenFriday, December 4, 2015 at 12:48pm EST
+yea no that sounds good to me. The structure of our experiements already allow us to do that pretty easily.
+
+Ben HeidornFriday, December 4, 2015 at 12:46pm EST
+the purpose of this is that, if we can isolate the best performing designs piece by piece, then we can drastically cut down the number of tests we need to run, while giving us a fairly good shot of running all the tests we need to find the best performing systems
+
+Ben HeidornFriday, December 4, 2015 at 12:45pm EST
+does that sound rational, or am I missing something?
+
+Ben HeidornFriday, December 4, 2015 at 12:45pm EST
+so it's possible that we could run a bunch of tests on the ALUs and multipliers, and only concerning ourselves with the performance compared to the issue width
+
+Ben HeidornFriday, December 4, 2015 at 12:44pm EST
+for example, the ALUs and multipliers should have minimal effect on the performance of branch prediction, TLBs, caches, etc
+
+Ben HeidornFriday, December 4, 2015 at 12:43pm EST
+looking over the constraints again, I realize that we can probably test a few of these in relative isolation
+
+Quang NguyenFriday, December 4, 2015 at 12:41pm EST
+I'm free now. I'm in the lab trying to set up the stupid vpn but I'm not having much luck
+
+Ben HeidornFriday, December 4, 2015 at 12:36pm EST
+Let me know whenever you're free, I'd like to bounce a few ideas off you
+
+Ben HeidornFriday, December 4, 2015 at 12:36pm EST
+I have some ideas for how we could perform all of the tests
+
+Ben HeidornFriday, December 4, 2015 at 12:36pm EST
+Hey Quang
+
+Quang NguyenThursday, December 3, 2015 at 12:51pm EST
+If a mobile node travels to a foreign network, will it always receive agent advertisement messages that are marked as foreign? If so, how will the mobile nodes that are considering this network as their home network view these agent advertisement messages that are marked as foreign?
+
+Quang NguyenThursday, December 3, 2015 at 12:48pm EST
+but this is an agent advertisement message. Am I wrong in thinking that an agent in a network will most likely be a home agent to some mobile nodes and foreign agent to some other mobile nodes. If that is the case, then what type (home/foreign) should the agent advertise?
+
+Ben HeidornThursday, December 3, 2015 at 12:25pm EST
+so, it's not a matter of relative perspective, but both the node and the wireless network agree that the connected agent is foreign
+
+Ben HeidornThursday, December 3, 2015 at 12:24pm EST
+when the node travels among different wireless networks, each of which would provide a different IP address to the node, each subsequent network is informed that the node already has an IP address, so from both the perspective of the node and the network, the agent is foreign
+
+Ben HeidornThursday, December 3, 2015 at 12:23pm EST
+from my understanding, the home agent is the agent that first provides the IP address to a node - for example, when it first connects with the network
+
+Ben HeidornThursday, December 3, 2015 at 12:22pm EST
+Sorry for the late response - I hadn't gotten to that part of the text when you sent it
+
+Quang NguyenWednesday, December 2, 2015 at 5:32pm EST
+I guess I can't think of a scenario where agent residing in a network would set itself as a foreign agent. I thought whether or not an agent is foreign is determined by the perspective of the mobile node.
+
+Quang NguyenWednesday, December 2, 2015 at 5:30pm EST
+You said you are working on 514 so let me ask you a quick question. On page 57 of "ch5.pdf" and page 566 of the book, why would the agent advertisement message have a foreign agent bit? the agent (the AP) would always be the home agent to the network that it is residing in right?
+
+Quang NguyenWednesday, December 2, 2015 at 5:15pm EST
+yup.
+
+Ben HeidornWednesday, December 2, 2015 at 5:15pm EST
+but it's a nice challenge
+
+Ben HeidornWednesday, December 2, 2015 at 5:15pm EST
+if we don't get top 5, I'm not going to be real surprised
+
+Ben HeidornWednesday, December 2, 2015 at 5:15pm EST
+haha
+
+Quang NguyenWednesday, December 2, 2015 at 5:14pm EST
+woah... alittle ambitious here... alright lets do it then. Yea, i'll put more time into this as I get some of my hws out of the way
+
+Ben HeidornWednesday, December 2, 2015 at 5:14pm EST
+I'm going to put a lot more time into this project after I get these last two homeworks off my back
+
+Ben HeidornWednesday, December 2, 2015 at 5:14pm EST
+I'm aiming for top 5, and I think we can do it
+
+Ben HeidornWednesday, December 2, 2015 at 5:13pm EST
+but I'm pretty confident, too
+
+Ben HeidornWednesday, December 2, 2015 at 5:13pm EST
+it will be tough
+
+Quang NguyenWednesday, December 2, 2015 at 5:13pm EST
+haha I can't believe that you just compare her class to the hunger games. That's hilarious!! Well, the good thing is that I have a feeling that we have a good chance of being on the top 10. Probably not the top 5 though
+
+Ben HeidornWednesday, December 2, 2015 at 5:12pm EST
+the last class she teaches will literally pit students against each other
+
+Ben HeidornWednesday, December 2, 2015 at 5:11pm EST
+I can see her taking the class down the route of the hunger games
+
+Ben HeidornWednesday, December 2, 2015 at 5:11pm EST
+exactly
+
+Quang NguyenWednesday, December 2, 2015 at 5:11pm EST
+she is retiring in a year or 2 so there's no way she'll care what we write
+
+Ben HeidornWednesday, December 2, 2015 at 5:11pm EST
+otherwise, she's an excellent teacher.. this assignment's grading scheme is just a bit out of left field
+
+Ben HeidornWednesday, December 2, 2015 at 5:10pm EST
+something I'll bring up on the SRTE, but like she'll care, lol
+
+Ben HeidornWednesday, December 2, 2015 at 5:10pm EST
+I'm not comfortable with it, since it's unnecessarily competitive
+
+Ben HeidornWednesday, December 2, 2015 at 5:10pm EST
+seriously
+
+Quang NguyenWednesday, December 2, 2015 at 5:10pm EST
+yea the points breakdown is rough man. only the top 10 groups will get anything...
+
+Ben HeidornWednesday, December 2, 2015 at 5:10pm EST
+I think that means we're going to want to run a lot of tests rather than focusing on trying to reason our way around it
+
+Ben HeidornWednesday, December 2, 2015 at 5:09pm EST
+sooo
+
+Ben HeidornWednesday, December 2, 2015 at 5:09pm EST
+btw, I saw that prof. irwin is giving points towards the best performing designs in the class overall
+
+Quang NguyenWednesday, December 2, 2015 at 5:09pm EST
+haha fair enough
+
+Ben HeidornWednesday, December 2, 2015 at 5:06pm EST
+haha, no worries, I come from a physics background, so literally half of the work was checking units
+
+Quang NguyenWednesday, December 2, 2015 at 5:06pm EST
+Haha checking units... How in the world did I forget to do that... Amateur haha
+
+Ben HeidornWednesday, December 2, 2015 at 5:06pm EST
+the execution time equation in hw6 should be correct
+
+Quang NguyenWednesday, December 2, 2015 at 5:05pm EST
+Yea that's fine. I'm in no rush. I just wanted to make sure that you know of the problem that I was having
+
+Ben HeidornWednesday, December 2, 2015 at 5:05pm EST
+the units don't match if you use the equation provided in hw5
+
+Ben HeidornWednesday, December 2, 2015 at 5:05pm EST
+I think that's a mistake
+
+Ben HeidornWednesday, December 2, 2015 at 5:05pm EST
+lastly, as for the execution time equation in hw5
+
+Ben HeidornWednesday, December 2, 2015 at 5:04pm EST
+unfortunately, I'm focused on homework for 514 and another class today and tomorrow
+
+Ben HeidornWednesday, December 2, 2015 at 5:03pm EST
+as for the python script above, I'll take a look at the script when I have some time soon
+
+Ben HeidornWednesday, December 2, 2015 at 5:02pm EST
+I saw - she still didn't really clarify how that affects point #2, but we can probably work around it
+
+Quang NguyenWednesday, December 2, 2015 at 5:01pm EST
+check your angle email if you haven't. She corrected the mistake regarding the ifq
+
+Quang NguyenWednesday, December 2, 2015 at 1:47pm EST
+Quang NguyenWednesday, December 2, 2015 at 1:47pm EST
+Oh and I wrote the function to produce the execution time graph last night, but I don't know how to fix the problem with the x axis. Ideally, I don't we want our points to be at the very edge of the axis like this. You said that you had previous experience with the matplotlib so maybe you can help me out.
+
+Quang NguyenWednesday, December 2, 2015 at 1:45pm EST
+hey ben, help me wrap my head around this. why are the execution time between hw5 and hw6 different? If the equation for hw5 is to measure performance then why don't we use that for hw6 also?
+
+Ben HeidornTuesday, December 1, 2015 at 1:49pm EST
+see you at 514
+
+Ben HeidornTuesday, December 1, 2015 at 1:49pm EST
+lol, sounds good
+
+Ben HeidornTuesday, December 1, 2015 at 1:48pm EST
+who does
+
+Quang NguyenTuesday, December 1, 2015 at 1:48pm EST
+yea. But I literally haven't paid attention in a while
+
+Ben HeidornTuesday, December 1, 2015 at 1:48pm EST
+that's due on thurs, right?
+
+Ben HeidornTuesday, December 1, 2015 at 1:48pm EST
+haha, sounds good
+
+Quang NguyenTuesday, December 1, 2015 at 1:47pm EST
+Alright I'm gonna take a break from this for now. I have to do some reading for 514 so I can actually finish the hw haha
+
+Quang NguyenTuesday, December 1, 2015 at 1:46pm EST
+oh my bad. I changed the authentication
+
+Ben HeidornTuesday, December 1, 2015 at 1:46pm EST
+sent you a request to edit it
+
+Quang NguyenTuesday, December 1, 2015 at 1:44pm EST
+https://docs.google.com/document/d/11hCWEWhyZdoGpjgomASmgec-O5ciKBJH06uW5_oFrqo/edit?usp=sharing
+
+Ben HeidornTuesday, December 1, 2015 at 1:43pm EST
+otherwise, I'll make one and send you the link
+
+Ben HeidornTuesday, December 1, 2015 at 1:43pm EST
+did you happen to start a drive doc?
+
+Ben HeidornTuesday, December 1, 2015 at 1:43pm EST
+we could also have multiple excel sheets with different baselines
+
+Ben HeidornTuesday, December 1, 2015 at 1:42pm EST
+it could just be for viewing purposes
+
+Ben HeidornTuesday, December 1, 2015 at 1:42pm EST
+cleaned it up a bit and committed
+
+Quang NguyenTuesday, December 1, 2015 at 1:41pm EST
+Would that be just for viewing purposes, because how would our script know which baseline file we are modifying on
+
+Ben HeidornTuesday, December 1, 2015 at 1:39pm EST
+but we'll probably want to put those in a folder instead of the root directory like I've been doing
+
+Ben HeidornTuesday, December 1, 2015 at 1:39pm EST
+we could have a config that's like, "barebones static superscalar" or "barebones dynamic" in which we set a few additional requirements and allow the remainder to be modified
+
+Ben HeidornTuesday, December 1, 2015 at 1:38pm EST
+you know, that's a good idea.. thinking on it more
+
+Quang NguyenTuesday, December 1, 2015 at 1:37pm EST
+alright
+
+Ben HeidornTuesday, December 1, 2015 at 1:36pm EST
+but let's make it a separate file
+
+Ben HeidornTuesday, December 1, 2015 at 1:36pm EST
+we could do that
+
+Quang NguyenTuesday, December 1, 2015 at 1:36pm EST
+yea I see that. but as we add constrains to the system. it would be nice to have a concise view like this for that too
+
+Ben HeidornTuesday, December 1, 2015 at 1:36pm EST
+and also defining whether or not a constraint can be changed (IND - independent) or can't be changed / is affected by another constraint (DEP - dependent)
+
+Ben HeidornTuesday, December 1, 2015 at 1:36pm EST
+but as concise as possible
+
+Ben HeidornTuesday, December 1, 2015 at 1:35pm EST
+this is literally all of the constraints set forth by the paper
+
+Ben HeidornTuesday, December 1, 2015 at 1:35pm EST
+no, leave this one alone
+
+Quang NguyenTuesday, December 1, 2015 at 1:35pm EST
+As we log down our new assumpts and such will we be changing this config_equation_analysis document then or will we be changing another one
+
+Quang NguyenTuesday, December 1, 2015 at 1:32pm EST
+ok
+
+Ben HeidornTuesday, December 1, 2015 at 1:30pm EST
+like [0,16] means a range from 0 to 16 inclusive
+
+Ben HeidornTuesday, December 1, 2015 at 1:30pm EST
+I used some math notation
+
+Ben HeidornTuesday, December 1, 2015 at 1:30pm EST
+a note on it
+
+Ben HeidornTuesday, December 1, 2015 at 1:29pm EST
+or, apparently, github's view is good too
+
+Ben HeidornTuesday, December 1, 2015 at 1:28pm EST
+with monospace font
+
+Ben HeidornTuesday, December 1, 2015 at 1:28pm EST
+you might want to open it in a code editor
+
+Ben HeidornTuesday, December 1, 2015 at 1:28pm EST
+it's called config_equation_analysis.cfg
+
+Ben HeidornTuesday, December 1, 2015 at 1:28pm EST
+committed the new restriction config
+
+Ben HeidornTuesday, December 1, 2015 at 1:28pm EST
+okay
+
+Quang NguyenTuesday, December 1, 2015 at 1:27pm EST
+Thats what I was thinking
+
+Ben HeidornTuesday, December 1, 2015 at 1:27pm EST
+so we can work on it simultaneously and keep notes
+
+Ben HeidornTuesday, December 1, 2015 at 1:26pm EST
+drive, definitely
+
+Quang NguyenTuesday, December 1, 2015 at 1:25pm EST
+So a word document or a good drive document?
+
+Quang NguyenTuesday, December 1, 2015 at 1:24pm EST
+Your current restriction document is good. I think we want to save that so we can refer to it at a later time in the event that we made a wrong assumption
+
+Ben HeidornTuesday, December 1, 2015 at 1:24pm EST
+since we'll already have our reasons prepared
+
+Ben HeidornTuesday, December 1, 2015 at 1:24pm EST
+which will be super helpful in writing the final paper
+
+Ben HeidornTuesday, December 1, 2015 at 1:24pm EST
+we could possibly just have a document that discusses our thoughts for what the values should be, and how they interact with one another
+
+Ben HeidornTuesday, December 1, 2015 at 1:24pm EST
+that's a good question
+
+Ben HeidornTuesday, December 1, 2015 at 1:23pm EST
+there's probably minimal gains after a certain number, but I still think we should max them out, since the tests we're running are not indicative of all possible programs that could benefit from multiple ALUs and such
+
+Quang NguyenTuesday, December 1, 2015 at 1:23pm EST
+so that brings us back to my earlier question. where do you want to store all these constrains that we are adding on top of her constrains
+
+Ben HeidornTuesday, December 1, 2015 at 1:22pm EST
+neither of which are constraints we're worried about
+
+Ben HeidornTuesday, December 1, 2015 at 1:22pm EST
+other than physical complexity and cost
+
+Ben HeidornTuesday, December 1, 2015 at 1:22pm EST
+I can't think of any reason why we'd not want to max them out
+
+Quang NguyenTuesday, December 1, 2015 at 1:21pm EST
+Quang NguyenTuesday, December 1, 2015 at 1:21pm EST
+Are there any reasons why we don't want to just max there 3 parameters at all time?
+
+Quang NguyenTuesday, December 1, 2015 at 1:20pm EST
+that's the output from one of the test. The benchmark interpret it as dec so i'm pretty sure we can use dec
+
+Quang NguyenTuesday, December 1, 2015 at 1:19pm EST
+Ben HeidornTuesday, December 1, 2015 at 1:19pm EST
+tbh, I have no clue how fetch:speed is going to affect our experiments
+
+Ben HeidornTuesday, December 1, 2015 at 1:19pm EST
+we can assume that it's an integer between 1 and 4
+
+Ben HeidornTuesday, December 1, 2015 at 1:19pm EST
+I guess we shouldn't overcomplicate things
+
+Ben HeidornTuesday, December 1, 2015 at 1:18pm EST
+do you know if the fetch:speed ratio is an integer?
+
+Quang NguyenTuesday, December 1, 2015 at 1:16pm EST
+oh nvm. I was looking at the wrong table
+
+Ben HeidornTuesday, December 1, 2015 at 1:16pm EST
+slide 26 clarifies that
+
+Ben HeidornTuesday, December 1, 2015 at 1:15pm EST
+no, that would be direct-mapped
+
+Quang NguyenTuesday, December 1, 2015 at 1:15pm EST
+just for technicality sake, wouldn't a fully-associative tlb be 256/512 sets and 1 entry?
+
+Quang NguyenTuesday, December 1, 2015 at 1:13pm EST
+How do you want to write down these assumptions and reasons that we have? I don't know if you you want us to make all these changes to your config-restrictions file
+
+Ben HeidornTuesday, December 1, 2015 at 1:11pm EST
+that provides some pretty good info for how we could play with the tlb
+
+Ben HeidornTuesday, December 1, 2015 at 1:11pm EST
+those two slides
+
+Ben HeidornTuesday, December 1, 2015 at 1:10pm EST
+Chapter 5C.26 / 5C.27
+
+Quang NguyenTuesday, December 1, 2015 at 1:10pm EST
+where did you get that from?
+
+Ben HeidornTuesday, December 1, 2015 at 1:10pm EST
+if you get the chance, check out..
+
+Ben HeidornTuesday, December 1, 2015 at 1:09pm EST
+1 set, 256 or 512 entries
+
+Ben HeidornTuesday, December 1, 2015 at 1:09pm EST
+I think we could experiment with fully-associative in the tlb
+
+Ben HeidornTuesday, December 1, 2015 at 1:09pm EST
+ooh - this is interesting
+
+Quang NguyenTuesday, December 1, 2015 at 1:08pm EST
+haha nice!
+
+Ben HeidornTuesday, December 1, 2015 at 1:08pm EST
+nvm
+
+Ben HeidornTuesday, December 1, 2015 at 1:08pm EST
+just found a slide in the lecture notes that confirms it
+
+Ben HeidornTuesday, December 1, 2015 at 1:08pm EST
+yes
+
+Ben HeidornTuesday, December 1, 2015 at 1:07pm EST
+otherwise, there wouldn't be a constraint on the associativity
+
+Ben HeidornTuesday, December 1, 2015 at 1:06pm EST
+but not 100%
+
+Ben HeidornTuesday, December 1, 2015 at 1:06pm EST
+I'm pretty certain it does
+
+Ben HeidornTuesday, December 1, 2015 at 1:06pm EST
+but does that mean the associativity * num_sets?
+
+Ben HeidornTuesday, December 1, 2015 at 1:05pm EST
+there are maximum sizes of the number of entries
+
+Ben HeidornTuesday, December 1, 2015 at 1:05pm EST
+*tlb
+
+Ben HeidornTuesday, December 1, 2015 at 1:05pm EST
+regarding the tld..
+
+Ben HeidornTuesday, December 1, 2015 at 1:05pm EST
+that sounds good to me
+
+Ben HeidornTuesday, December 1, 2015 at 1:05pm EST
+which is probably not in any of the code we're testing
+
+Ben HeidornTuesday, December 1, 2015 at 1:04pm EST
+I guess the only way it wouldn't be is if there was code with short time in-between branches
+
+Quang NguyenTuesday, December 1, 2015 at 1:04pm EST
+I can't think of a senario where taken or nottaken would out perform bimod...
+
+Ben HeidornTuesday, December 1, 2015 at 1:04pm EST
+I'm not 100% that it's ideal, but there's good reason to suspect that it is
+
+Ben HeidornTuesday, December 1, 2015 at 1:03pm EST
+umm, we could if you want
+
+Quang NguyenTuesday, December 1, 2015 at 1:03pm EST
+gotcha
+
+Quang NguyenTuesday, December 1, 2015 at 1:03pm EST
+for bped, can we put a constraint on it saying that it can only be "bimod", "2leve", or "comb"?
+
+Ben HeidornTuesday, December 1, 2015 at 1:02pm EST
+instead of having to read through the paper and juggle a bunch of different lines
+
+Ben HeidornTuesday, December 1, 2015 at 1:02pm EST
+the comments are just for us to easily refer to the constraints, one at a time
+
+Ben HeidornTuesday, December 1, 2015 at 1:02pm EST
+no need for that
+
+Quang NguyenTuesday, December 1, 2015 at 1:01pm EST
+No thats a lie. I guess I can still add the comments in the spreadsheet
+
+Quang NguyenTuesday, December 1, 2015 at 1:00pm EST
+Alright I'll stick with the spreadsheet method then. The reason I asked is because if we go with the spreadsheet method then we won't have the comments you put in your baseline config file
+
+Ben HeidornTuesday, December 1, 2015 at 12:59pm EST
+I'm okay with whatever measure you're comfortable with
+
+Quang NguyenTuesday, December 1, 2015 at 12:58pm EST
+The way my code generate the config files right now is by modifying the baseline specified in the spreadsheet. Do you want me to modify it to make a copy of your baseline config file, changed the name, and modify it instead? The reason why I had it in the spread sheet instead of making a copy of the file is because I wanted a quick and easy reference to the baseline machine as we are entering now parameters
+
+Ben HeidornTuesday, December 1, 2015 at 12:54pm EST
+with this file, we should ideally be able to make educated decisions as to what systems we want to explore
+
+Ben HeidornTuesday, December 1, 2015 at 12:54pm EST
+I'll commit shortly
+
+Ben HeidornTuesday, December 1, 2015 at 12:54pm EST
+almost done
+
+Ben HeidornTuesday, December 1, 2015 at 12:54pm EST
+I've been taking the config file from yesterday and appending all of the constraints to each individual item as a comment
+
+Ben HeidornTuesday, December 1, 2015 at 12:53pm EST
+good thinking
+
+Ben HeidornTuesday, December 1, 2015 at 12:53pm EST
+okay
+
+Quang NguyenTuesday, December 1, 2015 at 12:53pm EST
+I vote that we leave it along for now and we can play with in one of our experiments to make sure that it doesn't affect performance
+
+Ben HeidornTuesday, December 1, 2015 at 12:52pm EST
+a min bound is susceptible to deadlock
+
+Ben HeidornTuesday, December 1, 2015 at 12:52pm EST
+that's my guess
+
+Quang NguyenTuesday, December 1, 2015 at 12:52pm EST
+oh so you're saying its a max bound not a min bound kinda
+
+Ben HeidornTuesday, December 1, 2015 at 12:51pm EST
+either way, I'm fine with leaving it alone. committing more than 4 instructions at once is probably very rare
+
+Ben HeidornTuesday, December 1, 2015 at 12:51pm EST
+I thought it was a maximum number of items it could commit at any given time
+
+Ben HeidornTuesday, December 1, 2015 at 12:51pm EST
+are you sure?
+
+Quang NguyenTuesday, December 1, 2015 at 12:51pm EST
+Looking at the baseline result, it seems like it is independent of the issue width. I feel like we shouldn't mess with it. It doesn't make sense to have it really large because the machine would have to wait until the whole width are ready before it can commit
+
+Ben HeidornTuesday, December 1, 2015 at 12:49pm EST
+or just make it large..
+
+Ben HeidornTuesday, December 1, 2015 at 12:49pm EST
+maybe we should just ignore it?
+
+Ben HeidornTuesday, December 1, 2015 at 12:49pm EST
+but it shows up in the output files as a config item
+
+Ben HeidornTuesday, December 1, 2015 at 12:49pm EST
+not in the documentation or any of the homeworks
+
+Ben HeidornTuesday, December 1, 2015 at 12:47pm EST
+btw, I'm finding nothing about commit:width anywhere
+
+Ben HeidornTuesday, December 1, 2015 at 12:47pm EST
+aye
+
+Quang NguyenTuesday, December 1, 2015 at 12:47pm EST
+for il1 and dl1 cache, we are going to need to try both direct mapped and set associative right?
+
+Ben HeidornTuesday, December 1, 2015 at 12:46pm EST
+perfect - good find
+
+Quang NguyenTuesday, December 1, 2015 at 12:46pm EST
+on section 7.1. they proposed another setup that is better than having a large btb, but I think that design is just having several smaller btbs (which is not an option for us)
+
+Quang NguyenTuesday, December 1, 2015 at 12:44pm EST
+https://cseweb.ucsd.edu/~calder/papers/ISCA-94.pdf
+
+Quang NguyenTuesday, December 1, 2015 at 12:44pm EST
+I did a search of "btb" in this paper and just read through the sentences that mentioned about the btb, and it seems like having a large btb is ideal
+
+Ben HeidornTuesday, December 1, 2015 at 12:41pm EST
+sent her an email about wrong path, though I'm pretty certain that it will depend on in-order
+
+Ben HeidornTuesday, December 1, 2015 at 12:38pm EST
+presumably, the greater the associativity, the more records it can hold at no additional time cost, since the total size isn't restricted, but the number of sets is restricted
+
+Ben HeidornTuesday, December 1, 2015 at 12:37pm EST
+haha, yeah, I think that's what it is
+
+Quang NguyenTuesday, December 1, 2015 at 12:37pm EST
+I know I worded that pretty badly haha
+
+Quang NguyenTuesday, December 1, 2015 at 12:37pm EST
+the btb is the cache that contains the address of whatever the opposite of the branch prediction right
+
+Ben HeidornTuesday, December 1, 2015 at 12:35pm EST
+I'm not 100% on that, now that I think about it a bit more
+
+Ben HeidornTuesday, December 1, 2015 at 12:35pm EST
+good thinking
+
+Quang NguyenTuesday, December 1, 2015 at 12:35pm EST
+yea. Right now I'm trying to look up whether or not we can make your assumption about the max btb
+
+Ben HeidornTuesday, December 1, 2015 at 12:34pm EST
+or slide
+
+Ben HeidornTuesday, December 1, 2015 at 12:33pm EST
+but I don't think there was a lecture about it
+
+Ben HeidornTuesday, December 1, 2015 at 12:33pm EST
+I feel like she briefly discussed this during class
+
+Ben HeidornTuesday, December 1, 2015 at 12:31pm EST
+lol, I guess I could send her another email..
+
+Ben HeidornTuesday, December 1, 2015 at 12:31pm EST
+but it would be nice to make it dependent on whether or not we're using in-order
+
+Ben HeidornTuesday, December 1, 2015 at 12:30pm EST
+I think it's kind of assumed, but I don't know for certain
+
+Ben HeidornTuesday, December 1, 2015 at 12:30pm EST
+that's my thought
+
+Quang NguyenTuesday, December 1, 2015 at 12:30pm EST
+We can do the same thing where we can just switch it to true whenever we have a dynamic machine
+
+Ben HeidornTuesday, December 1, 2015 at 12:30pm EST
+yeah
+
+Quang NguyenTuesday, December 1, 2015 at 12:30pm EST
+I think that issue:wrongpath is one of the variable that we have to changed. If you look at hw4, she had us changed it to true whenever we switch to a dynamic machine
+
+Ben HeidornTuesday, December 1, 2015 at 12:29pm EST
+I'm thinking, for wrong path, that if we're using in-order, then wrong path should be false, but otherwise true
+
+Ben HeidornTuesday, December 1, 2015 at 12:27pm EST
+I think we could assume that, regarding ul2. There are a few other places we could make similar assumptions - like that the btb associativity should probably always be the highest available number (since we're not worried about cost or complexity)
+
+Ben HeidornTuesday, December 1, 2015 at 12:26pm EST
+Do you know if issue:wrongpath should be true or false definitively? There's no constraint, but from my understanding, doesn't wrongpath = true accurately represent real world systems, for out of order?
+
+Quang NguyenTuesday, December 1, 2015 at 12:24pm EST
+can't we reasonably assume that the ul2 cache should never be direct mapped?
+
+Ben HeidornTuesday, December 1, 2015 at 11:58am EST
+Just sent her an email. Hopefully she responds soon.
+
+Quang NguyenTuesday, December 1, 2015 at 11:51am EST
+Oh gotcha. Let me put some thoughts into that then
+
+Ben HeidornTuesday, December 1, 2015 at 11:43am EST
+As for the constraints, I think we'll want to define our own and provide reasons for it. I think that's a large part of what she expects in the paper.
+
+Ben HeidornTuesday, December 1, 2015 at 11:43am EST
+I just stopped by her office, but the door was closed, so I'm going to email her about it
+
+Quang NguyenTuesday, December 1, 2015 at 11:37am EST
+The reason I asked is becuz I'm heading to campus now and I can see if she is in her office and ask her if you want
+
+Quang NguyenTuesday, December 1, 2015 at 11:30am EST
+Also, did you emailed her about the ifq?
+
+Quang NguyenTuesday, December 1, 2015 at 11:30am EST
+What do you mean. All the constraints that you posted were the constraints that were giving to us by the assignment right?
+
+Ben HeidornTuesday, December 1, 2015 at 11:26am EST
+Though I'm still wondering if we put in enough constraints, whether we'd be able to produce the ideal configs to test.
+
+Ben HeidornTuesday, December 1, 2015 at 11:25am EST
+Haha, yeah, that's why we'll be a bit smarter about it, lol. I did an offhand calculation, and every additional variable roughly doubles the number of possible configs, which is unreasonable, lol.
+
+Quang NguyenTuesday, December 1, 2015 at 11:15am EST
+Apparently a friend of mine tried to come up with every single combination and stopped after he generated 4000 config files. Haha
+
+Ben HeidornMonday, November 30, 2015 at 4:56pm EST
+I would guess so.
+
+Ben HeidornMonday, November 30, 2015 at 4:56pm EST
+No clue. I haven't found any documentation on it.
+
+Quang NguyenMonday, November 30, 2015 at 3:49pm EST
+is the default of the commit:width the same as the issue:width?
+
+Quang NguyenMonday, November 30, 2015 at 3:24pm EST
+Alright
+
+Ben HeidornMonday, November 30, 2015 at 3:24pm EST
+I'm still going through these restrictions. I'll commit what I write up shortly
+
+Ben HeidornMonday, November 30, 2015 at 3:24pm EST
+okay, sounds good! thanks man
+
+Quang NguyenMonday, November 30, 2015 at 3:23pm EST
+done! I'm gonna take a break from this for a while.
+
+Ben HeidornMonday, November 30, 2015 at 3:09pm EST
+niice
+
+Quang NguyenMonday, November 30, 2015 at 3:08pm EST
+alright. N I just finished writing the function to pull the resulting data into a csv. I'll post it in a bit
+
+Ben HeidornMonday, November 30, 2015 at 3:07pm EST
+I'm going to finish reviewing the rest of the restrictions to see if anything else doesn't make sense
+
+Ben HeidornMonday, November 30, 2015 at 3:07pm EST
+I might do that
+
+Quang NguyenMonday, November 30, 2015 at 3:06pm EST
+Or we can email her also
+
+Quang NguyenMonday, November 30, 2015 at 3:06pm EST
+hmmm.... I think she has office hours tomorrow.
+
+Ben HeidornMonday, November 30, 2015 at 3:04pm EST
+and it's important, because restriction 2 sets a limit on the il1 block size
+
+Ben HeidornMonday, November 30, 2015 at 3:04pm EST
+one of them is wrong
+
+Ben HeidornMonday, November 30, 2015 at 3:03pm EST
+64/16 is a 4B word size
+
+Ben HeidornMonday, November 30, 2015 at 3:03pm EST
+"The il1 block size must match the ifq size (e.g., for the baseline machine the ifqsize is set to 1 word (8B) so the il1 block size is also set to 8B)."
+
+Ben HeidornMonday, November 30, 2015 at 3:03pm EST
+restriction 1 says:
+
+Ben HeidornMonday, November 30, 2015 at 3:03pm EST
+"ifqsize can be set to a maximum of 16 words (64B)"
+
+Ben HeidornMonday, November 30, 2015 at 3:03pm EST
+restriction 5 says:
+
+Ben HeidornMonday, November 30, 2015 at 3:03pm EST
+there's an inconsistency in the hw6 documentation
+
+Ben HeidornMonday, November 30, 2015 at 3:03pm EST
+uuugh
+
+Quang NguyenMonday, November 30, 2015 at 2:53pm EST
+OK.
+
+Ben HeidornMonday, November 30, 2015 at 2:53pm EST
+I'm currently assembling all of the restrictions for running tests, and all of the possible config parameters we could use
+
+Ben HeidornMonday, November 30, 2015 at 2:52pm EST
+that looks good to me
+
+Quang NguyenMonday, November 30, 2015 at 2:52pm EST
+Quang NguyenMonday, November 30, 2015 at 2:52pm EST
+I just realized that the table that i posted didn't include the benchmarks. The table should look like this instead. Let me know what you think
+
+Quang NguyenMonday, November 30, 2015 at 1:54pm EST
+Sweet!
+
+Ben HeidornMonday, November 30, 2015 at 1:53pm EST
+it'll make it really easy to make graphs and translate into latex tables
+
+Ben HeidornMonday, November 30, 2015 at 1:53pm EST
+that looks solid to me
+
+Quang NguyenMonday, November 30, 2015 at 1:33pm EST
+Quang NguyenMonday, November 30, 2015 at 1:33pm EST
+Now for the 3rd task (parsing the results and getting the data that we want), what kind of format do you want to work with? Are you ok if we produce a csv that represents the table below?
+
+Ben HeidornMonday, November 30, 2015 at 1:28pm EST
+sweet - I saw. sounds good!
+
+Quang NguyenMonday, November 30, 2015 at 1:18pm EST
+I just added the spreadsheet that we can use for our test cases under the csv file. I just added the 2 testcases so thatI can test my function. We can delete it then
+
+Quang NguyenMonday, November 30, 2015 at 1:08pm EST
+gotcha
+
+Ben HeidornMonday, November 30, 2015 at 1:07pm EST
+which is a github setting - you should have full access now
+
+Ben HeidornMonday, November 30, 2015 at 1:07pm EST
+haha, I didn't know I had to add you as a collaborator to the project
+
+Quang NguyenMonday, November 30, 2015 at 1:06pm EST
+oh hey! it works. what was the problem?
+
+Ben HeidornMonday, November 30, 2015 at 1:03pm EST
+try now
+
+Ben HeidornMonday, November 30, 2015 at 1:02pm EST
+one moment..
+
+Ben HeidornMonday, November 30, 2015 at 1:02pm EST
+oh, oh
+
+Ben HeidornMonday, November 30, 2015 at 12:59pm EST
+okay
+
+Quang NguyenMonday, November 30, 2015 at 12:59pm EST
+give me a sec. let me do some more googling
+
+Ben HeidornMonday, November 30, 2015 at 12:59pm EST
+hmm
+
+Quang NguyenMonday, November 30, 2015 at 12:58pm EST
+yea
+
+Ben HeidornMonday, November 30, 2015 at 12:58pm EST
+did you clone it with git clone [repo address]?
+
+Quang NguyenMonday, November 30, 2015 at 12:58pm EST
+yea I did the pull, made my changes, add and commit my changes. Now I am trying to push it back to you and I'm getting a 403 error. I think this might be because of ssh
+
+Ben HeidornMonday, November 30, 2015 at 12:58pm EST
+git pull is like svn update - it will update your local repo to the HEAD of the master repo (or whatever branch you're on)
+
+Ben HeidornMonday, November 30, 2015 at 12:57pm EST
+to move it to github
+
+Ben HeidornMonday, November 30, 2015 at 12:57pm EST
+then git push origin master
+
+Ben HeidornMonday, November 30, 2015 at 12:57pm EST
+then git commit to commit
+
+Ben HeidornMonday, November 30, 2015 at 12:57pm EST
+you can review what you're committing with: git status
+
+Ben HeidornMonday, November 30, 2015 at 12:57pm EST
+add the file: git add [file or folder]
+
+Ben HeidornMonday, November 30, 2015 at 12:56pm EST
+make the file
+
+Ben HeidornMonday, November 30, 2015 at 12:56pm EST
+the order of ops is..
+
+Ben HeidornMonday, November 30, 2015 at 12:56pm EST
+as a push
+
+Quang NguyenMonday, November 30, 2015 at 12:50pm EST
+I'm having a hard time getting my changes up to the repo. I should commit my changes as a pull request right?
+
+Quang NguyenMonday, November 30, 2015 at 12:49pm EST
+darn it. I finished but o
+
+Ben HeidornMonday, November 30, 2015 at 11:24am EST
+in a bit, I'll commit a stub that we can use
+
+Ben HeidornMonday, November 30, 2015 at 11:23am EST
+sweet. It's really simple, just a bit tedious at times
+
+Quang NguyenMonday, November 30, 2015 at 11:23am EST
+That what I was thinking too. I haven't done it before, but I'm interested in learning it
+
+Ben HeidornMonday, November 30, 2015 at 11:21am EST
+if you haven't done so before, I think it would be a good experience (plus, if you make your resume in latex, it looks really good to prospective employers)
+
+Ben HeidornMonday, November 30, 2015 at 11:21am EST
+are you interested in working in latex for the paper?
+
+Ben HeidornMonday, November 30, 2015 at 11:16am EST
+haha, awesome! sounds good
+
+Quang NguyenMonday, November 30, 2015 at 11:14am EST
+I will have the csv parser function up on the repo before 12
+
+Ben HeidornMonday, November 30, 2015 at 11:10am EST
+okay
+
+Quang NguyenMonday, November 30, 2015 at 11:10am EST
+alright I'll place it under the "./csv/" directory then.
+
+Ben HeidornMonday, November 30, 2015 at 11:08am EST
+I left the project layout incomplete so we could change it as needed, lol
+
+Ben HeidornMonday, November 30, 2015 at 11:07am EST
+wherever works for you
+
+Quang NguyenMonday, November 30, 2015 at 11:07am EST
+Where in the dir should we place the csv file?
+
+Ben HeidornMonday, November 30, 2015 at 11:07am EST
+I'm good with however you'd like to do it, honestly
+
+Quang NguyenMonday, November 30, 2015 at 11:06am EST
+no not at all. I guess I didn't noticed that suggestion in the hw2. Making it a absolute directory is a good idea
+
+Ben HeidornMonday, November 30, 2015 at 11:05am EST
+if it makes it easier, we can do that, but I don't mind moving my folders around to match your layout
+
+Ben HeidornMonday, November 30, 2015 at 11:05am EST
+if you're referring to the change directory command in the run_experiments.sh file, we can change that as needed - including just passing in a number or name and choosing the correct paths
+
+Ben HeidornMonday, November 30, 2015 at 11:03am EST
+I think our benchmarks should be in the same absolute directories, as it was part of the original assignment (HW2 / the evening class) to copy the simple scalar benchmarks to a specific location within our home directories
+
+Quang NguyenMonday, November 30, 2015 at 10:55am EST
+Quang NguyenMonday, November 30, 2015 at 10:55am EST
+Hey, I just looked over the readme file and it looks really good. I can do the 1st and 3rd tasks if you want. The only problem that I think we might have is our directory path. You and I will have different paths to our benchmarks folder. Do you want something where the python script would require us to input our name or a number for user's identification?
+
+Quang NguyenSaturday, November 14, 2015 at 5:59pm EST
+for now, I think I will stick with the theory that the machine doesn't peform a wakeup until the wb stage. I will make a note to ask the prof next week.
+
+Quang NguyenSaturday, November 14, 2015 at 5:58pm EST
+that kind of mathces up with what page 63 of the ppt said.
+
+Ben HeidornSaturday, November 14, 2015 at 5:57pm EST
+Sorry, load, not store.
+
+Ben HeidornSaturday, November 14, 2015 at 5:57pm EST
+But.. I suspect you might be right, and the store might perform the IQ lookup as soon as it finishes.. or else the wakeup might not happen until the next cycle
+
+Ben HeidornSaturday, November 14, 2015 at 5:55pm EST
+I think the load and store instructions do participate in the wakeup (not certain, we should probably ask the prof) but that the loads and stores don't flip the ready bit in the Ready Table until the load completes execution.
+
+Quang NguyenSaturday, November 14, 2015 at 5:53pm EST
+So basically, the wakeup step of the issue stage does not apply to load and store instructions at all. Only the rest of the other instructions use the wakeup function
+
+Quang NguyenSaturday, November 14, 2015 at 5:52pm EST
+yea I think I agree with you that the instruction is just there as a reminder and that it should be removed. so this is the steps that i think the lw instruction took. Let me if you think it is right. 1. The lw was marked ready and was sent for execution 2. Once the lw was done, the wb stage of the pipeline, perform an associated search on the IQ and wakeup the instructions that has the right src address
+
+Ben HeidornSaturday, November 14, 2015 at 5:46pm EST
+I'm not 100%, but I think that the load instruction was issued, but our professor might have just left the instruction in the IQ in faded font as a visual aid to remind us to flip the ready bit for p4 when the load completes.
+
+Quang NguyenSaturday, November 14, 2015 at 5:43pm EST
+Also, I don't know what your plan is but i'm planning to spend the rest of the day studying for this stuff. Idk if you want to study together or not.
+
+Quang NguyenSaturday, November 14, 2015 at 5:41pm EST
+When an instruction is flagged as ready, it will be executed and removed from the IQ right?
+
+Quang NguyenSaturday, November 14, 2015 at 5:41pm EST
+I thought the IQ can only support the ready flag? How can it flag a instruction as issued?
+
+Ben HeidornSaturday, November 14, 2015 at 5:33pm EST
+Oh, I think that just because the select and wakeup occur at the same time, doesn't imply that the wakeup will mark all source registers as ready - I think the wakeup procedure takes into account more than just whether an instruction with the appropriate destination register is issued. That would fit with the load scenario.
+
+Ben HeidornSaturday, November 14, 2015 at 5:29pm EST
+If you look at slide 63 from 4F, it states that a load from memory will update the ready table once the load completes. I think this is an exception to the select and wakeup procedure, but I can't find an exact reason that explains it (other than that it makes sense to wait to mark source registers as ready until the data is available)
+
+Quang NguyenSaturday, November 14, 2015 at 5:21pm EST
+Quang NguyenSaturday, November 14, 2015 at 5:21pm EST
+Hey Ben, I don't know how familiar you are with OOO for 431, but I have a quick question for ya. My question is on the issue stage of the OOO pipeline. the ppt said that the select and wakeup process happens all in one cycle. If that is the case, then why didn't p4 of the circled "addu" instruction not get set to ready? Should the machine performed an associated search for p4 when the lw instruction before it got issued and turn the ready bit to yes?
