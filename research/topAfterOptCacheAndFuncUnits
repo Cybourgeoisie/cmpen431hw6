@@ -1,0 +1,45 @@
+Findings, with max ALU/Mults:
+
+dynamic4:
+- sum of integer ALUs and mults should be >= 7
+-- ialu = imult = 4 for top many
+- sum of floating should be >= 6
+
+dynamic8:
+- sum of integer should be >= 10
+- sum of floating should be >= 9
+
+winners:
+
+using:
+cachedl2 ul2 4096 128 2 l
+cacheil1 il1 256 64 2 l
+
+dynamic 4:
+
+Integer:
+resimult 2 resialu 6 resfpmult 3 resfpalu 3	3.19033336063
+resimult 4 resialu 4 resfpmult 2 resfpalu 4	3.19013721549
+resimult 4 resialu 4 resfpmult 3 resfpalu 4	3.19013721549
+resimult 3 resialu 5 resfpmult 3 resfpalu 4	3.19013721549
+resimult 3 resialu 5 resfpmult 4 resfpalu 3	3.19000643197
+
+Floating:
+resimult 4 resialu 4 resfpmult 2 resfpalu 4 2.9698821431
+resimult 4 resialu 4 resfpmult 3 resfpalu 4 2.9698821431
+resimult 4 resialu 4 resfpmult 4 resfpalu 2 2.9698821431
+resimult 4 resialu 4 resfpmult 2 resfpalu 5 2.9698821431
+
+dynamic 8:
+
+Integer
+resimult 7 resialu 8 resfpmult 6 resfpalu 8	2.98267783039
+resimult 8 resialu 8 resfpmult 8 resfpalu 8	2.98255726213
+resimult 4 resialu 8 resfpmult 4 resfpalu 7	2.98255726213
+resimult 5 resialu 8 resfpmult 6 resfpalu 4	2.98249697252
+
+Floating:
+resimult 5 resialu 6 resfpmult 4 resfpalu 7 2.94930983006
+resimult 8 resialu 6 resfpmult 4 resfpalu 8 2.94930983006
+resimult 7 resialu 6 resfpmult 6 resfpalu 4 2.94930983006
+resimult 6 resialu 6 resfpmult 5 resfpalu 4 2.94930983006
