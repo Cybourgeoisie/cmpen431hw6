@@ -203,7 +203,7 @@ def extractDataFromResults(ListOfParaToGet, desiredTestSets = []):
 					static = True
 					issueWidth = 1
 					clockCycle = 100
-					simIPC = 1
+					simIPC = False
 
 					# Get all data from result file
 					with open("../results/%s/%s/%s.out" %(testSet[0],folder,benchmark), 'r') as testFile:
@@ -228,6 +228,7 @@ def extractDataFromResults(ListOfParaToGet, desiredTestSets = []):
 								try:
 									simIPC = float(matchObj.group(1))
 								except ValueError:
+									f.write("\n")
 									continue
 
 						# Get static/dynamic info
