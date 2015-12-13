@@ -40,13 +40,13 @@ with open(sys.argv[1], "rb") as input_file:
 
 
 	# Show only the values below threshold
-	n, bins, patches = plt.hist(parsed_data, bins=20, histtype='bar', 
-		color=['crimson', 'burlywood', 'chartreuse'], label=labels)
+	n, bins, patches = plt.hist(parsed_data, bins=20, histtype='bar', label=labels)
 
 
 	# Plot the data
-	plt.title("Branch Prediction: Comparing Methods")
+	plt.title(sys.argv[2])
 	plt.xlabel("Geometric Mean of Execution Time (us)")
 	plt.ylabel("Count")
 	plt.legend()
-	plt.show()
+	# plt.show()
+	plt.savefig(sys.argv[2] + ".png")
