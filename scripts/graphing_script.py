@@ -59,13 +59,13 @@ def calculateGeometricMeans(inputDataFrame):
 		integerGM = 1
 		for index,intExeTime in enumerate(offsetDataFrame[:4]["execution time (us)"]):
 			integerGM *= intExeTime
-		integerGM = integerGMBaseline / integerGM
+		# integerGM = integerGMBaseline / integerGM
 
 		# take the product of all the exectiontime for the floating point execution time
 		floatingGM = 1
 		for index,floatExeTime in enumerate(offsetDataFrame[4:6]["execution time (us)"]):
 			floatingGM *= floatExeTime
-		floatingGM = floatingGMBaseline / floatingGM
+		# floatingGM = floatingGMBaseline / floatingGM
 
 		integerGM = pow(integerGM,1.0/4.0)
 		floatingGM = pow(floatingGM,1.0/2.0)
