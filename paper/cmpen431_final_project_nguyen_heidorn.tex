@@ -25,6 +25,7 @@
 \usepackage[english]{babel} % English language/hyphenation
 \usepackage{amsmath,amsfonts,amsthm} % Math packages
 \usepackage{listings}
+\usepackage{graphicx}
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
@@ -138,6 +139,93 @@ The geometric means were calculated using the program execution times as its inp
 
 \section{Order of Experimentation}
 
+The majority of experiments were carried out by changing a few related parameters and determining how changing the variables affected the geometric means for all machine issue widths. By default, most of the tests were performed for both static and dynamic machines, with issue widths 1, 2 and 4 for static, and 2, 4, and 8 for dynamic. Near the end of our experimentation, we found that dynamic far outperformed static. To allow us to continue to test with higher accuracy, the static tests were eventually dropped in favor of the dynamic tests.
+
+The order of our initial tests were mostly arbitrary and experimental, but we've found that there is a logical sequence for how testing could be performed. After reviewing our process, the ideal experimentation order would have been to isolate the independent variables that allow us to optimize the performance of all issue widths, to set these variables to their best performing values, and then to test the remaining inter-dependent variables. We present the order of experimentation as we've proceeded, but we focus on the experiments that yielded the most useful results.
+
+\subsection{Identifying Independent Variables}
+
+The first round of experimentation involved testing different, interrelated parameters, and determining how well they affected the geometric means independent of the other Simple Scalar parameters. For our tests, we began by first testing the ideal number of ALUs and Multipliers, Fetch Speed, Memory Width, and the Register Update Unit \& Load / Store Queue. The results for the ALU's / Multipliers and the Fetch Speed were mixed at best, and were ultimately inconclusive to test so early on. However, the results for the Memory Width and the Register Update Unit showed positive trends that we could use to build on.
+
+\subsubsection{Best of the Register Update Unit \& Load / Store Queue}
+
+For the register update unit (RUU) and load / store queue (LSQ), we found that the best performing designs for dynamic issue machines of 2-wide, 4-wide and 8-wide performed best when the number of RUUs or LSQs were maxed out for each issue width:
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+	\hline
+	Issue Width & RUU & LSQ  \\ \hline
+	2-wide & 16 & 8 \\ \hline
+	4-wide & 32 & 16 \\ \hline
+	8-wide & 64 & 32 \\ \hline
+\end{tabular}
+\end{center}
+
+These results stood across the board, which allowed us to progress with the remainder of our testing by optimizing the performance of all issue widths.
+
+\subsubsection{Best of the Memory Width}
+
+Seemingly a no-brainer now, the memory width needs to be maxed out at 16 for optimal performance. This value was tested against all 6 machine combinations.
+
+
+\subsection{Branch Prediction: Finding an Ideal Method}
+
+The branch predictors were tested heavily following the initial evaluation of the RUU, LSQ and memory width. We made the assumption that not-taken and taken will not perform as well as bimodal, two-level or the combination branch predictors, and this was verified after the original tests against the three best-performing branch predictors.
+
+\subsubsection{Assumptions about the L1 Cache}
+
+For the three tested branch predictors, we analyzed not only the performance of the different branch prediction methods, but we also performed extensive research into the L1 data and instruction caches and the unified L2 cache. In order for the branch prediction tests to be carried out in a timely manner, we made a decision to match the L1 instruction cache to the L1 data cache, while keeping them separated. While this may cause less-than-ideal combinations of both the data and instruction cache, the number of combinations was too great to reasonably analyze. Further, it is common to see instruction and data caches with matching specifications, which aided our decision to simplify the testing process.
+
+While we realize that the more variables being tested, the more complex that the result analysis becomes, we were comfortable altering both the branch prediction type and altering the L1 and L2 caches. The same exact combinations of cache values were tested across all three branch predictors, which gave us a large number of results to compare the performance of each type of branch predictor. Ultimately, we saw that the combination method won out - not comfortably, but consistently enough that allowed us to expand our testing of the combination branch predictor. Of the hundreds of tests we ran, Figures \ref{fig:bpsi} through \ref{fig:bpdi} show the number of tests ran that returned a geometric mean at or below 1000 for both static and dynamic issue width systems. These figures also include expanded evaluation of the combination method, which is why the number of tests run for combination vastly exceeds bimodal and 2-level.
+
+\begin{figure}
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width=\linewidth]{graphs/branch_prediction/Branch_Prediction_Static_Interger.png}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\centering
+ \includegraphics[width=\linewidth]{graphs/branch_prediction/Branch_Prediction_Static_Float.png}
+\end{minipage}
+
+\caption{A subset of the total tests run for three branch predictor types (bimodal, 2-level, combination) for static issue machines.}
+\label{fig:bpsi}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width=\linewidth]{graphs/branch_prediction/Branch_Prediction_Dynamic_Interger.png}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\centering
+ \includegraphics[width=\linewidth]{graphs/branch_prediction/Branch_Prediction_Dynamic_Float.png}
+\end{minipage}
+
+\caption{A subset of the total tests run for three branch predictor types (bimodal, 2-level, combination) for dynamic issue machines.}
+\label{fig:bpdi}
+\end{figure}
+
+
+\subsection{TLB Investigation}
+
+We expanded our search of independent variables by exploring the affect of various sizes of the TLB on the performance of the different machines. The results were not very surprising, as the use of the TLB is minimal compared to the time spent in the cache or performing operations. Ultimately, the effects of changing the different sizes of the associativity and the number of sets of the TLB had little impact on the final outcome of the geometric means for each of the machines. We've presented our findings for each machine and issue width in Figure \ref{fig:tlb}, for those machines / widths that managed a geometric mean below 1000.
+
+\begin{figure}
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width=\linewidth]{graphs/TLB/TLB_Analysis_Integer.png}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\centering
+ \includegraphics[width=\linewidth]{graphs/TLB/TLB_Analysis_Integer.png}
+\end{minipage}
+
+\caption{Evaluation of the TLB}
+\label{fig:tlb}
+\end{figure}
 
 
 \section{Experiments}
