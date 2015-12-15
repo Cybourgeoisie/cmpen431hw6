@@ -114,6 +114,8 @@ Dynamic, 4-wide
 % Force the above to appear all on one page - the cover page. Start fresh for the content of the paper.
 \newpage
 
+\tableofcontents
+
 
 \section{Introduction}
 
@@ -130,7 +132,7 @@ Simple Scalar provides a number of parameters that can be modified to emulate an
 
 However, due to the number of variables outside of the architecture - the algorithms, access patterns, and behavior of the programs tested - it is not simply good enough to make educated guesses based on our understanding of processor evolution. Instead, a combination approach is required. Scientific reasoning is necessary to isolate the parameters and restrict the range of values which could benefit the performance of a given design. Once the parameters are defined and the range of reasonable values determined, a series of tests need to be run to experimentally verify our predictions and also to determine the best design decisions for a given architecture.
 
-Our testing methods combine scientific analysis and experimental verification, both to determine which variables to test and which tests to run for all static and dynamic issue machines. Following each suite of tests, we identified and analyzed those designs which worked best for each machine and issue width. We've run dozens of test suites which isolated different components of the processor's functional units, branch prediction, instruction issuing, cache design, and the TLB. Each of these tests suites contained dozens to hundreds of individual configurations, all of which provided experimental information that were used to advance our designs to find a outperformed system. These tests were not comprehensive in any way, but we believe that we've isolated strong designs as a result of our methodology.
+Our testing methods combine scientific analysis and experimental verification, both to determine which variables to test and which tests to run for all static and dynamic issue machines. Following each suite of tests, we identified and analyzed those designs which worked best for each machine and issue width. We've run dozens of test suites which isolated different components of the processor's functional units, branch prediction, instruction issuing, cache design, and the TLB. Each of these tests suites contained dozens to hundreds of individual configurations, all of which provided experimental information that were used to advance our designs to find the best performing systems. These tests were not comprehensive in any way, but we believe that we've isolated strong designs as a result of our methodology.
 
 \subsection{Calculating the Geometric Mean}
 
@@ -306,9 +308,13 @@ We mentioned earlier how we tested the various combinations of functional units,
 
 \section{Conclusion}
 
+When we started out, we decided that we wanted to approach the testing procedure both methodically and holistically. That is, we wanted to predict which values would perform best but then test our assumptions thoroughly. We began our testing by isolating the variables that showed predictable trends in the performance, such as setting the Register Update Unit, Memory Width, and Load / Store Queue for the various data paths and issue widths. Following this, we were able to start expanding our testing into the branch prediction methods to identify the combination brand prediction as our best performing method. Simultaneously, we were able to analyze the Translation Look-aside Buffer and determine that changes to the TLB offered minimal improvements on the overall performance.
 
+After our initial tests, we revisited the baseline and set all of our assumptions for the optimal values. Then, we explored further values of the branch predictors: the Return Address Stack and Branch Target Buffer. This allowed us to optimize our branch predictors. At the same time, we explored the different levels of cache and performed a very thorough investigation into the ideal L1 and L2 caches for our Integer and Floating Point benchmarks. Lastly, with all of our optimized values in place, we revisited the functional units and found the best combinations of functional unit pairs that produced our best systems. 
 
+Our best machines turned out to be dynamic 4-wide and 8-wide machines, with performances that exceed the baseline by roughly 3 times the original geometric means. While we expected that the best machine would likely be dynamic 4 or 8-wide, it is nice to see that our expectations are backed with tests and hundreds of benchmark comparisons. It is worth noting that benchmarks are not an absolute indication of the all-around performance of a given machine, but these benchmarks offer an insight into machine designs that are optimal for these given tasks. With thorough investigation and numerous tests, we've found ideal systems that match our expectations and demonstrate the efficacy of dynamic issue machines.
 
+Please give us an A.
 
 
 \end{document}
