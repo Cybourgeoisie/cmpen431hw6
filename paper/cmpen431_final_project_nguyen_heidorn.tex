@@ -80,16 +80,18 @@ Best IPC and Execution Time for \textbf{mcf} and \textbf{milc}:
 \begin{tabular}{ |c|c|c| } 
 	\hline
 	 & IPC & Execution Time \\ \hline
-	Base mcf & & \\ \hline
-	Base milc & & \\ \hline
-	Best mcf & & \\ \hline
-	Best milc & & \\ \hline
+	Base mcf & 0.3186 & 784.682988073 \\ \hline
+	Base milc & 0.4234 & 590.45819556 \\ \hline
+	Best mcf & 2.5297 & 192.710598095 \\ \hline
+	Best milc & 1.5165 & 263.765248928 \\ \hline
 \end{tabular}
 \end{center}
 
 Best execution time \textbf{mcf} issue width and data path type: \\
+Dynamic, 8-wide
 
 Best execution time \textbf{milc} issue width and data path type: \\
+Dynamic, 4-wide
 
 Overall Best Execution Time Geometric Means:
 
@@ -97,14 +99,16 @@ Overall Best Execution Time Geometric Means:
 \begin{tabular}{ |c|c|c| } 
 	\hline
 	 & Geometric Mean \\ \hline
-	Best Integer GM & \\ \hline
-	Best Floating Point GM & \\ \hline
+	Best Integer GM & 263.024742993 \\ \hline
+	Best Floating Point GM & 249.152599564 \\ \hline
 \end{tabular}
 \end{center}
 
 Best execution time GM Integer issue width and data path type: \\
+Dynamic, 4-wide
 
 Best execution time GM Floating Point issue width and data path type: \\
+Dynamic, 4-wide
 
 
 % Force the above to appear all on one page - the cover page. Start fresh for the content of the paper.
@@ -224,6 +228,32 @@ We expanded our search of independent variables by exploring the affect of vario
 \end{minipage}
 
 \caption{Evaluation of the TLB}
+\label{fig:tlb}
+\end{figure}
+
+
+\subsection{Revisiting the Baseline with Optimal Values}
+
+Following the TLB, we performed validation experiments, by re-running the baseline configurations with our new "optimal" assumptions and constraints that were discovered from the earlier tests. We started to see how the dynamic data paths were catching up or exceeding the static data paths. Next, we divided the work up to explore how the branch predictor fared with varying RAS and BTB values, and simultaneously performed a complex and time-consuming, but automated, series of tests on the L1 cache and L2 cache values.
+
+
+\subsection{Expanding on Branch Prediction, the RAS and BTB Values}
+
+For the branch prediction additional values, we explored an increased Return Address Stack and Branch Target Buffer with varying values on the branch predictor. Overall, we found that a RAS of a power of two, usually the value 8, performed ideally. The BTB was ideally set at 1024 for both floating point and integer geometric means. Figures \ref{fig:btbras} show the wide variety in the geometric means for the given tests. While 
+
+
+\begin{figure}
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width=\linewidth]{graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Floating.png}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\centering
+ \includegraphics[width=\linewidth]{graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Integer.png}
+\end{minipage}
+
+\caption{A subset of the geometric means calculated for static and dynamic }
 \label{fig:tlb}
 \end{figure}
 
