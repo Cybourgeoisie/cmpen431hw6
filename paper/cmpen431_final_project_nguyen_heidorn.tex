@@ -79,7 +79,7 @@ Best IPC and Execution Time for \textbf{mcf} and \textbf{milc}:
 \begin{center}
 \begin{tabular}{ |c|c|c| } 
 	\hline
-	 & IPC & Execution Time \\ \hline
+	 & IPC & Execution Time ($\mu$s) \\ \hline
 	Base mcf & 0.3186 & 784.682988073 \\ \hline
 	Base milc & 0.4234 & 590.45819556 \\ \hline
 	Best mcf & 2.5297 & 192.710598095 \\ \hline
@@ -93,12 +93,12 @@ Dynamic, 8-wide
 Best execution time \textbf{milc} issue width and data path type: \\
 Dynamic, 4-wide
 
-Overall Best Execution Time Geometric Means:
+Overall Best Execution Time Geometric Means (GM):
 
 \begin{center}
 \begin{tabular}{ |c|c|c| } 
 	\hline
-	 & Geometric Mean \\ \hline
+	 & Geometric Mean ($\mu$s) \\ \hline
 	Best Integer GM & 263.024742993 \\ \hline
 	Best Floating Point GM & 249.152599564 \\ \hline
 \end{tabular}
@@ -130,7 +130,7 @@ Simple Scalar provides a number of parameters that can be modified to emulate an
 
 However, due to the number of variables outside of the architecture - the algorithms, access patterns, and behavior of the programs tested - it is not simply good enough to make educated guesses based on our understanding of processor evolution. Instead, a combination approach is required. Scientific reasoning is necessary to isolate the parameters and restrict the range of values which could benefit the performance of a given design. Once the parameters are defined and the range of reasonable values determined, a series of tests need to be run to experimentally verify our predictions and also to determine the best design decisions for a given architecture.
 
-Our testing methods combine scientific analysis and experimental verification, both to determine which variables to test and which tests to run for all static and dynamic issue machines. Following each suite of tests, we identified and analyzed those designs which worked best for each machine and issue width. We've run dozens of test suites which isolated different components of the processor's functional units, branch prediction, instruction issuing, cache design, and the TLB. Each of these tests suites contained dozens to hundreds of individual configurations, all of which provided experimental information that were used to advance our designs to find a performant system. These tests were not comprehensive in any way, but we believe that we've isolated strong designs as a result of our methodology.
+Our testing methods combine scientific analysis and experimental verification, both to determine which variables to test and which tests to run for all static and dynamic issue machines. Following each suite of tests, we identified and analyzed those designs which worked best for each machine and issue width. We've run dozens of test suites which isolated different components of the processor's functional units, branch prediction, instruction issuing, cache design, and the TLB. Each of these tests suites contained dozens to hundreds of individual configurations, all of which provided experimental information that were used to advance our designs to find a outperformed system. These tests were not comprehensive in any way, but we believe that we've isolated strong designs as a result of our methodology.
 
 \subsection{Calculating the Geometric Mean}
 
@@ -141,7 +141,7 @@ The geometric means were calculated using the program execution times as its inp
 \end{align*}
 
 
-\section{Order of Experimentation}
+\section{Experiments}
 
 The majority of experiments were carried out by changing a few related parameters and determining how changing the variables affected the geometric means for all machine issue widths. By default, most of the tests were performed for both static and dynamic machines, with issue widths 1, 2 and 4 for static, and 2, 4, and 8 for dynamic. Near the end of our experimentation, we found that dynamic far outperformed static. To allow us to continue to test with higher accuracy, the static tests were eventually dropped in favor of the dynamic tests.
 
@@ -168,7 +168,7 @@ These results stood across the board, which allowed us to progress with the rema
 
 \subsubsection{Best of the Memory Width}
 
-Seemingly a no-brainer now, the memory width needs to be maxed out at 16 for optimal performance. This value was tested against all 6 machine combinations.
+We tested the combination of each data path and issue width against memory widths of 8 and 16 bytes. Our results were not surprising, as each machine with a memory width of 16 bytes outperformed their 8-byte counterparts. For the remainder of our experiments, we set the optimal memory width to 16 bytes.
 
 
 \subsection{Branch Prediction: Finding an Ideal Method}
@@ -239,7 +239,7 @@ Following the TLB, we performed validation experiments, by re-running the baseli
 
 \subsection{Expanding on Branch Prediction, the RAS and BTB Values}
 
-For the branch prediction additional values, we explored an increased Return Address Stack and Branch Target Buffer with varying values on the branch predictor. Overall, we found that a RAS of a power of two, usually the value 8, performed ideally. The BTB was ideally set at 1024 for both floating point and integer geometric means. Figures \ref{fig:btbras} show the wide variety in the geometric means for the given tests. While 
+For the branch prediction additional values, we explored an increased Return Address Stack and Branch Target Buffer with varying values on the branch predictor. Overall, we found that a RAS of a power of two, usually the value 8, performed ideally. The BTB was ideally set at 1024 for both floating point and integer geometric means. The associativity was interchangeable, but our best values came from 2-way associativity. Figures \ref{fig:btbras} show the wide variety in the geometric means for the given tests.
 
 
 \begin{figure}
@@ -253,13 +253,55 @@ For the branch prediction additional values, we explored an increased Return Add
  \includegraphics[width=\linewidth]{graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Integer.png}
 \end{minipage}
 
-\caption{A subset of the geometric means calculated for static and dynamic }
-\label{fig:tlb}
+\caption{A subset of the geometric means calculated by testing the Branch Prediction BTB and RAS for all static and dynamic issue widths. \textbf{NOTE:} The term "1-way", "2-way" and "4-way" in the images refers to the BTB associativity.}
+\label{fig:btbras}
 \end{figure}
 
 
-\section{Experiments}
+\subsection{Exploring the Cache - L1 and L2}
 
+The cache tests were, by far, the most extensive performed. We've tested all permutations of L1 cache associativity, set sizes, and block sizes against variable instruction fetch queue sizes, following the restrictions laid out in the project instructions. For the L1 cache tests, the instruction and data caches were set to identical cache sizes for simplicity - an assumption that pervades to the final tests. For this first set of experiments on the L1 cache, we examined the effects on all static and dynamic data path / issue width combinations, and the L2 cache was set to an arbitrarily large, constant cache that would permit experimentation on the L1 cache.
+
+Following the above, we identified (falsely, at the time) that dynamic 2-issue was performing best, which allowed us to streamline our testing for only one of the data path / issue width pairs. Using the dynamic 2-wide data path, we carried out further experimentation on combinations of the ideal L1 cache values with combinations of the L2 unified cache for all pairs of association, block sizes and set sizes that fit within the project constraints. While we were incorrect in assuming that dynamic 2-wide would perform the best, we did find that our results regarding the L1 and L2 cache combinations were valid across all data path and issue width combinations.
+
+Among our results, we found that a smaller associativity performed better, with larger number of sets and block sizes. The instruction fetch queue size was best set at either 4 or 8, so our L1 cache block sizes were either 32 or 64. The associativity was almost always 1 or 2 in our best-performing machines, and the number of sets were mostly maxed out.
+
+Following all of the above tests, we then took our findings and, for good measure, reran the tests against all static and dynamic issue machines. Fortunately, this allowed us to find that the dynamic 4-wide and 8-wide overtook the performance of all other machines by a large margin. For our final set of tests, we ran our tests against these two machines, and ran final "sanity check" tests against the other machines to confirm our results.
+
+
+\subsection{Return to the Functional Units}
+
+We mentioned earlier how we tested the various combinations of functional units, with inconclusive results. We realized after expanding on the RUU, LSQ, and the caches that the functional units would not be fully optimized unless they had the hardware in place to support them for each issue width. Now with the remaining values set to optimal ranges, we could return to the functional units and determine our best values. Thankfully, we found that certain patterns of combinations of the integer and floating point ALUs and Multipliers were better performing than the others, but with no hard-and-fast rules about which these values needed to be - just as long as the sum total of the Integer ALU and Multiplier or the sum total of the Floating Point ALU and Multiplier were above certain values, and that we had a minimum of ALUs that depended on the size of the issue width. Figures \ref{fig:hardware_int} and \ref{fig:hardware_float} show the best performing geometric means for the dynamic 4-wide and 8-wide machines that performed best.
+
+\begin{figure}
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width=\linewidth]{graphs/Functional_Units/hardware_int/Dynamic_4_Interger_FU_Analysis.png}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\centering
+ \includegraphics[width=\linewidth]{graphs/Functional_Units/hardware_int/Dynamic_8_Interger_FU_Analysis.png}
+\end{minipage}
+
+\caption{Best performing functional units for dynamic 4-wide and 8-wide integer benchmarks.}
+\label{fig:hardware_int}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width=\linewidth]{graphs/Functional_Units/hardware_float/Dynamic_4_Floating_Point_FU_Analysis.png}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\centering
+ \includegraphics[width=\linewidth]{graphs/Functional_Units/hardware_float/Dynamic_8_Floating_Point_FU_Analysis.png}
+\end{minipage}
+
+\caption{Best performing functional units for dynamic 4-wide and 8-wide floating point benchmarks.}
+\label{fig:hardware_float}
+\end{figure}
 
 
 \section{Conclusion}

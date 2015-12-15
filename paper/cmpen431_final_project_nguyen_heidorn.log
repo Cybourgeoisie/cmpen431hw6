@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 DEC 2015 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 DEC 2015 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -620,7 +620,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-<graphs/branch_prediction/Branch_Prediction_Static_Interger.png, id=20, 578.16p
+<graphs/branch_prediction/Branch_Prediction_Static_Interger.png, id=21, 578.16p
 t x 433.62pt>
 File: graphs/branch_prediction/Branch_Prediction_Static_Interger.png Graphic fi
 le (type png)
@@ -630,7 +630,7 @@ Package pdftex.def Info: graphs/branch_prediction/Branch_Prediction_Static_Inte
 rger.png used on input line 188.
 (pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
 
-<graphs/branch_prediction/Branch_Prediction_Static_Float.png, id=22, 578.16pt x
+<graphs/branch_prediction/Branch_Prediction_Static_Float.png, id=23, 578.16pt x
  433.62pt>
 File: graphs/branch_prediction/Branch_Prediction_Static_Float.png Graphic file 
 (type png)
@@ -639,7 +639,7 @@ Package pdftex.def Info: graphs/branch_prediction/Branch_Prediction_Static_Floa
 t.png used on input line 192.
 (pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
 
-<graphs/branch_prediction/Branch_Prediction_Dynamic_Interger.png, id=23, 578.16
+<graphs/branch_prediction/Branch_Prediction_Dynamic_Interger.png, id=24, 578.16
 pt x 433.62pt>
 File: graphs/branch_prediction/Branch_Prediction_Dynamic_Interger.png Graphic f
 ile (type png)
@@ -649,7 +649,7 @@ Package pdftex.def Info: graphs/branch_prediction/Branch_Prediction_Dynamic_Int
 erger.png used on input line 203.
 (pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
 
-<graphs/branch_prediction/Branch_Prediction_Dynamic_Float.png, id=24, 578.16pt 
+<graphs/branch_prediction/Branch_Prediction_Dynamic_Float.png, id=25, 578.16pt 
 x 433.62pt>
 File: graphs/branch_prediction/Branch_Prediction_Dynamic_Float.png Graphic file
  (type png)
@@ -658,7 +658,9 @@ Package pdftex.def Info: graphs/branch_prediction/Branch_Prediction_Dynamic_Flo
 at.png used on input line 207.
 (pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
 
-<graphs/TLB/TLB_Analysis_Integer.png, id=25, 578.16pt x 433.62pt>
+[5 <./graphs/branch_prediction/Branch_Prediction_Static_Interger.png> <./graphs
+/branch_prediction/Branch_Prediction_Static_Float.png>]
+<graphs/TLB/TLB_Analysis_Integer.png, id=31, 578.16pt x 433.62pt>
 File: graphs/TLB/TLB_Analysis_Integer.png Graphic file (type png)
 
 <use graphs/TLB/TLB_Analysis_Integer.png>
@@ -671,15 +673,10 @@ File: graphs/TLB/TLB_Analysis_Integer.png Graphic file (type png)
 Package pdftex.def Info: graphs/TLB/TLB_Analysis_Integer.png used on input line
  227.
 (pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
- [5 <./graphs/branch_prediction/Branch_Prediction_Static_Interger.png> <./graph
-s/branch_prediction/Branch_Prediction_Static_Float.png>]
-
-LaTeX Warning: Reference `fig:btbras' on page 6 undefined on input line 242.
-
-[6 <./graphs/branch_prediction/Branch_Prediction_Dynamic_Interger.png> <./graph
-s/branch_prediction/Branch_Prediction_Dynamic_Float.png> <./graphs/TLB/TLB_Anal
-ysis_Integer.png>]
-<graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Floating.png, id=37, 578.16pt 
+ [6 <./graphs/branch_prediction/Branch_Prediction_Dynamic_Interger.png> <./grap
+hs/branch_prediction/Branch_Prediction_Dynamic_Float.png> <./graphs/TLB/TLB_Ana
+lysis_Integer.png>]
+<graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Floating.png, id=38, 578.16pt 
 x 433.62pt>
 File: graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Floating.png Graphic file
  (type png)
@@ -688,7 +685,7 @@ Package pdftex.def Info: graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Floati
 ng.png used on input line 249.
 (pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
 
-<graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Integer.png, id=38, 578.16pt x
+<graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Integer.png, id=39, 578.16pt x
  433.62pt>
 File: graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Integer.png Graphic file 
 (type png)
@@ -699,33 +696,79 @@ r.png used on input line 253.
 
 [7 <./graphs/Bpred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Floating.png> <./graphs/B
 pred_RAS_BTB/BTB_Bpred_and_RAS_Analysis_Integer.png>]
-(./cmpen431_final_project_nguyen_heidorn.aux)
+<graphs/Functional_Units/hardware_int/Dynamic_4_Interger_FU_Analysis.png, id=46
+, 578.16pt x 433.62pt>
+File: graphs/Functional_Units/hardware_int/Dynamic_4_Interger_FU_Analysis.png G
+raphic file (type png)
 
-LaTeX Warning: There were undefined references.
+<use graphs/Functional_Units/hardware_int/Dynamic_4_Interger_FU_Analysis.png>
+Package pdftex.def Info: graphs/Functional_Units/hardware_int/Dynamic_4_Interge
+r_FU_Analysis.png used on input line 280.
+(pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
+
+<graphs/Functional_Units/hardware_int/Dynamic_8_Interger_FU_Analysis.png, id=47
+, 578.16pt x 433.62pt>
+File: graphs/Functional_Units/hardware_int/Dynamic_8_Interger_FU_Analysis.png G
+raphic file (type png)
+
+<use graphs/Functional_Units/hardware_int/Dynamic_8_Interger_FU_Analysis.png>
+Package pdftex.def Info: graphs/Functional_Units/hardware_int/Dynamic_8_Interge
+r_FU_Analysis.png used on input line 284.
+(pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
+
+Underfull \hbox (badness 1888) in paragraph at lines 287--287
+[]\T1/futs/m/n/12 Best per-form-ing func-tional units for dy-namic 4-wide and 8
+-wide in-te-ger
+ []
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+<graphs/Functional_Units/hardware_float/Dynamic_4_Floating_Point_FU_Analysis.pn
+g, id=48, 578.16pt x 433.62pt>
+File: graphs/Functional_Units/hardware_float/Dynamic_4_Floating_Point_FU_Analys
+is.png Graphic file (type png)
 
- ) 
+<use graphs/Functional_Units/hardware_float/Dynamic_4_Floating_Point_FU_Analysi
+s.png>
+Package pdftex.def Info: graphs/Functional_Units/hardware_float/Dynamic_4_Float
+ing_Point_FU_Analysis.png used on input line 295.
+(pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
+
+<graphs/Functional_Units/hardware_float/Dynamic_8_Floating_Point_FU_Analysis.pn
+g, id=49, 578.16pt x 433.62pt>
+File: graphs/Functional_Units/hardware_float/Dynamic_8_Floating_Point_FU_Analys
+is.png Graphic file (type png)
+
+<use graphs/Functional_Units/hardware_float/Dynamic_8_Floating_Point_FU_Analysi
+s.png>
+Package pdftex.def Info: graphs/Functional_Units/hardware_float/Dynamic_8_Float
+ing_Point_FU_Analysis.png used on input line 299.
+(pdftex.def)             Requested size: 224.06548pt x 168.04585pt.
+ [8] [9 <./graphs/Functional_Units/hardware_int/Dynamic_4_Interger_FU_Analysis.
+png> <./graphs/Functional_Units/hardware_int/Dynamic_8_Interger_FU_Analysis.png
+> <./graphs/Functional_Units/hardware_float/Dynamic_4_Floating_Point_FU_Analysi
+s.png> <./graphs/Functional_Units/hardware_float/Dynamic_8_Floating_Point_FU_An
+alysis.png>] (./cmpen431_final_project_nguyen_heidorn.aux) ) 
 Here is how much of TeX's memory you used:
- 6833 strings out of 493089
- 102319 string characters out of 6134842
- 321727 words of memory out of 5000000
- 10149 multiletter control sequences out of 15000+600000
- 91121 words of font info for 96 fonts, out of 8000000 for 9000
+ 6860 strings out of 493089
+ 103886 string characters out of 6134842
+ 321757 words of memory out of 5000000
+ 10167 multiletter control sequences out of 15000+600000
+ 92080 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,16n,47p,990b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on cmpen431_final_project_nguyen_heidorn.pdf (7 pages, 254511 by
+ 47i,16n,47p,1107b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive
+/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+adobe/utopia/putri8a.pfb>
+Output written on cmpen431_final_project_nguyen_heidorn.pdf (9 pages, 379934 by
 tes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
